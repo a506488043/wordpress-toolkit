@@ -109,7 +109,7 @@ class WordPress_Toolkit {
         // 加载CookieGuard模块
         require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'modules/cookieguard/cookieguard-module.php';
         $this->cookieguard = CookieGuard_Module::get_instance();
-        
+
         // 调试日志
         if (defined('WP_DEBUG') && WP_DEBUG) {
             error_log('WordPress Toolkit: Modules loaded - Custom Card: ' . ($this->custom_card ? 'Yes' : 'No'));
