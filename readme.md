@@ -1,5 +1,7 @@
 # WordPress Toolkit
 
+**语言 / Language:** [中文](readme.md) | [English](README.md)
+
 一个功能强大、安全可靠的WordPress综合工具包，集成了四个实用工具模块，为网站提供全面的功能支持。
 
 ## 📋 基本信息

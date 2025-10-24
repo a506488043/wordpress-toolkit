@@ -1,30 +1,11 @@
 # WordPress Toolkit
 
-<div style="text-align: right; margin-bottom: 20px;">
-  <button id="lang-switch" style="padding: 8px 16px; background: #0073aa; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; transition: background-color 0.3s;">English</button>
-</div>
+**语言 / Language:** [中文](readme.md) | [English](README.md)
 
-<div id="content-zh" style="display: block;">
-一个功能强大、安全可靠的WordPress综合工具包，集成了四个实用工具模块，为网站提供全面的功能支持。
-</div>
-
-<div id="content-en" style="display: none;">
 A powerful, secure, and reliable WordPress comprehensive toolkit that integrates four practical tool modules to provide comprehensive functionality support for websites.
-</div>
 
-## 📋 基本信息
+## 📋 Basic Information
 
-<div class="content-zh">
-- **插件名称**: WordPress Toolkit
-- **版本**: 1.0.3
-- **作者**: www.saiita.com.cn
-- **许可证**: GPL v2 或更高版本
-- **最低要求**: WordPress 5.0+, PHP 7.4+
-- **测试兼容**: WordPress 6.4
-- **插件地址**: https://www.saiita.com.cn
-</div>
-
-<div class="content-en" style="display: none;">
 - **Plugin Name**: WordPress Toolkit
 - **Version**: 1.0.3
 - **Author**: www.saiita.com.cn
@@ -32,37 +13,12 @@ A powerful, secure, and reliable WordPress comprehensive toolkit that integrates
 - **Minimum Requirements**: WordPress 5.0+, PHP 7.4+
 - **Tested Compatibility**: WordPress 6.4
 - **Plugin URL**: https://www.saiita.com.cn
-</div>
 
-## 🛠️ 核心模块
+## 🛠️ Core Modules
 
-### 🌐 网站卡片 (Custom Card)
-<div class="content-zh">**版本**: 1.0.3</div>
-<div class="content-en" style="display: none;">**Version**: 1.0.3</div>
+### 🌐 Website Cards (Custom Card)
+**Version**: 1.0.3
 
-<div class="content-zh">
-自动抓取网站元数据并生成美观的卡片展示。
-
-**核心功能**:
-- ✅ 多源数据抓取：支持Open Graph、Twitter Cards、Schema.org
-- ✅ 智能缓存系统：三级缓存（数据库→Memcached→Opcache）
-- ✅ SSRF安全防护：完整的URL验证和安全检查
-- ✅ Gutenberg集成：支持可视化编辑器区块
-- ✅ 点击统计：详细的卡片访问数据统计
-- ✅ 响应式设计：完美适配移动端和桌面端
-
-**使用方式**:
-```php
-// 短代码调用
-[custom_card url="https://example.com"]
-[custom_card_lazy url="https://example.com"]
-
-// PHP函数调用
-echo do_shortcode('[custom_card url="https://example.com"]');
-```
-</div>
-
-<div class="content-en" style="display: none;">
 Automatically fetch website metadata and generate beautiful card displays.
 
 **Core Features**:
@@ -82,37 +38,10 @@ Automatically fetch website metadata and generate beautiful card displays.
 // PHP function call
 echo do_shortcode('[custom_card url="https://example.com"]');
 ```
-</div>
 
-### 📅 年龄计算器 (Age Calculator)
-<div class="content-zh">**版本**: 1.0.3</div>
-<div class="content-en" style="display: none;">**Version**: 1.0.3</div>
+### 📅 Age Calculator (Age Calculator)
+**Version**: 1.0.3
 
-<div class="content-zh">
-精确计算年龄，特别针对闰年2月29日优化。
-
-**核心功能**:
-- ✅ 精确计算：使用PHP DateTime类处理复杂日期
-- ✅ 闰年优化：完美处理2月29日出生的情况
-- ✅ 多种格式：支持年、月、天、详细等多种显示格式
-- ✅ 用户集成：与WordPress用户系统深度集成
-- ✅ 记忆功能：为登录用户保存生日信息
-- ✅ 交互模式：支持即时计算和表单模式
-
-**使用方式**:
-```php
-// 显示完整计算器
-[manus_age_calculator]
-
-// 仅显示计算表单
-[manus_age_calculator_form]
-
-// 显示特定年龄
-[manus_age_calculator date="1990-02-28"]
-```
-</div>
-
-<div class="content-en" style="display: none;">
 Calculate age precisely, with special optimization for leap year February 29th.
 
 **Core Features**:
@@ -134,47 +63,10 @@ Calculate age precisely, with special optimization for leap year February 29th.
 // Display specific age
 [manus_age_calculator date="1990-02-28"]
 ```
-</div>
 
-### 📦 物品管理 (Time Capsule)
-<div class="content-zh">**版本**: 1.0.6</div>
-<div class="content-en" style="display: none;">**Version**: 1.0.6</div>
+### 📦 Item Management (Time Capsule)
+**Version**: 1.0.6
 
-<div class="content-zh">
-记录和管理个人物品购买信息，追踪使用情况和保修状态。
-
-**核心功能**:
-- ✅ 物品档案：完整的物品信息管理系统
-- ✅ 分类管理：支持多种物品类别（电子产品、家具、交通工具等）
-- ✅ 保修追踪：自动计算保修状态和到期提醒
-- ✅ 使用统计：详细的使用时长和频率统计
-- ✅ 数据导出：支持CSV和JSON格式导出
-- ✅ 用户隔离：管理员和订阅者数据分离
-- ✅ 多维度筛选：按类别、状态、保修期、用户等筛选
-
-**物品类别支持**:
-- 🚗 交通工具（汽车、摩托车、自行车等）
-- 📱 电子产品（手机、电脑、家电等）
-- 🪑 家具用品（沙发、床、桌子等）
-- 👔 服装鞋帽（上衣、裤子、鞋子等）
-- 🍔 食品饮料（零食、饮料、调料等）
-- 📚 书籍文具（图书、文具、办公用品等）
-- ⚽ 运动器材（健身器材、球类、户外装备等）
-
-**使用方式**:
-```php
-// 显示物品列表和添加表单
-[time_capsule]
-
-// 显示单个物品详情
-[time_capsule_item id="123"]
-
-// 显示分类物品
-[time_capsule category="电子产品"]
-```
-</div>
-
-<div class="content-en" style="display: none;">
 Record and manage personal item purchase information, track usage and warranty status.
 
 **Core Features**:
@@ -206,32 +98,10 @@ Record and manage personal item purchase information, track usage and warranty s
 // Display category items
 [time_capsule category="Electronics"]
 ```
-</div>
 
-### 🍪 Cookie同意 (CookieGuard)
-<div class="content-zh">**版本**: 1.0.3</div>
-<div class="content-en" style="display: none;">**Version**: 1.0.3</div>
+### 🍪 Cookie Consent (CookieGuard)
+**Version**: 1.0.3
 
-<div class="content-zh">
-符合GDPR要求的专业Cookie同意通知系统。
-
-**核心功能**:
-- ✅ GDPR合规：完全符合欧盟数据保护法规
-- ✅ 苹果风格设计：毛玻璃效果，现代化界面
-- ✅ 智能地理检测：自动识别用户地理位置
-- ✅ 无障碍支持：完整的键盘导航和屏幕阅读器支持
-- ✅ 深色模式适配：自动适配系统深色偏好
-- ✅ 多语言支持：国际化文本支持
-- ✅ 用户偏好记忆：保存用户的Cookie选择
-
-**特色设计**:
-- 中国用户智能隐藏（符合本地化需求）
-- 平滑动画过渡效果
-- 自定义样式和文案配置
-- 优雅的毛玻璃背景效果
-</div>
-
-<div class="content-en" style="display: none;">
 Professional Cookie consent notification system compliant with GDPR requirements.
 
 **Core Features**:
@@ -248,39 +118,10 @@ Professional Cookie consent notification system compliant with GDPR requirements
 - Smooth animation transition effects
 - Custom style and text configuration
 - Elegant frosted glass background effects
-</div>
 
-## 🏗️ 技术架构
+## 🏗️ Technical Architecture
 
-### 模块化设计
-<div class="content-zh">
-```
-wordpress-toolkit/
-├── wordpress-toolkit.php          # 主插件文件
-├── modules/                       # 功能模块目录
-│   ├── custom-card/              # 网站卡片模块
-│   ├── age-calculator/           # 年龄计算器模块
-│   ├── time-capsule/             # 物品管理模块
-│   └── cookieguard/              # Cookie同意模块
-├── assets/                       # 资源文件
-│   ├── css/                      # 样式文件
-│   └── js/                       # JavaScript文件
-├── includes/                     # 核心类库
-│   ├── class-admin-page-template.php
-│   ├── class-logger.php
-│   └── i18n.php
-└── languages/                     # 语言文件
-    └── wordpress-toolkit.pot
-```
-
-### 统一管理界面
-- **工具箱菜单**: 所有工具统一在"工具箱"菜单下管理
-- **权限分级**: 不同功能模块设置不同用户权限
-- **设置页面**: 每个模块都有独立的设置页面
-- **快速导航**: 提供便捷的功能说明和快速链接
-</div>
-
-<div class="content-en" style="display: none;">
+### Modular Design
 ```
 wordpress-toolkit/
 ├── wordpress-toolkit.php          # Main plugin file
@@ -305,78 +146,116 @@ wordpress-toolkit/
 - **Permission Levels**: Different user permissions for different function modules
 - **Settings Pages**: Each module has independent settings pages
 - **Quick Navigation**: Convenient function descriptions and quick links
-</div>
 
-## 🔒 安全特性
+## 🔒 Security Features
 
-### 数据安全
-<div class="content-zh">
-- ✅ **SQL注入防护**: 所有数据库查询使用参数化查询
-- ✅ **XSS防护**: 输入数据严格清理和转义
-- ✅ **CSRF防护**: 完整的nonce验证机制
-- ✅ **文件操作安全**: 路径验证防止目录遍历攻击
-</div>
-
-<div class="content-en" style="display: none;">
+### Data Security
 - ✅ **SQL Injection Protection**: All database queries use parameterized queries
 - ✅ **XSS Protection**: Strict input data cleaning and escaping
 - ✅ **CSRF Protection**: Complete nonce verification mechanism
 - ✅ **File Operation Security**: Path validation prevents directory traversal attacks
-</div>
 
-### Cookie安全
-<div class="content-zh">
-- ✅ **安全标志**: 使用httponly、secure、samesite标志
-- ✅ **地理IP安全**: 安全的IP地址检测和代理处理
-- ✅ **用户隐私**: 不收集任何个人数据，数据本地存储
-</div>
-
-<div class="content-en" style="display: none;">
+### Cookie Security
 - ✅ **Security Flags**: Use httponly, secure, samesite flags
 - ✅ **Geo IP Security**: Secure IP address detection and proxy handling
 - ✅ **User Privacy**: No personal data collection, local data storage
-</div>
 
-## 🚀 安装配置
+### Access Control
+- ✅ **Permission Checks**: Complete user permission verification
+- ✅ **Role Management**: Administrator and subscriber permission separation
+- ✅ **Access Logs**: Secure access log recording
 
-### 系统要求
-<div class="content-zh">
-- **WordPress**: 5.0 或更高版本
-- **PHP**: 7.4 或更高版本
-- **MySQL**: 5.6 或更高版本
-- **内存**: 最低64MB，推荐128MB
-</div>
+### Code Security
+- ✅ **Input Validation**: All user inputs undergo strict validation
+- ✅ **Output Escaping**: Prevent code injection and XSS attacks
+- ✅ **Error Handling**: Secure error message handling
+- ✅ **Audit Logs**: Debug mode controlled sensitive log recording
 
-<div class="content-en" style="display: none;">
+## ⚡ Performance Optimization
+
+### Caching System
+- **Multi-level Caching**: Database → Memcached → Opcache three-level caching
+- **Smart Expiration**: Automatic cache invalidation and update detection
+- **Preloading**: Support key data preloading
+- **Compression Optimization**: CSS and JavaScript file compression
+
+### On-demand Loading
+- **Modular Loading**: Only load resources for activated modules
+- **Conditional Loading**: Load corresponding resources based on page type
+- **Asynchronous Processing**: AJAX asynchronous communication improves experience
+- **Lazy Loading**: Non-critical resources delayed loading
+
+### Code Optimization
+- **Function Streamlining**: Remove all redundant and unused code (46% code reduction)
+- **Database Optimization**: Efficient database queries and index design
+- **Memory Management**: Prevent memory leaks and resource waste
+- **Frontend Optimization**: CSS and JavaScript code optimization (40% file size reduction)
+
+## 🌐 Internationalization Support
+
+### Multi-language Support
+- ✅ **Text Domain**: `wordpress-toolkit`
+- ✅ **Language Files**: Standard .pot language packs
+- ✅ **Modular Translation**: Independent translation support for each module
+- ✅ **Localization Adaptation**: Support date and number format localization
+
+### Regional Adaptation
+- ✅ **Chinese Users**: Smart hiding of Cookie notifications
+- ✅ **Timezone Support**: Automatic adaptation to WordPress timezone settings
+- ✅ **Currency Format**: Support localized currency display
+- ✅ **Date Format**: Date display conforming to regional customs
+
+## 📱 Responsive Design
+
+### Device Compatibility
+- ✅ **Desktop**: Complete desktop browser support
+- ✅ **Tablet**: Optimized tablet display effects
+- ✅ **Mobile**: Perfect mobile experience
+- ✅ **Touch Optimization**: Touch gesture and interaction optimization
+
+### Browser Compatibility
+- ✅ **Modern Browsers**: Chrome, Firefox, Safari, Edge
+- ✅ **Mobile Browsers**: iOS Safari, Chrome Mobile
+- ✅ **Progressive Enhancement**: Core functions available in older browsers
+
+## 🎨 UI/UX Design
+
+### Design Principles
+- **Consistency**: Unified design language and interaction patterns
+- **Simplicity**: Clear and intuitive user interface
+- **Accessibility**: WCAG 2.1 AA compliant
+- **Performance**: Priority on loading speed and response performance
+
+### Theme Compatibility
+- ✅ **Default Themes**: Perfect compatibility with WordPress default themes
+- ✅ **Third-party Themes**: Extensive theme compatibility testing
+- ✅ **Custom Styles**: Support theme style overriding
+- ✅ **Block Editor**: Deep integration with Gutenberg editor
+
+## 📊 Data Management
+
+### Data Storage
+- **WordPress Standards**: Use WordPress standard database table structures
+- **Custom Tables**: Efficient custom data table design
+- **Data Backup**: Support WordPress standard backup processes
+- **Data Migration**: Provide data import and export functions
+
+### Data Statistics
+- **Access Statistics**: Detailed access and usage statistics
+- **User Behavior**: User operation behavior analysis
+- **Performance Monitoring**: Page loading performance monitoring
+- **Error Tracking**: System errors and exception recording
+
+## 🚀 Installation & Configuration
+
+### System Requirements
 - **WordPress**: 5.0 or higher
 - **PHP**: 7.4 or higher
 - **MySQL**: 5.6 or higher
 - **Memory**: Minimum 64MB, recommended 128MB
-</div>
 
-### 安装步骤
-<div class="content-zh">
-#### 方法一：自动安装
-1. 登录WordPress管理后台
-2. 进入"插件" → "安装插件"
-3. 搜索"WordPress Toolkit"
-4. 点击"现在安装"并激活插件
+### Installation Steps
 
-#### 方法二：手动安装
-1. 下载插件zip文件
-2. 进入WordPress管理后台
-3. 进入"插件" → "安装插件" → "上传插件"
-4. 选择zip文件并上传安装
-5. 激活插件
-
-### 初次配置
-1. 激活插件后，进入"工具箱"菜单
-2. 查看功能说明和快速导航
-3. 根据需要配置各个工具模块
-4. 在设置页面中进行详细配置
-</div>
-
-<div class="content-en" style="display: none;">
 #### Method 1: Automatic Installation
 1. Log in to WordPress admin dashboard
 2. Go to "Plugins" → "Add New"
@@ -395,35 +274,103 @@ wordpress-toolkit/
 2. View function descriptions and quick navigation
 3. Configure each tool module as needed
 4. Perform detailed configuration in settings pages
-</div>
 
-## ❓ 常见问题
+## 🔧 Management Interface
 
-<div class="content-zh">
-### Q: 这个插件包含哪些工具？
-A: WordPress Toolkit包含四个核心工具：
-1. **网站卡片** - 自动抓取网站元数据
-2. **年龄计算器** - 精确计算年龄
-3. **物品管理** - 物品管理和保修追踪
-4. **Cookie同意** - GDPR合规的Cookie通知
+### Toolkit Main Menu
+- **Function Descriptions**: Detailed module function introductions
+- **Quick Navigation**: Convenient module quick access
+- **User Guides**: Usage methods for each module
+- **Configuration Suggestions**: Best configuration recommendations
 
-### Q: 是否可以单独使用某个工具？
-A: 是的，每个工具都是独立的模块，您可以根据需要启用或禁用相应的模块，不会影响其他功能的正常使用。
+### Module Management
+- **Website Cards**: Card list, cache management, settings configuration
+- **Age Calculator**: Calculator settings, display configuration, user preferences
+- **Item Management**: Item list, category management, statistical analysis
+- **Cookie Consent**: Style configuration, text settings, behavior configuration
 
-### Q: 插件是否影响网站性能？
-A: 不会。插件采用模块化设计，按需加载资源，并且使用了智能缓存机制，对网站性能的影响最小化。
+### Settings Pages
+- **Website Card Settings**: Cache configuration, fetch settings, display options
+- **Age Calculator Settings**: Default format, user permissions, display configuration
+- **Cookie Consent Settings**: Style selection, text configuration, regional settings
 
-### Q: 是否支持多语言？
-A: 是的，插件支持多语言和本地化，您可以根据需要翻译为任何语言。
+## 📈 Use Cases
 
-### Q: 是否与所有主题兼容？
-A: 是的，插件与所有WordPress主题兼容，包括自定义主题。
+### Enterprise Websites
+- **Website Cards**: Display partners and client websites
+- **Cookie Consent**: Ensure GDPR compliance
+- **Item Management**: Manage company assets and equipment
 
-### Q: 如何获取技术支持？
-A: 如需技术支持，请访问：https://www.saiita.com.cn
-</div>
+### Personal Blogs
+- **Age Calculator**: Display author age or anniversaries
+- **Cookie Consent**: Protect visitor privacy
+- **Website Cards**: Recommend related websites and resources
 
-<div class="content-en" style="display: none;">
+### E-commerce Platforms
+- **Website Cards**: Display brands and suppliers
+- **Item Management**: Manage inventory and warranty information
+- **Cookie Consent**: Compliant Cookie management
+
+### Content Websites
+- **Website Cards**: Enrich content display forms
+- **Cookie Consent**: Privacy protection and compliance
+- **Age Calculator**: Increase interactivity and fun
+
+## 🛠️ Development Information
+
+### Code Quality
+- **Coding Standards**: Follow WordPress coding standards
+- **Complete Documentation**: Detailed code comments and documentation
+- **Test Coverage**: Core functionality test coverage
+- **Performance Monitoring**: Continuous performance monitoring and optimization
+
+### Technology Stack
+- **Backend**: PHP 7.4+, WordPress API, MySQL
+- **Frontend**: HTML5, CSS3, JavaScript (jQuery)
+- **Caching**: Memcached, Opcache
+- **Security**: Nonce verification, data cleaning, permission control
+
+### Extensibility
+- **Hook System**: Complete WordPress hook support
+- **API Interface**: Provide REST API interfaces
+- **Theme Integration**: Deep integration with theme system
+- **Plugin Compatibility**: Compatible with mainstream WordPress plugins
+
+## 🔄 Version History
+
+### v1.0.3 (2025-10-23)
+**Major Updates**:
+- 🎨 **UI Unification**: Backend management interface style unification optimization
+- 🧹 **Code Cleanup**: Clean redundant code, 46% code reduction
+- ⚡ **Performance Improvement**: CSS and JS file size reduced by 40%
+- 🔒 **Security Enhancement**: Fixed function redeclaration issues
+- 📱 **Responsive Optimization**: Mobile experience improvements
+
+**Technical Improvements**:
+- Unified backend management interface styles
+- Optimized item management table layout
+- Cleaned unused functions and styles
+- Fixed PHP syntax errors
+- Improved error handling mechanisms
+
+### v1.0.2
+**Security Release**:
+- 🛡️ Fixed SQL injection vulnerabilities
+- 🔒 Enhanced file operation security
+- 🍪 Improved Cookie security settings
+- 🌐 Optimized IP address handling
+- 📝 Completed logging system
+
+### v1.0.0
+**Initial Release**:
+- 🎉 Integrated four core tool modules
+- 🎨 Unified management interface design
+- ⚡ Optimized performance and caching mechanisms
+- 🔒 Enhanced security and data protection
+- 🌍 Complete internationalization support
+
+## ❓ Frequently Asked Questions
+
 ### Q: What tools does this plugin include?
 A: WordPress Toolkit includes four core tools:
 1. **Website Cards** - Automatically fetch website metadata
@@ -445,33 +392,17 @@ A: Yes, the plugin is compatible with all WordPress themes, including custom the
 
 ### Q: How to get technical support?
 A: For technical support, please visit: https://www.saiita.com.cn
-</div>
 
-## 🔗 相关链接
+## 🔗 Related Links
 
-<div class="content-zh">
-- **插件主页**: https://www.saiita.com.cn
-- **技术支持**: https://www.saiita.com.cn/support
-- **文档中心**: https://www.saiita.com.cn/docs
-- **GitHub仓库**: [项目仓库链接]
-</div>
-
-<div class="content-en" style="display: none;">
 - **Plugin Homepage**: https://www.saiita.com.cn
 - **Technical Support**: https://www.saiita.com.cn/support
 - **Documentation Center**: https://www.saiita.com.cn/docs
 - **GitHub Repository**: [Project Repository Link]
-</div>
 
-## 📄 许可证
+## 📄 License
 
-<div class="content-zh">
-本插件基于GPLv2或更高版本许可证发布。
-</div>
-
-<div class="content-en" style="display: none;">
 This plugin is released under the GPLv2 or later license.
-</div>
 
 ```
 WordPress Toolkit
@@ -490,30 +421,4 @@ GNU General Public License for more details.
 
 ---
 
-<div class="content-zh">
-**WordPress Toolkit** - 让WordPress网站功能更强大！🚀
-</div>
-
-<div class="content-en" style="display: none;">
 **WordPress Toolkit** - Make WordPress websites more powerful! 🚀
-</div>
-
-<script>
-document.getElementById('lang-switch').addEventListener('click', function() {
-  const zhContents = document.querySelectorAll('.content-zh, #content-zh');
-  const enContents = document.querySelectorAll('.content-en, #content-en');
-  const button = this;
-
-  if (zhContents[0].style.display !== 'none') {
-    // Switch to English
-    zhContents.forEach(el => el.style.display = 'none');
-    enContents.forEach(el => el.style.display = 'block');
-    button.textContent = '中文';
-  } else {
-    // Switch to Chinese
-    zhContents.forEach(el => el.style.display = 'block');
-    enContents.forEach(el => el.style.display = 'none');
-    button.textContent = 'English';
-  }
-});
-</script>
