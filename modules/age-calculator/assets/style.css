@@ -1,0 +1,352 @@
+/* Age Calculator Plugin Styles */
+
+/* 使用更具体的选择器，避免影响主题样式 */
+.age-calculator-form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.age-calculator-form:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* 保留原有的样式以兼容性，但更新为更现代的设计 */
+.manus-age-calculator-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.manus-age-calculator-container:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.manus-age-calculator-container .manus-age-calculator-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.manus-age-calculator-container .manus-age-calculator-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.manus-age-calculator-container .manus-age-calculator-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.manus-age-calculator-container .manus-age-calculator-label {
+    font-weight: bold;
+    color: #555;
+    font-size: 14px;
+}
+
+.manus-age-calculator-container .manus-age-calculator-input {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.manus-age-calculator-container .manus-age-calculator-input:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.1);
+    background-color: #ffffff;
+}
+
+.manus-age-calculator-container .manus-age-calculator-button {
+    padding: 14px 24px;
+    background-color: #007cba;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.manus-age-calculator-container .manus-age-calculator-button:hover {
+    background-color: #005a87;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 124, 186, 0.3);
+}
+
+.manus-age-calculator-container .manus-age-calculator-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 124, 186, 0.3);
+}
+
+.manus-age-calculator-container .manus-age-calculator-result {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.manus-age-calculator-container .manus-age-calculator-result.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.manus-age-calculator-container .manus-age-calculator-result.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.manus-age-calculator-container .manus-age-calculator-result.info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.manus-age-calculator-container .manus-age-calculator-info {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* 页面模板样式 */
+.manus-age-calculator-page-wrapper {
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.manus-age-calculator-page-content {
+    padding: 20px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .manus-age-calculator-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .manus-age-calculator-container .manus-age-calculator-title {
+        font-size: 16px;
+    }
+    
+    .manus-age-calculator-container .manus-age-calculator-input,
+    .manus-age-calculator-container .manus-age-calculator-button {
+        font-size: 14px;
+    }
+}
+
+/* 表单元素样式 */
+.age-calculator-form .form-group {
+    margin-bottom: 15px;
+}
+
+.age-calculator-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.age-calculator-form input[type="date"],
+.age-calculator-form select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.age-calculator-form input[type="date"]:focus,
+.age-calculator-form select:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.1);
+    background-color: #ffffff;
+}
+
+/* 确保下拉框选项文字可见 */
+.age-calculator-form select option {
+    color: #333 !important;
+    background-color: #fff !important;
+}
+
+/* 针对不同浏览器和状态的下拉框样式 */
+.age-calculator-form select::-webkit-input-placeholder {
+    color: #333 !important;
+}
+
+.age-calculator-form select::-moz-placeholder {
+    color: #333 !important;
+}
+
+.age-calculator-form select:-ms-input-placeholder {
+    color: #333 !important;
+}
+
+.age-calculator-form select::placeholder {
+    color: #333 !important;
+}
+
+/* 确保下拉框在未选择状态时也显示文字 */
+.age-calculator-form select:invalid {
+    color: #333 !important;
+}
+
+/* 针对Webkit浏览器的下拉框样式 */
+.age-calculator-form select::-webkit-select {
+    color: #333 !important;
+}
+
+.age-calculator-form select::-webkit-value {
+    color: #333 !important;
+}
+
+.age-calculator-form .button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007cba;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.age-calculator-form .button:hover {
+    background-color: #005a87;
+}
+
+.age-calculator-form .age-calculator-result {
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.age-calculator-form .age-calculator-result.detailed {
+    text-align: center;
+}
+
+.age-calculator-form .age-calculator-result.detailed div {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+    border: 1px solid #e1f5fe;
+}
+
+/* 响应式设计：在小屏幕上改为垂直排列 */
+@media (max-width: 480px) {
+    .age-calculator-form .age-calculator-result.detailed div {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    /* 改进的移动端响应式设计 */
+    .age-calculator-form,
+    .manus-age-calculator-container {
+        margin: 15px;
+        padding: 20px;
+        max-width: calc(100% - 30px);
+    }
+    
+    .manus-age-calculator-container .manus-age-calculator-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .manus-age-calculator-container .manus-age-calculator-input,
+    .age-calculator-form input[type="date"],
+    .age-calculator-form select {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+    
+    .manus-age-calculator-container .manus-age-calculator-button,
+    .age-calculator-form .button {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+}
+
+.age-calculator-form .age-calculator-result .age-label {
+    color: #666;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.age-calculator-form .age-calculator-result .age-value {
+    color: #007cba;
+    font-weight: bold;
+}
+
+.age-calculator-form .error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* 重置可能影响主题的全局样式 */
+.manus-age-calculator-container * {
+    box-sizing: border-box;
+}
+
+.manus-age-calculator-container p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+

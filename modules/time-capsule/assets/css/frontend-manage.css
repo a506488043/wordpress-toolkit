@@ -1,0 +1,687 @@
+/**
+ * 前端物品管理样式
+ */
+
+/* 管理页面头部 */
+.tc-manage-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e7;
+}
+
+.tc-manage-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.tc-manage-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* 统计概览 */
+.tc-stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.tc-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e7;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tc-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: #d2d2d7;
+}
+
+.tc-stat-card.warning {
+    border-color: #ff9500;
+}
+
+.tc-stat-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.tc-stat-card.warning .tc-stat-icon {
+    background: rgba(255, 149, 0, 0.1);
+}
+
+.tc-stat-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.tc-stat-number {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 4px;
+    line-height: 1;
+}
+
+.tc-stat-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #86868b;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap; /* 防止文字换行 */
+    text-align: center; /* 居中对齐 */
+    padding: 0 2px; /* 添加少量内边距确保文字不贴边 */
+}
+
+/* 物品管理卡片布局 */
+.tc-manage-items {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e7;
+}
+
+/* 水平卡片网格 */
+.tc-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* 物品卡片 */
+.tc-item-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e7;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.tc-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-color: #d2d2d7;
+}
+
+/* 卡片头部 */
+.tc-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+}
+
+.tc-item-category {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.tc-item-header-info {
+    flex: 1;
+    margin-left: 12px;
+    min-width: 0;
+}
+
+.tc-item-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tc-item-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.tc-item-status.active {
+    background: rgba(52, 199, 89, 0.15);
+    color: #34c759;
+}
+
+.tc-item-status.inactive {
+    background: rgba(255, 149, 0, 0.15);
+    color: #ff9500;
+}
+
+.tc-item-status.disposed {
+    background: rgba(255, 59, 48, 0.15);
+    color: #ff3b30;
+}
+
+/* 卡片内容 */
+.tc-item-content {
+    margin-bottom: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tc-item-description {
+    font-size: 14px;
+    color: #86868b;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.tc-item-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.tc-meta-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.tc-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.tc-meta-label {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.4;
+    min-width: 60px;
+    text-align: left;
+}
+
+.tc-meta-value {
+    color: #6c757d;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+    font-weight: 500;
+    display: inline;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+.tc-meta-value {
+    font-size: 13px;
+    color: #1d1d1f;
+    font-weight: 400;
+    line-height: 1.4;
+    display: inline;
+}
+
+/* 状态徽章 */
+.tc-status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.tc-status-badge.active {
+    background: rgba(52, 199, 89, 0.1);
+    color: #34c759;
+}
+
+.tc-status-badge.inactive {
+    background: rgba(255, 149, 0, 0.1);
+    color: #ff9500;
+}
+
+.tc-status-badge.disposed {
+    background: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+}
+
+/* 操作按钮 */
+.tc-item-actions {
+    white-space: nowrap;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.tc-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    background: white;
+    color: #1d1d1f;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.tc-action-btn:hover {
+    background: #f5f5f7;
+    border-color: #c7c7cc;
+    text-decoration: none;
+}
+
+.tc-edit-btn {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.tc-edit-btn:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.tc-delete-btn {
+    border-color: #ff3b30;
+    color: #ff3b30;
+}
+
+.tc-delete-btn:hover {
+    background: rgba(255, 59, 48, 0.1);
+}
+
+/* 空状态 */
+.tc-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.tc-empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.tc-empty-state h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 8px;
+}
+
+.tc-empty-state p {
+    color: #86868b;
+    margin: 0 0 20px;
+}
+
+/* 模态框样式 */
+.tc-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tc-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.tc-modal-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e5e5e7;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 100001;
+}
+
+.tc-modal-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid #e5e5e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tc-modal-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.tc-modal-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #86868b;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.tc-modal-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #1d1d1f;
+}
+
+.tc-modal-body {
+    padding: 20px;
+    overflow-y: auto;
+    max-height: calc(80vh - 80px);
+}
+
+/* 表单样式 */
+.tc-item-form {
+    max-width: 100%;
+}
+
+.tc-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.tc-form-section {
+    background: #f9f9fb;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #e5e5e7;
+}
+
+.tc-form-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e5e7;
+}
+
+.tc-field-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.tc-field-group:last-child {
+    margin-bottom: 0;
+}
+
+.tc-field-group label {
+    display: block;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.tc-field-group .required {
+    color: #ff3b30;
+    font-weight: 700;
+}
+
+.tc-field-group input,
+.tc-field-group select,
+.tc-field-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1d1d1f;
+    background: white;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.tc-field-group input:focus,
+.tc-field-group select:focus,
+.tc-field-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.tc-field-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.tc-field-group .field-unit {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #86868b;
+    font-size: 13px;
+    font-weight: 500;
+    pointer-events: none;
+    margin-top: 12px;
+}
+
+.tc-form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e7;
+    flex-wrap: wrap;
+}
+
+/* 按钮样式 */
+.tc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    gap: 6px;
+}
+
+.tc-btn-primary {
+    background: #667eea;
+    color: white;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+.tc-btn-primary:hover {
+    background: #5a6fd8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.tc-btn-secondary {
+    background: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+}
+
+.tc-btn-secondary:hover {
+    background: #e8e8ed;
+    color: #1d1d1f;
+    text-decoration: none;
+}
+
+.tc-btn-danger {
+    background: #ff3b30;
+    color: white;
+}
+
+.tc-btn-danger:hover {
+    background: #d70015;
+    color: white;
+    text-decoration: none;
+}
+
+/* 特定类别字段显示/隐藏 */
+.tc-vehicle-only,
+.tc-snacks-only {
+    transition: all 0.3s ease;
+}
+
+.tc-vehicle-only[style*="display: none"],
+.tc-snacks-only[style*="display: none"] {
+    display: none !important;
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .tc-form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tc-manage-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .tc-stats-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tc-manage-items {
+        padding: 16px;
+    }
+
+    .tc-items-grid {
+        justify-content: center;
+    }
+
+    .tc-item-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .tc-item-actions {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        justify-content: flex-start;
+    }
+
+    .tc-action-btn {
+        width: auto;
+        justify-content: center;
+    }
+
+    .tc-modal-content {
+        width: 95%;
+        margin: 20px;
+    }
+
+    .tc-modal-header {
+        padding: 16px;
+    }
+
+    .tc-modal-body {
+        padding: 16px;
+    }
+
+    .tc-form-section {
+        padding: 16px;
+    }
+
+    .tc-form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tc-form-actions .tc-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tc-manage-items {
+        padding: 12px;
+    }
+
+    .tc-form-section {
+        padding: 12px;
+    }
+
+    .tc-field-group {
+        margin-bottom: 12px;
+    }
+}

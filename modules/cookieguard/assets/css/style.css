@@ -1,0 +1,695 @@
+/**
+ * CookieGuard Pro - 精美苹果风格前端样式 v2.0
+ * 基于Apple Human Interface Guidelines和最新设计趋势
+ * 采用现代化毛玻璃效果和流畅动画
+ */
+
+/* CSS变量定义 - 苹果设计系统增强版 */
+:root {
+    /* 苹果系统颜色 - 2024版本 */
+    --apple-blue: #007AFF;
+    --apple-blue-dark: #0051D5;
+    --apple-blue-light: #5AC8FA;
+    --apple-green: #34C759;
+    --apple-green-dark: #30D158;
+    --apple-red: #FF3B30;
+    --apple-orange: #FF9500;
+    --apple-yellow: #FFCC00;
+    --apple-purple: #AF52DE;
+    --apple-pink: #FF2D92;
+    --apple-teal: #5AC8FA;
+    --apple-indigo: #5856D6;
+    
+    /* 精细化灰度系统 */
+    --apple-gray-50: #FAFAFA;
+    --apple-gray-100: #F5F5F7;
+    --apple-gray-200: #E5E5EA;
+    --apple-gray-300: #D1D1D6;
+    --apple-gray-400: #C7C7CC;
+    --apple-gray-500: #AEAEB2;
+    --apple-gray-600: #8E8E93;
+    --apple-gray-700: #636366;
+    --apple-gray-800: #48484A;
+    --apple-gray-900: #1D1D1F;
+    
+    /* 语义化颜色增强 */
+    --apple-label: #000000;
+    --apple-label-secondary: #3C3C43;
+    --apple-label-tertiary: rgba(60, 60, 67, 0.6);
+    --apple-label-quaternary: rgba(60, 60, 67, 0.18);
+    
+    /* 背景色系统 */
+    --apple-bg-primary: #FFFFFF;
+    --apple-bg-secondary: #F2F2F7;
+    --apple-bg-tertiary: #FFFFFF;
+    --apple-bg-grouped-primary: #F2F2F7;
+    --apple-bg-grouped-secondary: #FFFFFF;
+    
+    /* 精确间距系统 */
+    --space-1: 2px;
+    --space-2: 4px;
+    --space-3: 6px;
+    --space-4: 8px;
+    --space-5: 10px;
+    --space-6: 12px;
+    --space-8: 16px;
+    --space-10: 20px;
+    --space-12: 24px;
+    --space-16: 32px;
+    --space-20: 40px;
+    --space-24: 48px;
+    --space-32: 64px;
+    
+    /* 圆角系统增强 */
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-3xl: 24px;
+    --radius-full: 9999px;
+    
+    /* 高级阴影系统 */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+    
+    /* 苹果专用阴影 */
+    --apple-shadow-card: 0 8px 32px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.08);
+    --apple-shadow-floating: 0 16px 64px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1);
+    --apple-shadow-button: 0 4px 14px rgba(0, 122, 255, 0.3), 0 2px 4px rgba(0, 122, 255, 0.2);
+    
+    /* 动画缓动函数 */
+    --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* 字体系统 */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 24px;
+    --font-size-3xl: 30px;
+    
+    /* 行高系统 */
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+    
+    /* 毛玻璃效果参数 */
+    --blur-sm: 4px;
+    --blur-md: 8px;
+    --blur-lg: 16px;
+    --blur-xl: 24px;
+    --blur-2xl: 40px;
+    --blur-3xl: 64px;
+}
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --apple-label: #FFFFFF;
+        --apple-label-secondary: #EBEBF5;
+        --apple-label-tertiary: rgba(235, 235, 245, 0.6);
+        --apple-label-quaternary: rgba(235, 235, 245, 0.18);
+        
+        --apple-bg-primary: #000000;
+        --apple-bg-secondary: #1C1C1E;
+        --apple-bg-tertiary: #2C2C2E;
+        --apple-bg-grouped-primary: #000000;
+        --apple-bg-grouped-secondary: #1C1C1E;
+        
+        --apple-gray-50: #1D1D1F;
+        --apple-gray-100: #2C2C2E;
+        --apple-gray-200: #3A3A3C;
+        --apple-gray-300: #48484A;
+        --apple-gray-400: #636366;
+        --apple-gray-500: #8E8E93;
+        --apple-gray-600: #AEAEB2;
+        --apple-gray-700: #C7C7CC;
+        --apple-gray-800: #D1D1D6;
+        --apple-gray-900: #F2F2F7;
+    }
+}
+
+/* 减少动画偏好设置 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 重置样式 */
+#cookieguard-notice,
+#cookieguard-notice * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 主容器 - 精美苹果风格毛玻璃卡片 */
+#cookieguard-notice {
+    /* 定位系统 - 全宽度显示 */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999999;
+    
+    /* 苹果字体系统 */
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Segoe UI', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: var(--font-size-base);
+    line-height: var(--leading-normal);
+    font-weight: 400;
+    color: var(--apple-label);
+    
+    /* 高级毛玻璃效果 */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(var(--blur-xl)) saturate(180%) brightness(110%);
+    -webkit-backdrop-filter: blur(var(--blur-xl)) saturate(180%) brightness(110%);
+    
+    /* 精美边框 - 只保留顶部边框 */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    
+    /* 多层阴影系统 */
+    box-shadow: 
+        0 -8px 32px rgba(0, 0, 0, 0.12),
+        0 -2px 8px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    
+    /* 入场动画 */
+    animation: slideInFromBottom 0.8s var(--ease-spring) forwards;
+    transform: translateY(100%);
+    opacity: 0;
+    
+    /* 性能优化 */
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+    contain: layout style paint;
+}
+
+/* 深色模式毛玻璃效果 */
+@media (prefers-color-scheme: dark) {
+    #cookieguard-notice {
+        background: rgba(28, 28, 30, 0.85);
+        border-top-color: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(var(--blur-xl)) saturate(180%) brightness(120%);
+        -webkit-backdrop-filter: blur(var(--blur-xl)) saturate(180%) brightness(120%);
+        box-shadow: 
+            0 -8px 32px rgba(0, 0, 0, 0.4),
+            0 -2px 8px rgba(0, 0, 0, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* 顶部显示位置 */
+.cookieguard-notice-top {
+    top: 0;
+    bottom: auto;
+    border-top: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInFromTop 0.8s var(--ease-spring) forwards;
+    transform: translateY(-100%);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+    .cookieguard-notice-top {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+        box-shadow: 
+            0 8px 32px rgba(0, 0, 0, 0.4),
+            0 2px 8px rgba(0, 0, 0, 0.3),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* 内容容器 */
+.cookieguard-notice-container {
+    padding: var(--space-8) var(--space-16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-8);
+    min-height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 图标区域 - 精美设计 */
+.cookieguard-notice-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, var(--apple-blue) 0%, var(--apple-blue-dark) 50%, var(--apple-indigo) 100%);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        var(--apple-shadow-button),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s var(--ease-apple);
+}
+
+.cookieguard-notice-icon::before {
+    content: '🍪';
+    font-size: 24px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* 图标光泽效果 */
+.cookieguard-notice-icon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        transparent 70%);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+    z-index: 1;
+}
+
+/* 文本内容区域 */
+.cookieguard-notice-content {
+    flex: 1;
+    min-width: 0;
+    padding-top: var(--space-1);
+}
+
+/* 标题样式 */
+.cookieguard-notice-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--apple-label);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.02em;
+    line-height: var(--leading-tight);
+}
+
+/* 文本内容 */
+.cookieguard-notice-text {
+    font-size: var(--font-size-sm);
+    font-weight: 400;
+    color: var(--apple-label-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-6);
+}
+
+.cookieguard-notice-text p {
+    margin: 0;
+}
+
+/* 了解更多链接 - 精美设计 */
+.cookieguard-learn-more {
+    color: var(--apple-blue);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: var(--space-2);
+    transition: all 0.2s var(--ease-apple);
+    border-radius: var(--radius-sm);
+    padding: var(--space-1) var(--space-2);
+    margin: calc(-1 * var(--space-1)) calc(-1 * var(--space-2));
+    position: relative;
+    overflow: hidden;
+}
+
+.cookieguard-learn-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--apple-blue);
+    opacity: 0;
+    transition: opacity 0.2s var(--ease-apple);
+    border-radius: inherit;
+}
+
+.cookieguard-learn-more:hover {
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.cookieguard-learn-more:hover::before {
+    opacity: 1;
+}
+
+.cookieguard-learn-more:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* 按钮容器 */
+.cookieguard-notice-buttons {
+    display: flex;
+    gap: var(--space-3);
+    flex-shrink: 0;
+    margin-top: var(--space-2);
+}
+
+/* 按钮基础样式 */
+.cookieguard-btn {
+    padding: var(--space-3) var(--space-6);
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s var(--ease-apple);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-width: 80px;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* 接受按钮 - 苹果蓝色 */
+.cookieguard-accept-btn {
+    background: var(--apple-blue);
+    color: white;
+    box-shadow: var(--apple-shadow-button);
+}
+
+.cookieguard-accept-btn:hover {
+    background: var(--apple-blue-dark);
+    transform: translateY(-1px);
+    box-shadow: 
+        0 6px 20px rgba(0, 122, 255, 0.4),
+        0 3px 8px rgba(0, 122, 255, 0.3);
+}
+
+.cookieguard-accept-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 
+        0 2px 8px rgba(0, 122, 255, 0.3),
+        0 1px 4px rgba(0, 122, 255, 0.2);
+}
+
+/* 拒绝按钮 - 苹果灰色 */
+.cookieguard-decline-btn {
+    background: var(--apple-gray-200);
+    color: var(--apple-label);
+    box-shadow: var(--shadow-sm);
+}
+
+.cookieguard-decline-btn:hover {
+    background: var(--apple-gray-300);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.cookieguard-decline-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 按钮加载状态 */
+.cookieguard-notice-loading .cookieguard-btn {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: scale(0.98);
+}
+
+/* 按钮成功状态 */
+.cookieguard-btn.success-state {
+    background: var(--apple-green) !important;
+    color: white !important;
+    box-shadow: 
+        0 4px 14px rgba(52, 199, 89, 0.3),
+        0 2px 4px rgba(52, 199, 89, 0.2) !important;
+}
+
+/* 触摸设备优化 */
+.cookieguard-btn.touch-active {
+    transform: scale(0.95);
+}
+
+/* 关闭按钮 */
+.cookieguard-close-btn {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--apple-label-tertiary);
+    cursor: pointer;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s var(--ease-apple);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.cookieguard-close-btn:hover {
+    background: var(--apple-gray-200);
+    color: var(--apple-label);
+}
+
+.cookieguard-close-btn:active {
+    transform: scale(0.9);
+}
+
+/* 动画定义 - 修复版本 */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutToBottom {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutToTop {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* 隐藏动画 */
+.cookieguard-notice-hiding {
+    animation: slideOutToBottom 0.5s var(--ease-in-out-quart) forwards;
+}
+
+.cookieguard-notice-top.cookieguard-notice-hiding {
+    animation: slideOutToTop 0.5s var(--ease-in-out-quart) forwards;
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+    .cookieguard-notice-container {
+        padding: var(--space-6) var(--space-4);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: var(--space-6);
+    }
+    
+    .cookieguard-notice-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .cookieguard-notice-icon::before {
+        font-size: 22px;
+    }
+    
+    .cookieguard-notice-buttons {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: var(--space-3);
+    }
+    
+    .cookieguard-btn {
+        flex: 1;
+        max-width: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cookieguard-notice-container {
+        padding: var(--space-4) var(--space-3);
+    }
+    
+    .cookieguard-notice-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .cookieguard-notice-text {
+        font-size: var(--font-size-sm);
+    }
+    
+    .cookieguard-notice-buttons {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+    
+    .cookieguard-btn {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    #cookieguard-notice {
+        border-width: 2px;
+        border-color: var(--apple-label);
+    }
+    
+    .cookieguard-accept-btn {
+        border-width: 2px;
+        border-color: var(--apple-blue-dark);
+    }
+    
+    .cookieguard-decline-btn {
+        border-width: 2px;
+        border-color: var(--apple-label-secondary);
+    }
+}
+
+/* 打印样式 */
+@media print {
+    #cookieguard-notice {
+        display: none !important;
+    }
+}
+
+/* 无障碍访问增强 */
+.cookieguard-btn:focus {
+    outline: 2px solid var(--apple-blue);
+    outline-offset: 2px;
+}
+
+.cookieguard-learn-more:focus {
+    outline: 2px solid var(--apple-blue);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* 性能优化 */
+#cookieguard-notice * {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* 浏览器兼容性 */
+@supports not (backdrop-filter: blur(1px)) {
+    #cookieguard-notice {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+        #cookieguard-notice {
+            background: rgba(28, 28, 30, 0.95);
+        }
+    }
+}
+
+/* 隐藏动画类 - 修复版本（使用CSS动画而不是直接样式覆盖） */
+.cookieguard-notice-hiding {
+    animation: slideOutToBottom 0.5s var(--ease-in-out-quart) forwards !important;
+    pointer-events: none !important;
+}
+
+/* 顶部位置的隐藏动画 */
+.cookieguard-notice-top.cookieguard-notice-hiding {
+    animation: slideOutToTop 0.5s var(--ease-in-out-quart) forwards !important;
+}
+
+/* 加载状态样式 */
+.cookieguard-notice-loading {
+    pointer-events: none;
+}
+
+.cookieguard-notice-loading .cookieguard-btn {
+    opacity: 0.7;
+    cursor: not-allowed;
+}

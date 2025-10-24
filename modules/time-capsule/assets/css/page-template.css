@@ -1,0 +1,482 @@
+/**
+ * 时间胶囊页面样式 - 重新设计版本
+ */
+
+/* 页面主容器 */
+.time-capsule-page-wrapper {
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.tc-page-main {
+    padding: 40px 20px;
+}
+
+.tc-page-main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 类别筛选区域 */
+.tc-category-filter-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tc-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tc-filter-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.tc-filter-reset {
+    background: #f1f5f9;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 80px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.tc-filter-reset:hover,
+.tc-filter-reset.active {
+    background: #3b82f6;
+    color: white;
+}
+
+.tc-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.tc-category-card {
+    background: #f8fafc;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 16px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tc-category-card:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+.tc-category-card.active {
+    background: #dbeafe;
+    border-color: #3b82f6;
+}
+
+.tc-category-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.tc-category-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.tc-category-count {
+    font-size: 12px;
+    color: #6b7280;
+    background: #e5e7eb;
+    border-radius: 12px;
+    padding: 2px 8px;
+    display: inline-block;
+}
+
+.tc-category-card.active .tc-category-count {
+    background: #3b82f6;
+    color: white;
+}
+
+/* 物品展示区域 */
+.tc-items-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tc-items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tc-items-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+.tc-items-count {
+    font-size: 14px;
+    color: #6b7280;
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* 物品网格 */
+.tc-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+/* 新的物品卡片 */
+.tc-item-new {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.tc-item-new:hover {
+    border-color: #d1d5db;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.tc-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.tc-item-category-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+
+.tc-item-info {
+    flex: 1;
+}
+
+.tc-item-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 4px 0;
+    line-height: 1.3;
+}
+
+.tc-item-brand {
+    font-size: 13px;
+    color: #3b82f6;
+    margin-bottom: 6px;
+}
+
+.tc-item-status {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.tc-item-status.active {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.tc-item-status.inactive {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.tc-item-status.disposed {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.tc-item-description {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.tc-item-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.tc-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.tc-detail-label {
+    font-size: 13px;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.tc-detail-value {
+    font-size: 13px;
+    color: #111827;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* 空状态 */
+.tc-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.tc-empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+}
+
+.tc-empty-state h3 {
+    font-size: 20px;
+    color: #374151;
+    margin: 0 0 8px 0;
+}
+
+.tc-empty-state p {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0 0 24px 0;
+}
+
+/* 按钮样式 */
+.tc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tc-btn-primary {
+    background: #3b82f6;
+    color: white;
+}
+
+.tc-btn-primary:hover {
+    background: #2563eb;
+}
+
+.tc-login-notice {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.tc-login-notice h3 {
+    font-size: 24px;
+    color: #374151;
+    margin: 0 0 12px 0;
+}
+
+.tc-login-notice p {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0 0 24px 0;
+}
+
+.tc-login-btn {
+    background: #3b82f6;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tc-login-btn:hover {
+    background: #2563eb;
+}
+
+/* 加载更多按钮 */
+.tc-load-more {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.tc-load-more-btn {
+    background: #f3f4f6;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tc-load-more-btn:hover {
+    background: #e5e7eb;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .tc-page-main {
+        padding: 20px 16px;
+    }
+
+    .tc-category-filter-section,
+    .tc-items-section {
+        padding: 20px 16px;
+    }
+
+    .tc-filter-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .tc-category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 8px;
+    }
+
+    .tc-category-card {
+        padding: 12px 8px;
+    }
+
+    .tc-items-header {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .tc-items-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .tc-item-details {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tc-item-new {
+        padding: 16px;
+    }
+
+    .tc-item-header {
+        gap: 10px;
+    }
+
+    .tc-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 管理按钮样式 */
+.tc-filter-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tc-admin-manage-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: #10b981;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-width: 80px;
+    text-align: center;
+}
+
+.tc-admin-manage-btn:hover {
+    background: #059669;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.tc-admin-manage-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* 响应式设计 - 管理按钮 */
+@media (max-width: 768px) {
+    .tc-filter-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .tc-filter-actions {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .tc-filter-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .tc-admin-manage-btn {
+        justify-content: center;
+    }
+}
+}

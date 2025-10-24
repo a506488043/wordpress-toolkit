@@ -1,0 +1,789 @@
+# Copyright (C) 2024 www.saiita.com.cn
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Toolkit 1.0.3\n"
+"Report-Msgid-Bugs-To: https://www.saiita.com.cn\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: WP-CLI 2.8.1\n"
+"X-Domain: wordpress-toolkit\n"
+
+#. Plugin Name of the plugin
+#: wordpress-toolkit.php
+msgid "WordPress Toolkit"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wordpress-toolkit.php
+msgid "https://www.saiita.com.cn"
+msgstr ""
+
+#. Description of the plugin
+#: wordpress-toolkit.php
+msgid "一个集成了网站卡片、年龄计算器、物品管理和Cookie同意通知的WordPress综合工具包。"
+msgstr ""
+
+#. Author of the plugin
+#: wordpress-toolkit.php
+msgid "www.saiita.com.cn"
+msgstr ""
+
+#. Author URI of the plugin
+#: wordpress-toolkit.php
+msgid "https://www.saiita.com.cn"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "工具箱"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "网站卡片"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "年龄计算器"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "物品管理"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "Cookie同意"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "WordPress Toolkit"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "欢迎使用工具箱"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "这里是网站管理工具的集合页面。请从左侧菜单选择具体的工具。"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "可用工具："
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "网站卡片 - 自动抓取网站元数据并生成美观的卡片展示"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "年龄计算器 - 精确计算年龄，特别针对闰年2月29日优化"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "物品管理 - 记录和管理个人物品购买信息，追踪使用情况和保修状态"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "Cookie同意 - 符合GDPR要求的专业Cookie同意通知，苹果风格设计"
+msgstr ""
+
+#: wordpress-toolkit.php
+msgid "设置"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "网站卡片设置"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "缓存时间（小时）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "设置卡片数据的缓存时间，默认为72小时。"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "启用Memcached缓存"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "如果服务器支持Memcached，可以启用此选项提高性能。"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "启用OPcache缓存"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "如果服务器支持OPcache，可以启用此选项提高性能。"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "保存设置"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "使用说明"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "短代码使用"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "在文章或页面中使用以下短代码来显示网站卡片："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "或者使用旧版本短代码："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "参数说明"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "要显示的网站URL（必需）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "自定义标题（可选）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "自定义描述（可选）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "自定义图片URL（可选）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "是否使用缓存，默认为true（可选）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "Gutenberg区块"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "在Gutenberg编辑器中，您可以找到\"网站卡片\"区块，直接添加并配置URL即可。"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "功能特性"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "自动抓取网站标题、描述和图片"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "支持Open Graph、Twitter Cards和Schema.org"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "多级缓存系统（数据库 → Memcached → OPcache）"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "完整的SSRF防护"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "响应式设计，完美适配移动端"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "缓存管理"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "当前缓存设置："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "数据库缓存："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "小时"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "Memcached："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "已启用"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "已禁用"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "OPcache："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "清除所有缓存"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "确定要清除所有网站卡片缓存吗？"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "缓存已清除"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "清除缓存失败："
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php
+msgid "网络错误，请重试"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "年龄计算器设置"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "默认显示格式"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "选择默认的年龄显示格式。"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "年"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "月"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "天"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "详细"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "对登录用户显示"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "是否对已登录用户显示年龄计算器。"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "对未登录用户显示"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "是否对未登录用户显示年龄计算器。"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "出生日期"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "参考日期 (可选)"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "显示格式"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "计算年龄"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "请选择出生日期"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "基本用法："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "输出：年龄:"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "岁"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "指定参考日期："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "不同格式："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "个月"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "交互式表单："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "这将显示一个交互式表单，用户可以输入日期进行计算。"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "页面模板"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "您可以创建一个专门的年龄计算器页面："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "创建新页面"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "在页面属性中选择\"年龄计算器页面\"模板"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "发布页面"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "精确计算年龄，特别针对闰年2月29日优化"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "支持多种显示格式（年、月、天、详细）"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "支持用户权限控制"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "响应式设计，完美适配移动端"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "支持交互式表单"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "支持页面模板"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "闰年处理"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "本插件使用PHP的DateTime类自动处理闰年，包括："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "2月29日出生的用户在非闰年的计算"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "跨闰年的精确天数计算"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "不同月份天数的正确处理"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "测试工具"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "您可以使用以下工具测试年龄计算功能："
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "年龄计算测试"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "测试计算"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "计算结果:"
+msgstr ""
+
+#: modules/age-calculator/age-calculator-module.php
+msgid "错误:"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "物品管理设置"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "每页显示项目数"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "设置每页显示的物品管理项目数量。"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "启用演示数据"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "是否在首次激活时插入演示数据。"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "物品名称"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "类别"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "描述"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "购买日期"
+msgstr ""
+
+#: modules/time-capsule/time-capsule/module.php
+msgid "购买来源"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "保修期（月）"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "价格"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "品牌"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "型号"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "序列号"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "备注"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "添加物品"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "编辑物品"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "删除物品"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "确定要删除此物品吗？"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "物品删除成功"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "物品删除失败"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "请登录后查看您的物品管理"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "请登录后添加物品"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "您没有权限查看此物品"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "物品不存在"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "添加新物品"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "我的物品管理"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "统计信息"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "总物品数"
+msgstr ""
+
+#: modules/time-capsule/time-capsule/module.php
+msgid "保修中"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "已过期"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "总价值"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "按类别统计"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "导出数据"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "CSV格式"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "JSON格式"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "导出"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "数据导出成功"
+msgstr ""
+
+#: modules/time-capsule/time-capsule-module.php
+msgid "数据导出失败"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "Cookie同意设置"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "通知文本"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "接受按钮文字"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "拒绝按钮文字"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "了解更多文字"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "了解更多链接"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "显示位置"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "底部"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "顶部"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "居中"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "背景颜色"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "文字颜色"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "按钮颜色"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "按钮文字颜色"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "显示拒绝按钮"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "Cookie有效期（天）"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "启用统计分析"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "启用地理位置检测"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "本地IP视为中国"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "地理位置缓存管理"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "清除地理位置缓存"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "地理位置缓存已清除"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "清除缓存失败："
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "🍪 Cookie 使用通知"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "本网站使用Cookie来改善您的浏览体验。继续使用本网站即表示您同意我们使用Cookie。"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "接受"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "拒绝"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "了解更多"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "关闭Cookie通知"
+msgstr ""
+
+#: modules/cookieguard/cookieguard-module.php
+msgid "Cookie使用通知已显示，请选择您的偏好设置。"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "WordPress Toolkit"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "操作成功"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "操作失败"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "网络错误，请重试"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "处理中..."
+msgstr ""
+
+#: assets/css/admin.css
+msgid "缓存已清除"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "数据导出成功"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "设置已重置"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "连接测试成功"
+msgstr ""
+
+#: assets/css/admin.css
+msgid "连接测试失败"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "安全验证失败"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "权限不足"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "请先登录"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "无效的物品ID"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "保存失败"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "删除失败"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "导出失败"
+msgstr ""
+
+#: assets/js/admin.js
+msgid "网络错误，请重试"
+msgstr ""
