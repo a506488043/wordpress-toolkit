@@ -7,7 +7,7 @@
 ## 📋 基本信息
 
 - **插件名称**: WordPress Toolkit
-- **版本**: 1.0.4
+- **版本**: 1.0.5
 - **作者**: www.saiita.com.cn
 - **许可证**: GPL v2 or later
 - **最低要求**: WordPress 5.0+, PHP 7.4+
@@ -562,6 +562,79 @@ A: 是的，插件与所有WordPress主题兼容，包括自定义主题。
 
 ### Q: 如何获得技术支持？
 A: 如需技术支持，请访问: https://www.saiita.com.cn
+
+## 👨‍💻 开发者指南
+
+### 🎯 新架构开发指南
+
+**CSS开发**:
+```css
+/* 使用CSS变量 */
+.my-component {
+  background: var(--tc-bg-primary);
+  color: var(--tc-text-primary);
+  padding: var(--tc-spacing-lg);
+  border-radius: var(--tc-radius-lg);
+}
+
+/* 使用通用组件 */
+.my-form {
+  /* 使用 tc-form-group, tc-form-control 等类 */
+}
+```
+
+**JavaScript开发**:
+```javascript
+// 扩展核心框架
+var MyModule = $.extend({}, ToolkitCore, {
+  init: function() {
+    this.bindEvents();
+  },
+
+  customAction: function() {
+    this.ajax({
+      data: { action: 'my_custom_action' }
+    }).done(response => {
+      this.showNotice('success', '操作成功');
+    });
+  }
+});
+```
+
+**PHP开发**:
+```php
+// 使用页面模板
+$template = new Toolkit_Admin_Page_Template([
+  'title' => '我的模块',
+  'tabs' => [
+    'settings' => [
+      'title' => '设置',
+      'callback' => [$this, 'render_settings']
+    ]
+  ]
+]);
+$template->render();
+```
+
+### 🔧 扩展开发
+
+**创建新模块**:
+1. 在 `modules/` 目录下创建模块文件夹
+2. 实现标准的模块类结构
+3. 使用统一的样式和JavaScript框架
+4. 遵循WordPress编码规范
+
+**最佳实践**:
+- 使用统一的CSS变量和组件类
+- 使用ToolkitCore进行AJAX和表单处理
+- 实现适当的安全检查和权限验证
+- 添加详细的代码注释和文档
+
+### 📚 更多资源
+
+- **优化总结**: [OPTIMIZATION_SUMMARY.md](OPTIMIZATION_SUMMARY.md)
+- **代码示例**: 各模块中的实际代码示例
+- **API文档**: 核心框架的完整API文档
 
 ## 🔗 相关链接
 
