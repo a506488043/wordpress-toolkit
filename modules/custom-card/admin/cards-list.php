@@ -8,6 +8,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// 调试代码已禁用 - 生产环境不需要
+/*
 // 启用错误报告用于调试
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -24,6 +26,7 @@ debug_log('Current user: ' . get_current_user_id());
 debug_log('User can manage_options: ' . (current_user_can('manage_options') ? 'Yes' : 'No'));
 debug_log('PHP memory limit: ' . ini_get('memory_limit'));
 debug_log('PHP max_execution_time: ' . ini_get('max_execution_time'));
+*/
 
 global $wpdb;
 

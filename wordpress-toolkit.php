@@ -2,8 +2,8 @@
 /**
  * Plugin Name: WordPress Toolkit
  * Plugin URI: https://www.saiita.com.cn
- * Description: 一个集成了网站卡片、年龄计算器、物品管理和Cookie同意通知的综合工具包。
- * Version: 1.0.3
+ * Description: 一个集成了网站卡片、年龄计算器、物品管理、友情链接和Cookie同意通知的综合工具包。
+ * Version: 1.0.4
  * Author: www.saiita.com.cn
  * Author URI: https://www.saiita.com.cn
  * License: GPL v2 or later
@@ -22,13 +22,12 @@ if (!defined('ABSPATH')) {
 }
 
 // 定义插件常量
-define('WORDPRESS_TOOLKIT_VERSION', '1.0.3');
+define('WORDPRESS_TOOLKIT_VERSION', '1.0.4');
 define('WORDPRESS_TOOLKIT_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WORDPRESS_TOOLKIT_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('WORDPRESS_TOOLKIT_PLUGIN_BASENAME', plugin_basename(__FILE__));
 
-// 加载国际化支持
-require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'includes/i18n.php';
+// 国际化支持已移除 - 直接使用WordPress原生翻译函数
 
 // 加载日志管理
 require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'includes/class-logger.php';
@@ -53,6 +52,8 @@ class WordPress_Toolkit {
     private $age_calculator = null;
     private $time_capsule = null;
     private $cookieguard = null;
+    private $simple_friendlink = null;
+    private $simple_friendlink_admin = null;
     
     /**
      * 获取单例实例
@@ -110,6 +111,14 @@ class WordPress_Toolkit {
         require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'modules/cookieguard/cookieguard-module.php';
         $this->cookieguard = CookieGuard_Module::get_instance();
 
+        // 加载Simple FriendLink模块
+        require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'modules/simple-friendlink/simple-friendlink-module.php';
+        $this->simple_friendlink = Simple_FriendLink_Module::get_instance();
+
+        // 加载Simple FriendLink管理页面
+        require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'modules/simple-friendlink/admin.php';
+        $this->simple_friendlink_admin = new Simple_FriendLink_Admin();
+
         // 调试日志
         if (defined('WP_DEBUG') && WP_DEBUG) {
             error_log('WordPress Toolkit: Modules loaded - Custom Card: ' . ($this->custom_card ? 'Yes' : 'No'));
@@ -128,6 +137,7 @@ class WordPress_Toolkit {
         if ($this->age_calculator) $this->age_calculator->activate();
         if ($this->time_capsule) $this->time_capsule->activate();
         if ($this->cookieguard) $this->cookieguard->activate();
+        if ($this->simple_friendlink) $this->simple_friendlink->activate();
         
         // 设置插件激活时间
         add_option('wordpress_toolkit_activated_time', current_time('timestamp'));
@@ -142,6 +152,7 @@ class WordPress_Toolkit {
         if ($this->age_calculator) $this->age_calculator->deactivate();
         if ($this->time_capsule) $this->time_capsule->deactivate();
         if ($this->cookieguard) $this->cookieguard->deactivate();
+        if ($this->simple_friendlink) $this->simple_friendlink->deactivate();
     }
     
     /**
@@ -156,6 +167,7 @@ class WordPress_Toolkit {
         if ($this->age_calculator) $this->age_calculator->init();
         if ($this->time_capsule) $this->time_capsule->init();
         if ($this->cookieguard) $this->cookieguard->init();
+        if ($this->simple_friendlink) $this->simple_friendlink->init();
     }
     
     /**
@@ -169,7 +181,7 @@ class WordPress_Toolkit {
         // 添加主菜单 - 使用较低权限让订阅者也能看到
         add_menu_page(
             'WordPress Toolkit',
-            wt__('工具箱', 'wordpress-toolkit'),
+            __('工具箱', 'wordpress-toolkit'),
             'read', // 使用基础阅读权限，所有登录用户都有
             'wordpress-toolkit',
             array($this, 'admin_page'),
@@ -181,8 +193,8 @@ class WordPress_Toolkit {
         if (current_user_can('manage_options')) {
             add_submenu_page(
                 'wordpress-toolkit',
-                wt__('网站卡片', 'wordpress-toolkit'),
-                wt__('网站卡片', 'wordpress-toolkit'),
+                __('网站卡片', 'wordpress-toolkit'),
+                __('网站卡片', 'wordpress-toolkit'),
                 'manage_options',
                 'wordpress-toolkit-cards-list',
                 array($this, 'custom_cards_list_page')
@@ -192,12 +204,24 @@ class WordPress_Toolkit {
         // 物品管理（订阅者和管理员都可见）
         add_submenu_page(
             'wordpress-toolkit',
-            wt__('物品管理', 'wordpress-toolkit'),
-            wt__('物品管理', 'wordpress-toolkit'),
+            __('物品管理', 'wordpress-toolkit'),
+            __('物品管理', 'wordpress-toolkit'),
             'read', // 使用基础阅读权限
             'wordpress-toolkit-time-capsule',
             array($this, 'time_capsule_admin_page')
         );
+
+        // 友情链接（仅管理员可见）
+        if (current_user_can('manage_options')) {
+            add_submenu_page(
+                'wordpress-toolkit',
+                __('友情链接', 'wordpress-toolkit'),
+                __('友情链接', 'wordpress-toolkit'),
+                'manage_options',
+                'wordpress-toolkit-friendlinks',
+                array($this, 'friendlinks_admin_page')
+            );
+        }
 
 
         // ======================
@@ -206,8 +230,8 @@ class WordPress_Toolkit {
 
         // 网站卡片设置
         add_options_page(
-            wt__('网站卡片设置', 'wordpress-toolkit'),
-            wt__('网站卡片', 'wordpress-toolkit'),
+            __('网站卡片设置', 'wordpress-toolkit'),
+            __('网站卡片', 'wordpress-toolkit'),
             'manage_options',
             'wordpress-toolkit-custom-card-settings',
             array($this, 'custom_card_settings_page')
@@ -215,8 +239,8 @@ class WordPress_Toolkit {
 
         // 年龄计算器设置
         add_options_page(
-            wt__('年龄计算器设置', 'wordpress-toolkit'),
-            wt__('年龄计算器', 'wordpress-toolkit'),
+            __('年龄计算器设置', 'wordpress-toolkit'),
+            __('年龄计算器', 'wordpress-toolkit'),
             'manage_options',
             'wordpress-toolkit-age-calculator-settings',
             array($this, 'age_calculator_settings_page')
@@ -224,13 +248,24 @@ class WordPress_Toolkit {
 
         // Cookie同意设置
         add_options_page(
-            wt__('Cookie同意设置', 'wordpress-toolkit'),
-            wt__('Cookie同意', 'wordpress-toolkit'),
+            __('Cookie同意设置', 'wordpress-toolkit'),
+            __('Cookie同意', 'wordpress-toolkit'),
             'manage_options',
             'wordpress-toolkit-cookieguard-settings',
             array($this, 'cookieguard_settings_page')
         );
-    }
+
+        // 简洁友情链接设置
+        add_options_page(
+            __('简洁友情链接', 'wordpress-toolkit'),
+            __('简洁友情链接', 'wordpress-toolkit'),
+            'manage_options',
+            'wordpress-toolkit-simple-friendlink-settings',
+            array($this, 'simple_friendlink_settings_page')
+        );
+
+
+            }
     
     /**
      * 加载管理后台脚本和样式
@@ -296,6 +331,7 @@ class WordPress_Toolkit {
         if ($this->age_calculator) $this->age_calculator->admin_enqueue_scripts($hook);
         if ($this->time_capsule) $this->time_capsule->admin_enqueue_scripts($hook);
         if ($this->cookieguard) $this->cookieguard->admin_enqueue_scripts($hook);
+        // Simple_FriendLink_Module 不需要特殊的管理页面资源加载
     }
     
     /**
@@ -307,6 +343,7 @@ class WordPress_Toolkit {
         if ($this->age_calculator) $this->age_calculator->enqueue_scripts();
         if ($this->time_capsule) $this->time_capsule->enqueue_scripts();
         if ($this->cookieguard) $this->cookieguard->enqueue_scripts();
+        if ($this->simple_friendlink) $this->simple_friendlink->enqueue_scripts();
     }
     
     /**
@@ -315,7 +352,7 @@ class WordPress_Toolkit {
     public function admin_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 显示工具箱主页面，包含功能说明
@@ -328,12 +365,12 @@ class WordPress_Toolkit {
     public function custom_card_settings_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_custom_card')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
 
         // 调试日志
@@ -355,12 +392,12 @@ class WordPress_Toolkit {
     public function age_calculator_settings_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_age_calculator')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
 
         if ($this->age_calculator) {
@@ -377,12 +414,12 @@ class WordPress_Toolkit {
     public function time_capsule_settings_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_time_capsule')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
 
         if ($this->time_capsule) {
@@ -399,34 +436,250 @@ class WordPress_Toolkit {
     public function cookieguard_settings_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_cookieguard')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
 
-        if ($this->cookieguard) {
-            // 调用CookieGuard模块的设置页面
-            $this->cookieguard->settings_page();
-        } else {
-            echo '<div class="wrap"><h1>Cookie同意设置</h1><div class="error"><p>CookieGuard 模块未正确加载，请检查插件设置。</p></div></div>';
+        // 处理表单提交
+        if (isset($_POST['action']) && $_POST['action'] === 'save_cookieguard_settings') {
+            $this->save_cookieguard_settings();
         }
+
+        // 获取设置
+        $settings = get_option('wordpress_toolkit_cookieguard_settings', array(
+            'cookie_types' => array(),
+            'theme' => 'light',
+            'position' => 'bottom',
+            'learn_more_url' => '',
+            'privacy_policy_url' => '',
+            'consent_expiry_days' => 365
+        ));
+
+        // 添加设置页面样式
+        wp_enqueue_style('cookieguard-admin', plugins_url('assets/cookieguard-admin.css', __FILE__));
+        ?>
+        <div class="wrap">
+            <h1><?php _e('Cookie同意设置', 'wordpress-toolkit'); ?></h1>
+
+            <form method="post" action="">
+                <input type="hidden" name="action" value="save_cookieguard_settings">
+                <?php wp_nonce_field('wordpress_toolkit_cookieguard'); ?>
+
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('Cookie类型', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="cookie_types[]" value="necessary" checked disabled>
+                                <?php _e('必要Cookie', 'wordpress-toolkit'); ?> (<?php _e('始终启用', 'wordpress-toolkit'); ?>)
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="cookie_types[]" value="functional" <?php echo in_array('functional', $settings['cookie_types']) ? 'checked' : ''; ?>>
+                                <?php _e('功能性Cookie', 'wordpress-toolkit'); ?>
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="cookie_types[]" value="analytics" <?php echo in_array('analytics', $settings['cookie_types']) ? 'checked' : ''; ?>>
+                                <?php _e('分析性Cookie', 'wordpress-toolkit'); ?>
+                            </label><br>
+                            <label>
+                                <input type="checkbox" name="cookie_types[]" value="marketing" <?php echo in_array('marketing', $settings['cookie_types']) ? 'checked' : ''; ?>>
+                                <?php _e('营销性Cookie', 'wordpress-toolkit'); ?>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('主题', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <select name="theme">
+                                <option value="light" <?php selected($settings['theme'], 'light'); ?>><?php _e('浅色', 'wordpress-toolkit'); ?></option>
+                                <option value="dark" <?php selected($settings['theme'], 'dark'); ?>><?php _e('深色', 'wordpress-toolkit'); ?></option>
+                                <option value="auto" <?php selected($settings['theme'], 'auto'); ?>><?php _e('自动', 'wordpress-toolkit'); ?></option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('位置', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <select name="position">
+                                <option value="bottom" <?php selected($settings['position'], 'bottom'); ?>><?php _e('底部', 'wordpress-toolkit'); ?></option>
+                                <option value="top" <?php selected($settings['position'], 'top'); ?>><?php _e('顶部', 'wordpress-toolkit'); ?></option>
+                                <option value="center" <?php selected($settings['position'], 'center'); ?>><?php _e('居中', 'wordpress-toolkit'); ?></option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('了解更多链接', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <input type="url" name="learn_more_url" value="<?php echo esc_url($settings['learn_more_url']); ?>" class="regular-text">
+                            <p class="description"><?php _e('Cookie使用说明页面链接', 'wordpress-toolkit'); ?></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('隐私政策链接', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <input type="url" name="privacy_policy_url" value="<?php echo esc_url($settings['privacy_policy_url']); ?>" class="regular-text">
+                            <p class="description"><?php _e('隐私政策页面链接', 'wordpress-toolkit'); ?></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('同意有效期', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <input type="number" name="consent_expiry_days" value="<?php echo $settings['consent_expiry_days']; ?>" min="1" max="3650" step="1">
+                            <p class="description"><?php _e('用户Cookie同意记录的有效天数（默认：365天）', 'wordpress-toolkit'); ?></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <p class="submit">
+                    <input type="submit" name="save_settings" class="button button-primary" value="<?php _e('保存设置', 'wordpress-toolkit'); ?>">
+                </p>
+            </form>
+        </div>
+        <?php
     }
 
     /**
+     * 保存CookieGuard设置
+     */
+    private function save_cookieguard_settings() {
+        if (!current_user_can('manage_options')) {
+            wp_die(__('权限不足', 'wordpress-toolkit'));
+        }
+
+        $cookie_types = isset($_POST['cookie_types']) ? array_map('sanitize_text_field', $_POST['cookie_types']) : array();
+
+        $settings = array(
+            'cookie_types' => $cookie_types,
+            'theme' => sanitize_text_field($_POST['theme']),
+            'position' => sanitize_text_field($_POST['position']),
+            'learn_more_url' => esc_url_raw($_POST['learn_more_url']),
+            'privacy_policy_url' => esc_url_raw($_POST['privacy_policy_url']),
+            'consent_expiry_days' => intval($_POST['consent_expiry_days'])
+        );
+
+        update_option('wordpress_toolkit_cookieguard_settings', $settings);
+
+        // 显示成功消息
+        add_settings_error('wordpress_toolkit_cookieguard_settings', 'settings_saved', __('设置已保存', 'wordpress-toolkit'), 'updated');
+        set_transient('settings_errors', get_settings_errors(), 30);
+    }
+
+    /**
+     * 简洁友情链接设置页面
+     */
+    public function simple_friendlink_settings_page() {
+        // 验证用户权限
+        if (!current_user_can('manage_options')) {
+            wp_die(__('权限不足', 'wordpress-toolkit'));
+        }
+
+        // 保存设置
+        if (isset($_POST['save_settings'])) {
+            $settings = array(
+                'allow_user_submit' => isset($_POST['allow_user_submit']),
+                'require_login' => isset($_POST['require_login']),
+                'admin_approval' => isset($_POST['admin_approval']),
+                'max_links_per_page' => intval($_POST['max_links_per_page'])
+            );
+
+            if (class_exists('Simple_FriendLink_Module')) {
+                $friendlink_module = Simple_FriendLink_Module::get_instance();
+                $friendlink_module->save_settings($settings);
+                echo '<div class="notice notice-success is-dismissible"><p>' . __('设置保存成功！', 'wordpress-toolkit') . '</p></div>';
+            }
+        }
+
+        // 获取当前设置
+        if (class_exists('Simple_FriendLink_Module')) {
+            $friendlink_module = Simple_FriendLink_Module::get_instance();
+            $settings = $friendlink_module->get_settings();
+        } else {
+            $settings = array(
+                'allow_user_submit' => true,
+                'require_login' => true,
+                'admin_approval' => false,
+                'max_links_per_page' => 30
+            );
+        }
+
+        // 显示设置表单
+        ?>
+        <div class="wrap">
+            <h1><?php echo __('简洁友情链接设置', 'wordpress-toolkit'); ?></h1>
+
+            <form method="post" action="">
+                <?php wp_nonce_field('wordpress_toolkit_simple_friendlink'); ?>
+
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('用户提交', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="allow_user_submit" value="1" <?php checked($settings['allow_user_submit']); ?>>
+                                <?php _e('允许用户提交友情链接', 'wordpress-toolkit'); ?>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('需要登录', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="require_login" value="1" <?php checked($settings['require_login']); ?>>
+                                <?php _e('用户必须登录才能提交', 'wordpress-toolkit'); ?>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('管理员审核', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="admin_approval" value="1" <?php checked($settings['admin_approval']); ?>>
+                                <?php _e('用户提交的链接需要管理员审核', 'wordpress-toolkit'); ?>
+                            </label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row"><?php _e('每页显示数量', 'wordpress-toolkit'); ?></th>
+                        <td>
+                            <input type="number" name="max_links_per_page" value="<?php echo $settings['max_links_per_page']; ?>" min="5" max="50" step="5">
+                            <p class="description"><?php _e('友情链接页面每页显示的链接数量（默认：30）', 'wordpress-toolkit'); ?></p>
+                        </td>
+                    </tr>
+
+                                    </table>
+
+                <p class="submit">
+                    <input type="submit" name="save_settings" class="button button-primary" value="<?php _e('保存设置', 'wordpress-toolkit'); ?>">
+                </p>
+            </form>
+        </div>
+        <?php
+    }
+
+/**
      * 网站卡片页面 - 放在工具箱菜单中
      */
     public function custom_cards_list_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_custom_card')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
 
         // 调试日志
@@ -448,12 +701,12 @@ class WordPress_Toolkit {
     public function age_calculator_admin_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
         
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_age_calculator')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
         
         if ($this->age_calculator) {
@@ -467,31 +720,56 @@ class WordPress_Toolkit {
     public function time_capsule_admin_page() {
         // 验证用户权限 - 允许管理员和订阅者访问
         if (!current_user_can('manage_options') && !current_user_can('read')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
 
         // 验证nonce（防止CSRF攻击）- 只在有POST数据时验证
         if (!empty($_POST) && isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_time_capsule')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
 
         if ($this->time_capsule) {
             $this->time_capsule->admin_page();
         }
     }
-    
+
+    /**
+     * 友情链接管理页面 - 统一管理页面
+     */
+    public function friendlinks_admin_page() {
+        // 验证用户权限
+        if (!current_user_can('manage_options')) {
+            wp_die(__('权限不足', 'wordpress-toolkit'));
+        }
+
+        // 简化验证 - 将nonce验证移到具体的操作处理函数中
+        // 避免在页面加载时进行验证，防止误报
+
+        if ($this->simple_friendlink_admin) {
+            // 调用友情链接管理页面的统一视图
+            $this->simple_friendlink_admin->unified_admin_page();
+        } else {
+            echo '<div class="wrap"><div class="error"><p>' . __('友情链接管理模块未正确加载', 'wordpress-toolkit') . '</p>';
+            echo '<br><strong>调试信息:</strong><br>';
+            echo 'simple_friendlink_admin: ' . ($this->simple_friendlink_admin ? '已加载' : '未加载') . '<br>';
+            echo 'simple_friendlink: ' . ($this->simple_friendlink ? '已加载' : '未加载') . '<br>';
+            echo 'WordPress工具包版本: ' . WORDPRESS_TOOLKIT_VERSION . '<br>';
+            echo '</p></div></div>';
+        }
+    }
+
     /**
      * CookieGuard管理页面 - 安全版本
      */
     public function cookieguard_admin_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
         
         // 验证nonce（防止CSRF攻击）
         if (isset($_POST['action']) && !wp_verify_nonce($_POST['_wpnonce'], 'wordpress_toolkit_cookieguard')) {
-            wp_die(wt__('安全验证失败', 'wordpress-toolkit'));
+            wp_die(__('安全验证失败', 'wordpress-toolkit'));
         }
         
         if ($this->cookieguard) {
@@ -506,7 +784,7 @@ class WordPress_Toolkit {
     public function toolbox_about_page() {
         // 验证用户权限
         if (!current_user_can('manage_options')) {
-            wp_die(wt__('权限不足', 'wordpress-toolkit'));
+            wp_die(__('权限不足', 'wordpress-toolkit'));
         }
         ?>
         <div class="wrap">
@@ -523,6 +801,10 @@ class WordPress_Toolkit {
                         <a href="<?php echo esc_url(admin_url('admin.php?page=wordpress-toolkit-time-capsule')); ?>" class="quick-link">
                             <span class="dashicons dashicons-archive"></span>
                             <span>物品管理</span>
+                        </a>
+                        <a href="<?php echo esc_url(admin_url('admin.php?page=wordpress-toolkit-friendlinks')); ?>" class="quick-link">
+                            <span class="dashicons dashicons-networking"></span>
+                            <span>友情链接管理</span>
                         </a>
                         <a href="<?php echo esc_url(admin_url('options-general.php?page=wordpress-toolkit-custom-card-settings')); ?>" class="quick-link">
                             <span class="dashicons dashicons-admin-settings"></span>
@@ -613,7 +895,34 @@ class WordPress_Toolkit {
                         <p>支持自定义CSS样式覆盖</p>
                     </div>
                 </div>
-                
+
+                <div class="about-section">
+                    <h2>友情链接模块</h2>
+                    <div class="feature-card">
+                        <h3>主要功能</h3>
+                        <ul>
+                            <li>完整的友情链接管理系统</li>
+                            <li>支持链接分类和状态管理</li>
+                            <li>用户提交友情链接功能</li>
+                            <li>管理员审核机制（统一管理界面）</li>
+                            <li>响应式网格布局展示</li>
+                            <li>支持网站Logo和描述</li>
+                            <li>搜索和分页功能</li>
+                            <li>专用页面模板</li>
+                            <li>AJAX表单提交</li>
+                        </ul>
+
+                        <h3>后台管理</h3>
+                        <p>管理员可在"工具箱" → "友情链接管理"中统一管理所有友情链接</p>
+                        <p>管理页面包含"已发布链接"和"待审核申请"两个标签页</p>
+                        <p>支持批量操作、单个审核、删除等功能</p>
+
+                        <h3>前端显示</h3>
+                        <p>使用页面模板"友情链接页面"或"简洁友情链接页面"创建专用页面</p>
+                        <p>页面将自动包含完整的友情链接展示和提交功能</p>
+                    </div>
+                </div>
+
                 <div class="about-section">
                     <h2>通用功能</h2>
                     <div class="feature-card">

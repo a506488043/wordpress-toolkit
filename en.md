@@ -1,13 +1,13 @@
 # WordPress Toolkit
 
-**语言 / Language:** [中文](README.md) | [English](readme.md)
+**Language / Language:** [中文](README.md) | [English](en.md)
 
 A powerful, secure, and reliable WordPress comprehensive toolkit that integrates four practical tool modules to provide comprehensive functionality support for websites.
 
 ## 📋 Basic Information
 
 - **Plugin Name**: WordPress Toolkit
-- **Version**: 1.0.3
+- **Version**: 1.0.4
 - **Author**: www.saiita.com.cn
 - **License**: GPL v2 or later
 - **Minimum Requirements**: WordPress 5.0+, PHP 7.4+
@@ -119,6 +119,38 @@ Professional Cookie consent notification system compliant with GDPR requirements
 - Custom style and text configuration
 - Elegant frosted glass background effects
 
+### 🔗 Friend Links Management
+**Version**: 1.0.0
+
+Complete friend link management system with user submission and moderation capabilities.
+
+**Core Features**:
+- ✅ **Complete Management**: Full friend link CRUD operations
+- ✅ **Category System**: Organize links by categories
+- ✅ **User Submissions**: Allow logged-in users to submit friend links
+- ✅ **Moderation System**: Admin approval workflow for user submissions
+- ✅ **Responsive Grid**: Beautiful card-based layout for link display
+- ✅ **Rich Metadata**: Support for logos, descriptions, and ratings
+- ✅ **Search & Filter**: Search by name, URL, or description
+- ✅ **Pagination**: Handle large numbers of links efficiently
+- ✅ **Template System**: Dedicated page template with full functionality
+- ✅ **AJAX Operations**: Smooth form submission and management
+
+**Backend Management**:
+- Access via "Toolkit" → "Friend Links Management" in WordPress admin
+- Unified interface with "Published Links" and "Pending Review" tabs
+- Batch operations for approval and deletion
+- Individual link editing and management
+
+**Frontend Display**:
+- Create a new WordPress page and select "友情链接页面" (Friend Links Page) template
+- The page automatically includes complete friend links functionality:
+  - Friend links grid display
+  - Search and filter capabilities
+  - Category navigation
+  - User submission form (if enabled)
+  - Pagination support
+
 ## 🏗️ Technical Architecture
 
 ### Modular Design
@@ -129,6 +161,7 @@ wordpress-toolkit/
 │   ├── custom-card/              # Website card module
 │   ├── age-calculator/           # Age calculator module
 │   ├── time-capsule/             # Item management module
+│   ├── simple-friendlink/        # Friend links template module
 │   └── cookieguard/              # Cookie consent module
 ├── assets/                       # Asset files
 │   ├── css/                      # Style files
@@ -338,6 +371,20 @@ wordpress-toolkit/
 
 ## 🔄 Version History
 
+### v1.0.4 (2025-10-27)
+**Major Updates**:
+- 🔗 **Simplified Friend Links**: Clean friend links display template
+- 🗑️ **Module Simplification**: Removed backend management interface
+- 📱 **Responsive Design**: Beautiful card-based layout for link display
+- 🎨 **Template Focus**: Frontend display only with clean design
+
+**Technical Features**:
+- Simple template-based friend links display
+- Automatic favicon fetching with fallback
+- Responsive grid layout
+- Minimalist design approach
+- Database-driven content management
+
 ### v1.0.3 (2025-10-23)
 **Major Updates**:
 - 🎨 **UI Unification**: Backend management interface style unification optimization
@@ -377,6 +424,7 @@ A: WordPress Toolkit includes four core tools:
 2. **Age Calculator** - Precisely calculate age
 3. **Item Management** - Item management and warranty tracking
 4. **Cookie Consent** - GDPR compliant Cookie notifications
+5. **Friend Links Management** - Complete friend link management and display system
 
 ### Q: Can I use individual tools separately?
 A: Yes, each tool is an independent module. You can enable or disable corresponding modules as needed without affecting other functions.

@@ -85,9 +85,9 @@
                 var value = $field.val();
                 if (name && name !== 'tc_nonce') {
                     formData[name] = value;
-                    // 调试：记录关键字段
+                    // 调试：记录关键字段（仅在开发时启用）
                     if (name.includes('fee') || name.includes('price')) {
-                        console.log('Field ' + name + ':', value, 'type:', typeof value);
+                        // console.log('Field ' + name + ':', value, 'type:', typeof value);
                     }
                 }
             });

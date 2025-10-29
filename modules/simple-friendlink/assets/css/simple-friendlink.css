@@ -1,0 +1,297 @@
+/**
+ * Friends Plugin CSS - 匹配1.1.6.zip插件的样式
+ */
+
+.friends-plugin-container {
+    /* 添加上边距，与WordPress导航栏保持适当距离 */
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.friends-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* 使用伪元素填充最后一行，确保奇数个卡片左对齐 */
+.friends-grid::after {
+    content: '';
+    width: 350px; /* 与卡片宽度相同 */
+    height: 0; /* 不占用垂直空间 */
+}
+
+.friend-card {
+    background-color: #fff;
+    border: 1px solid #E7E9EF;
+    border-radius: 14px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* 确保内容遵循边框半径 */
+    width: 350px; /* 固定宽度保持卡片大小一致 */
+    flex-shrink: 0; /* 防止卡片收缩 */
+}
+
+.friend-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.friend-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.friend-icon-link {
+    margin-right: 15px;
+    flex-shrink: 0; /* 防止图标收缩 */
+}
+
+.friend-icon {
+    width: 60px; /* 根据设计调整，图片显示约80px但我们从小开始 */
+    height: 60px;
+    border-radius: 50%; /* 圆形图标 */
+    object-fit: cover; /* 确保图像覆盖区域不失真 */
+    display: block;
+    background: #f0f0f0;
+    padding: 2px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Logo加载失败时的备用样式 */
+.friend-icon[style*="display: none"] + .friend-icon {
+    /* 确保首字母占位符始终可见 */
+    display: flex !important;
+}
+
+.friend-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* 用于文本截断 */
+}
+
+.friend-name {
+    margin: 0 0 5px 0 !important;
+    font-size: 1.2em; /* 根据需要调整 */
+    font-weight: bold;
+    /* color: inherit; */ /* 将继承主题的默认颜色 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.friend-name a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.friend-description {
+    margin: 0;
+    font-size: 0.9em;
+    color: #BFC1C6; /* 根据要求 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4; /* 确保单行 */
+    max-height: 1.4em; /* 单行回退 */
+}
+
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .friend-card {
+        max-width: 90vw; /* 防止在非常小的屏幕上溢出 */
+        width: min(350px, 90vw); /* 保持固定宽度但尊重视口限制 */
+    }
+}
+
+
+.friend-description {
+    height: 1.4em; /* 单行的严格高度 */
+    overflow: hidden;
+}
+
+.friend-latest-post {
+    background-color: #f8f9fa;
+    border-radius: 14px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    min-height: 2.5em;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.latest-post-title {
+    color: inherit;
+    text-decoration: none;
+    font-weight: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+    flex-grow: 1;
+}
+
+.latest-post-title:hover {
+    text-decoration: underline;
+}
+
+.latest-post-date,
+.no-latest-post {
+    color: #BFC1C6;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.no-latest-post {
+    width: 100%;
+    text-align: left;
+}
+
+.loading-rss {
+    color: #999;
+    font-style: italic;
+    width: 100%;
+    text-align: left;
+}
+
+.loading-desc {
+    color: #999;
+    font-style: italic;
+}
+
+/* 最近文章动画样式 */
+.friend-card.recent-post {
+    position: relative;
+    animation: rotating-shadow 3s ease-in-out infinite;
+}
+
+@keyframes rotating-shadow {
+    0% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            8px 8px 20px rgba(152, 193, 217, 0.4);
+    }
+    5% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            8px 6px 20px rgba(152, 193, 217, 0.4);
+    }
+    10% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            6px 8px 20px rgba(152, 193, 217, 0.4);
+    }
+    15% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            3px 9px 20px rgba(152, 193, 217, 0.4);
+    }
+    20% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            0px 10px 20px rgba(152, 193, 217, 0.4);
+    }
+    25% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -3px 9px 20px rgba(152, 193, 217, 0.4);
+    }
+    30% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -6px 8px 20px rgba(152, 193, 217, 0.4);
+    }
+    35% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -9px 6px 20px rgba(152, 193, 217, 0.4);
+    }
+    40% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -10px 3px 20px rgba(152, 193, 217, 0.4);
+    }
+    45% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -9px 0px 20px rgba(152, 193, 217, 0.4);
+    }
+    50% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -8px -3px 20px rgba(152, 193, 217, 0.4);
+    }
+    55% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -6px -6px 20px rgba(152, 193, 217, 0.4);
+    }
+    60% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            -3px -9px 20px rgba(152, 193, 217, 0.4);
+    }
+    65% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            0px -10px 20px rgba(152, 193, 217, 0.4);
+    }
+    70% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            3px -9px 20px rgba(152, 193, 217, 0.4);
+    }
+    75% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            6px -6px 20px rgba(152, 193, 217, 0.4);
+    }
+    80% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            8px -3px 20px rgba(152, 193, 217, 0.4);
+    }
+    85% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            9px 0px 20px rgba(152, 193, 217, 0.4);
+    }
+    90% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            10px 3px 20px rgba(152, 193, 217, 0.4);
+    }
+    95% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            9px 6px 20px rgba(152, 193, 217, 0.4);
+    }
+    100% {
+        box-shadow:
+            0 0 12px rgba(152, 193, 217, 0.2),
+            8px 8px 20px rgba(152, 193, 217, 0.4);
+    }
+}
+
+/* 响应式设计 - 针对不同屏幕尺寸调整间距 */
+@media screen and (max-width: 768px) {
+    .friends-plugin-container {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .friends-plugin-container {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+}

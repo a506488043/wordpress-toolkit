@@ -210,7 +210,7 @@
         // 更新预览
         updatePreview: function() {
             // 这里可以添加实时预览功能
-            console.log('Preview updated');
+            // console.log('Preview updated');
         }
     });
 

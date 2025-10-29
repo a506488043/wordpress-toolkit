@@ -28,7 +28,7 @@
                 return false;
             }
 
-            console.log('WordPress Toolkit Core initialized successfully');
+            // console.log('WordPress Toolkit Core initialized successfully');
             return true;
         },
 
@@ -98,12 +98,12 @@
         migrateEventBindings: function() {
             // 如果发现旧的事件绑定，使用新的统一方式
             if (typeof CookieGuardAdmin !== 'undefined' && CookieGuardAdmin.init) {
-                console.log('Migrating CookieGuardAdmin to new framework...');
+                // console.log('Migrating CookieGuardAdmin to new framework...');
                 // CookieGuardAdmin已经重新定义为基础ToolkitCore的扩展
             }
 
             if (typeof TimeCapsuleAdmin !== 'undefined' && TimeCapsuleAdmin.init) {
-                console.log('Migrating TimeCapsuleAdmin to new framework...');
+                // console.log('Migrating TimeCapsuleAdmin to new framework...');
                 // TimeCapsuleAdmin已经重新定义为基础ToolkitCore的扩展
             }
         },
@@ -148,10 +148,10 @@
     $(document).ready(function() {
         MigrationHelper.init();
 
-        // 延迟显示迁移完成通知
-        setTimeout(function() {
-            MigrationHelper.showMigrationComplete();
-        }, 1000);
+        // 延迟显示迁移完成通知 - 已禁用
+        // setTimeout(function() {
+        //     MigrationHelper.showMigrationComplete();
+        // }, 1000);
     });
 
     // 暴露到全局作用域

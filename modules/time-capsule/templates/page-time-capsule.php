@@ -325,19 +325,13 @@ get_header(); ?>
 <script>
 // 新版页面模板JavaScript
 jQuery(document).ready(function($) {
-    // 仅在调试模式下输出日志
-    var wp_debug = <?php echo (defined('WP_DEBUG') && WP_DEBUG) ? 'true' : 'false'; ?>;
-    if (wp_debug) {
-        console.log('新版时间胶囊页面JavaScript已加载');
-    }
+    // console.log('新版时间胶囊页面JavaScript已加载');
 
     // 类别卡片筛选功能
     $('.tc-category-card, .tc-filter-reset').on('click', function(e) {
         e.preventDefault();
         var category = $(this).data('category');
-        if (wp_debug) {
-            console.log('点击类别卡片筛选:', category);
-        }
+        // console.log('点击类别卡片筛选:', category);
 
         $('.tc-category-card, .tc-filter-reset').removeClass('active');
         if ($(this).hasClass('tc-filter-reset')) {
@@ -348,16 +342,12 @@ jQuery(document).ready(function($) {
 
         if (category === '' || category === undefined) {
             $('.tc-item-new').show();
-            if (wp_debug) {
-                console.log('显示所有物品');
-            }
+            // console.log('显示所有物品');
         } else {
             $('.tc-item-new').hide();
             var matchingItems = $('.tc-item-new[data-category="' + category + '"]');
             matchingItems.show();
-            if (wp_debug) {
-                console.log('筛选类别:', category, '找到物品数量:', matchingItems.length);
-            }
+            // console.log('筛选类别:', category, '找到物品数量:', matchingItems.length);
         }
 
         // 更新URL参数
@@ -370,9 +360,7 @@ jQuery(document).ready(function($) {
             }
             window.history.replaceState({}, '', url);
         } catch (e) {
-            if (wp_debug) {
-                console.log('URL更新失败:', e);
-            }
+            // console.log('URL更新失败:', e);
         }
     });
 
@@ -380,9 +368,7 @@ jQuery(document).ready(function($) {
     var urlParams = new URLSearchParams(window.location.search);
     var categoryParam = urlParams.get('category');
     if (categoryParam) {
-        if (wp_debug) {
-            console.log('从URL应用筛选:', categoryParam);
-        }
+        // console.log('从URL应用筛选:', categoryParam);
         $('.tc-category-card[data-category="' + categoryParam + '"]').addClass('active');
         $('.tc-filter-reset').removeClass('active');
         $('.tc-item-new').hide();
