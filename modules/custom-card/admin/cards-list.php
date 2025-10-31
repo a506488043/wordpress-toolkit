@@ -30,12 +30,8 @@ debug_log('PHP max_execution_time: ' . ini_get('max_execution_time'));
 
 global $wpdb;
 
-debug_log('Global $wpdb object: ' . (is_object($wpdb) ? 'Valid' : 'Invalid'));
-
 // 处理操作请求
-debug_log('Checking for action parameter: ' . (isset($_GET['action']) ? $_GET['action'] : 'Not set'));
 if (isset($_GET['action']) && wp_verify_nonce($_GET['_wpnonce'], 'custom_card_action')) {
-    debug_log('Action detected: ' . $_GET['action']);
     global $wpdb;
     $cards_table = $wpdb->prefix . 'chf_cards';
 
@@ -43,7 +39,6 @@ if (isset($_GET['action']) && wp_verify_nonce($_GET['_wpnonce'], 'custom_card_ac
         case 'delete':
             if (isset($_GET['id'])) {
                 $card_id = intval($_GET['id']);
-                debug_log('Deleting card ID: ' . $card_id);
                 $wpdb->delete($cards_table, array('id' => $card_id));
                 // 重定向回卡片列表页面
                 wp_redirect(add_query_arg(array('page' => 'wordpress-toolkit-cards-list', 'message' => 'deleted'), admin_url('admin.php')));
@@ -53,14 +48,10 @@ if (isset($_GET['action']) && wp_verify_nonce($_GET['_wpnonce'], 'custom_card_ac
 
 
     }
-} else {
-    debug_log('No valid action or nonce verification failed');
 }
 
 // 显示操作成功消息
-debug_log('Checking for message parameter: ' . (isset($_GET['message']) ? $_GET['message'] : 'Not set'));
 if (isset($_GET['message'])) {
-    debug_log('Message detected: ' . $_GET['message']);
     switch ($_GET['message']) {
         case 'deleted':
             echo '<div class="notice notice-success is-dismissible"><p>卡片已删除！</p></div>';
@@ -69,11 +60,9 @@ if (isset($_GET['message'])) {
 }
 
 // 获取搜索参数
-debug_log('Getting search parameters');
 $search = isset($_GET['s']) ? sanitize_text_field($_GET['s']) : '';
 $status = isset($_GET['status']) ? sanitize_text_field($_GET['status']) : '';
 $paged = isset($_GET['paged']) ? max(1, intval($_GET['paged'])) : 1;
-debug_log('Search: ' . $search . ', Status: ' . $status . ', Page: ' . $paged);
 
 // 构建查询条件
 $where_conditions = array();
@@ -102,39 +91,26 @@ if (!in_array($per_page, $per_page_options)) {
 $offset = ($paged - 1) * $per_page;
 
 // 检查表是否存在
-debug_log('Checking if cards table exists');
 $cards_table = $wpdb->prefix . 'chf_cards';
 $table_exists = $wpdb->get_var("SHOW TABLES LIKE '$cards_table'") == $cards_table;
-
-debug_log('Cards table exists: ' . ($table_exists ? 'Yes' : 'No'));
-
-debug_log('Table name: ' . $cards_table);
 
 // 检查点击统计表是否存在
 $clicks_table = $wpdb->prefix . 'chf_card_clicks';
 $clicks_table_exists = $wpdb->get_var("SHOW TABLES LIKE '$clicks_table'") == $clicks_table;
 
-debug_log('Clicks table exists: ' . ($clicks_table_exists ? 'Yes' : 'No'));
-
 if (!$table_exists) {
-    debug_log('Table does not exist, setting empty data');
     $total_items = 0;
     $total_pages = 0;
     $cards = array();
 } else {
-    debug_log('Table exists, proceeding with queries');
     // 获取卡片总数
     $count_query = "SELECT COUNT(*) FROM {$wpdb->prefix}chf_cards $where_sql";
-    debug_log('Count query: ' . $count_query);
     if (!empty($query_params)) {
         $count_query = $wpdb->prepare($count_query, $query_params);
-        debug_log('Prepared count query: ' . $count_query);
     }
     $total_items = $wpdb->get_var($count_query);
-    debug_log('Total items raw result: ' . var_export($total_items, true));
     $total_items = $total_items ? intval($total_items) : 0;
     $total_pages = ceil($total_items / $per_page);
-    debug_log('Total items: ' . $total_items . ', Total pages: ' . $total_pages);
 
     // 获取卡片列表 - 按点击次数从高到低排序
     $query = "SELECT c.*, COALESCE(COUNT(click.id), 0) as click_count
@@ -147,28 +123,20 @@ if (!$table_exists) {
     $query_params[] = $per_page;
     $query_params[] = $offset;
 
-    debug_log('Executing query: ' . $query);
-    debug_log('Query params: ' . print_r($query_params, true));
-
     if (!empty($query_params)) {
-        debug_log('Executing prepared query');
         $cards = $wpdb->get_results($wpdb->prepare($query, $query_params));
     } else {
-        debug_log('Executing direct query');
         $cards = $wpdb->get_results($query);
     }
-    
-    debug_log('Cards found: ' . count($cards));
+
     if (is_wp_error($cards)) {
-        debug_log('Query error: ' . $cards->get_error_message());
+        error_log('Custom Card Query Error: ' . $cards->get_error_message());
     }
 }
 
 // 点击统计数据现在已包含在主查询中，不需要单独查询
 $click_stats = array();
 ?>
-
-<?php debug_log('=== STARTING HTML OUTPUT ==='); ?>
 <div class="wrap">
 
     <!-- 数据库表状态检查 -->
@@ -360,8 +328,6 @@ $click_stats = array();
     </div>
 
 </div>
-
-<?php debug_log('=== CARDS LIST PAGE COMPLETED ==='); ?>
 
 <style>
 /* 优化合并布局 */
