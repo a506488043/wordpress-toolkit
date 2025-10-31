@@ -2,8 +2,8 @@
 /**
  * Plugin Name: WordPress Toolkit
  * Plugin URI: https://www.saiita.com.cn
- * Description: 一个集成了网站卡片、年龄计算器、物品管理、友情链接和Cookie同意通知的综合工具包。
- * Version: 1.0.4
+ * Description: 一个集成了网站卡片、年龄计算器、物品管理、友情链接、Cookie同意通知和REST代理修复的综合工具包。
+ * Version: 1.0.5
  * Author: www.saiita.com.cn
  * Author URI: https://www.saiita.com.cn
  * License: GPL v2 or later
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 }
 
 // 定义插件常量
-define('WORDPRESS_TOOLKIT_VERSION', '1.0.4');
+define('WORDPRESS_TOOLKIT_VERSION', '1.0.5');
 define('WORDPRESS_TOOLKIT_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WORDPRESS_TOOLKIT_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('WORDPRESS_TOOLKIT_PLUGIN_BASENAME', plugin_basename(__FILE__));
@@ -34,6 +34,9 @@ require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'includes/class-logger.php';
 
 // 加载管理页面模板系统
 require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'includes/class-admin-page-template.php';
+
+// 加载REST代理修复模块
+require_once WORDPRESS_TOOLKIT_PLUGIN_PATH . 'modules/rest-proxy-fix.php';
 
 /**
  * WordPress Toolkit 主类

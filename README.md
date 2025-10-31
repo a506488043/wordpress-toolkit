@@ -2,7 +2,7 @@
 
 **语言 / Language:** [中文](README.md) | [English](en.md)
 
-一个功能强大、安全可靠的WordPress综合工具包，集成了四个实用工具模块，为网站提供全面的功能支持。
+一个功能强大、安全可靠的WordPress综合工具包，集成了五个实用工具模块，为网站提供全面的功能支持。
 
 ## 📋 基本信息
 
@@ -155,6 +155,49 @@ echo do_shortcode('[custom_card url="https://example.com"]');
 [simple_friendlink_submit]
 ```
 
+### 🛡️ REST代理修复 (REST Proxy Fix)
+**版本**: 1.0.0
+
+智能修复WordPress REST代理连接问题，保护网站稳定运行。
+
+**核心功能**:
+- ✅ **智能过滤**: 仅阻止有问题的WordPress.com域名
+- ✅ **小程序保护**: 确保微信小程序API完全正常
+- ✅ **RSS/Feed支持**: 保护所有RSS订阅和Feed功能
+- ✅ **安全防护**: 阻止恶意请求和连接错误
+- ✅ **自动清理**: 清理相关缓存和错误日志
+- ✅ **调试支持**: 管理员可见的调试信息
+
+**阻止的问题域名**:
+- 🚫 public-api.wordpress.com (问题REST代理)
+- 🚫 rest-proxy.com (问题代理服务)
+- 🚫 wp-proxy.com (问题代理服务)
+
+**保护的合法服务**:
+- ✅ saiita.com.cn (本地域名)
+- ✅ www.saiita.com.cn (本地域名)
+- ✅ api.weixin.qq.com (微信小程序API)
+- ✅ pay.weixin.qq.com (微信支付)
+- ✅ feedly.com (RSS阅读器)
+- ✅ feedburner.com (RSS服务)
+- ✅ api.wordpress.org (WordPress官方API)
+- ✅ wordpress.org (WordPress官网)
+- ✅ download.wordpress.org (WordPress下载)
+- ✅ WordPress内部API和Feed路径
+
+**特色功能**:
+- 智能域名白名单机制
+- 路径级请求保护
+- 自动错误日志记录
+- 管理界面状态监控
+- 对网站性能零影响
+
+**解决的问题**:
+- 修复 `public-api.wordpress.com/wp-admin/rest-proxy/` 连接失败
+- 消除浏览器控制台REST代理错误
+- 确保微信小程序和RSS订阅不受影响
+- 提升网站整体稳定性和安全性
+
 ## 🏗️ 技术架构
 
 ### 模块化设计
@@ -162,6 +205,7 @@ echo do_shortcode('[custom_card url="https://example.com"]');
 wordpress-toolkit/
 ├── wordpress-toolkit.php          # 主插件文件
 ├── modules/                       # 功能模块目录
+│   ├── rest-proxy-fix.php        # REST代理修复模块
 │   ├── custom-card/              # 网站卡片模块
 │   ├── age-calculator/           # 年龄计算器模块
 │   ├── time-capsule/             # 物品管理模块
@@ -480,6 +524,31 @@ $template->render();
 
 ## 🔄 版本历史
 
+### v1.0.5 (2025-10-31)
+**安全增强更新**:
+- 🛡️ **REST代理修复**: 新增智能REST代理连接问题修复模块
+- 🔒 **安全防护**: 阻止有问题的WordPress.com域名请求
+- 📱 **小程序保护**: 确保微信小程序API完全正常工作
+- 📡 **RSS/Feed支持**: 保护所有RSS订阅和Feed功能
+- 🧹 **自动清理**: 清理相关缓存和错误日志
+- 🔧 **智能过滤**: 域名白名单和路径级请求保护
+- 📊 **状态监控**: 管理界面实时状态显示和调试信息
+- ⚡ **零影响**: 对网站性能无任何影响的静默修复
+
+**解决的核心问题**:
+- 修复 `public-api.wordpress.com/wp-admin/rest-proxy/` 连接失败
+- 消除浏览器控制台REST代理错误信息
+- 确保微信小程序功能完全不受影响
+- 保护RSS订阅功能正常工作
+- 提升网站整体稳定性和安全性
+
+**技术特性**:
+- 智能域名过滤机制
+- 路径级请求保护
+- 自动错误日志记录
+- 管理员调试信息显示
+- 与现有功能完全兼容
+
 ### v1.0.4 (2025-10-29)
 **架构重构更新**:
 - 🏗️ **代码架构重构**: 统一的设计系统和开发框架
@@ -541,12 +610,13 @@ $template->render();
 ## ❓ 常见问题
 
 ### Q: 这个插件包括哪些工具？
-A: WordPress Toolkit包括五个核心工具：
+A: WordPress Toolkit包括六个核心工具：
 1. **网站卡片** - 自动抓取网站元数据
 2. **年龄计算器** - 精确计算年龄
 3. **物品管理** - 物品管理和保修追踪
 4. **Cookie同意** - GDPR合规的Cookie通知
 5. **友情链接管理** - 完整的友情链接管理和展示系统
+6. **REST代理修复** - 智能修复WordPress REST代理连接问题
 
 ### Q: 我可以单独使用各个工具吗？
 A: 是的，每个工具都是独立的模块。你可以根据需要启用或禁用相应的模块，不会影响其他功能。
