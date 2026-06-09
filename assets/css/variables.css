@@ -1,0 +1,96 @@
+/**
+ * WordPress Toolkit - CSS变量定义
+ * 统一的设计系统和颜色方案
+ */
+
+:root {
+    /* 主题色彩 */
+    --tc-primary-color: #667eea;
+    --tc-primary-hover: #5a6fd8;
+    --tc-primary-light: rgba(102, 126, 234, 0.1);
+
+    /* 苹果风格蓝色 */
+    --tc-apple-blue: #007AFF;
+    --tc-apple-blue-hover: #0051D5;
+    --tc-apple-blue-light: rgba(0, 122, 255, 0.1);
+
+    /* 状态色彩 */
+    --tc-success-color: #34c759;
+    --tc-success-hover: #30d158;
+    --tc-success-light: rgba(52, 199, 89, 0.1);
+
+    --tc-warning-color: #ff9500;
+    --tc-warning-hover: #ff8c00;
+    --tc-warning-light: rgba(255, 149, 0, 0.1);
+
+    --tc-error-color: #ff3b30;
+    --tc-error-hover: #d70015;
+    --tc-error-light: rgba(255, 59, 48, 0.1);
+
+    --tc-info-color: #007aff;
+    --tc-info-hover: #0056b3;
+    --tc-info-light: rgba(0, 122, 255, 0.1);
+
+    /* 中性色彩 */
+    --tc-text-primary: #1d1d1f;
+    --tc-text-secondary: #86868b;
+    --tc-text-muted: #6e6e73;
+    --tc-text-placeholder: #aeaeb2;
+
+    --tc-bg-primary: #ffffff;
+    --tc-bg-secondary: #f5f5f7;
+    --tc-bg-tertiary: #f9f9fb;
+    --tc-bg-quaternary: #fbfbfd;
+
+    --tc-border-primary: #d2d2d7;
+    --tc-border-secondary: #e5e5e7;
+    --tc-border-light: #f0f0f1;
+
+    /* 阴影 */
+    --tc-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --tc-shadow-md: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --tc-shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --tc-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    /* 圆角 */
+    --tc-radius-sm: 4px;
+    --tc-radius-md: 6px;
+    --tc-radius-lg: 8px;
+    --tc-radius-xl: 12px;
+    --tc-radius-full: 50%;
+
+    /* 字体 */
+    --tc-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --tc-font-size-xs: 11px;
+    --tc-font-size-sm: 12px;
+    --tc-font-size-base: 14px;
+    --tc-font-size-lg: 16px;
+    --tc-font-size-xl: 18px;
+    --tc-font-size-2xl: 20px;
+    --tc-font-size-3xl: 22px;
+    --tc-font-size-4xl: 28px;
+
+    --tc-font-weight-normal: 400;
+    --tc-font-weight-medium: 500;
+    --tc-font-weight-semibold: 600;
+    --tc-font-weight-bold: 700;
+
+    /* 间距 */
+    --tc-spacing-xs: 4px;
+    --tc-spacing-sm: 8px;
+    --tc-spacing-md: 12px;
+    --tc-spacing-lg: 16px;
+    --tc-spacing-xl: 20px;
+    --tc-spacing-2xl: 24px;
+    --tc-spacing-3xl: 30px;
+
+    /* 过渡动画 */
+    --tc-transition-fast: 0.15s ease;
+    --tc-transition-normal: 0.2s ease;
+    --tc-transition-slow: 0.3s ease;
+
+    /* Z-index层级 */
+    --tc-z-dropdown: 1000;
+    --tc-z-modal: 100000;
+    --tc-z-modal-backdrop: 99999;
+}

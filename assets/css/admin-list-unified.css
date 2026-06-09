@@ -1,0 +1,678 @@
+/**
+ * ai-content-toolkit 统一列表样式
+ * 
+ * 所有后台模块的列表、表格、筛选栏、按钮、徽章等统一使用此样式
+ * 前缀: act- (ai-content-toolkit)
+ * 基于 variables.css (--tc-*) 设计系统
+ *
+ * @package AI Content Toolkit
+ * @since 1.0.0
+ */
+
+/* ========================================
+   筛选栏
+   ======================================== */
+.act-filter-bar {
+    background: var(--tc-bg-primary);
+    border: 1px solid var(--tc-border-secondary);
+    border-radius: var(--tc-radius-xl);
+    padding: var(--tc-spacing-lg) var(--tc-spacing-xl);
+    margin-bottom: var(--tc-spacing-lg);
+    box-shadow: var(--tc-shadow-sm);
+}
+
+.act-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.act-filter-row select,
+.act-filter-row input[type="text"],
+.act-filter-row input[type="number"] {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 var(--tc-spacing-md);
+    border-radius: var(--tc-radius-md);
+    border: 1px solid var(--tc-border-primary);
+    font-size: var(--tc-font-size-sm);
+    transition: border-color var(--tc-transition-normal), box-shadow var(--tc-transition-normal);
+}
+
+.act-filter-row select:focus,
+.act-filter-row input[type="text"]:focus,
+.act-filter-row input[type="number"]:focus {
+    border-color: var(--tc-apple-blue);
+    box-shadow: 0 0 0 2px var(--tc-apple-blue-light);
+    outline: none;
+}
+
+.act-filter-row input[type="text"],
+.act-filter-row input[type="number"] {
+    width: 220px;
+}
+
+.act-filter-actions {
+    display: flex;
+    gap: var(--tc-spacing-sm);
+    margin-left: auto;
+}
+
+/* ========================================
+   按钮
+   ======================================== */
+.act-btn {
+    height: 36px;
+    line-height: 34px;
+    padding: 0 var(--tc-spacing-lg);
+    border-radius: var(--tc-radius-md);
+    font-size: var(--tc-font-size-sm);
+    font-weight: var(--tc-font-weight-medium);
+    transition: all var(--tc-transition-normal);
+    border: 1px solid var(--tc-border-primary);
+    background: var(--tc-bg-primary);
+    color: var(--tc-text-primary);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--tc-spacing-xs);
+}
+
+.act-btn:hover {
+    background: var(--tc-bg-secondary);
+    border-color: var(--tc-text-secondary);
+}
+
+.act-btn-primary {
+    background: var(--tc-apple-blue);
+    border-color: var(--tc-apple-blue);
+    color: var(--tc-bg-primary);
+}
+
+.act-btn-primary:hover {
+    background: var(--tc-apple-blue-hover);
+    border-color: var(--tc-apple-blue-hover);
+    color: var(--tc-bg-primary);
+}
+
+/* 行内小按钮（编辑/查看/删除） */
+.act-btn-sm {
+    height: auto;
+    padding: 5px 10px;
+    font-size: var(--tc-font-size-xs);
+    line-height: 1.4;
+    white-space: nowrap;
+    min-width: auto;
+    width: auto;
+}
+
+.act-btn-edit {
+    border-color: var(--tc-apple-blue);
+    color: var(--tc-apple-blue);
+}
+
+.act-btn-edit:hover {
+    background: var(--tc-apple-blue);
+    color: var(--tc-bg-primary);
+}
+
+.act-btn-view {
+    border-color: var(--tc-success-color);
+    color: var(--tc-success-color);
+}
+
+.act-btn-view:hover {
+    background: var(--tc-success-color);
+    color: var(--tc-bg-primary);
+}
+
+.act-btn-delete {
+    border-color: var(--tc-error-color);
+    color: var(--tc-error-color);
+}
+
+.act-btn-delete:hover {
+    background: var(--tc-error-color);
+    color: var(--tc-bg-primary);
+}
+
+/* ========================================
+   统计条
+   ======================================== */
+.act-stats-bar {
+    background: var(--tc-info-light);
+    border: 1px solid var(--tc-border-secondary);
+    border-radius: var(--tc-radius-md);
+    padding: var(--tc-spacing-sm) var(--tc-spacing-lg);
+    margin-top: var(--tc-spacing-md);
+    font-size: var(--tc-font-size-sm);
+    color: var(--tc-apple-blue);
+    display: flex;
+    align-items: center;
+    gap: var(--tc-spacing-sm);
+}
+
+.act-stats-bar strong {
+    font-size: 15px;
+    color: var(--tc-apple-blue-hover);
+}
+
+/* ========================================
+   表格
+   ======================================== */
+.act-table {
+    border: 1px solid var(--tc-border-secondary);
+    border-radius: var(--tc-radius-xl);
+    border-spacing: 0;
+    overflow: hidden;
+    box-shadow: var(--tc-shadow-sm);
+    margin-top: 0;
+}
+
+.act-table thead th {
+    background: var(--tc-bg-secondary);
+    border-bottom: 2px solid var(--tc-border-secondary);
+    color: var(--tc-text-primary);
+    font-weight: var(--tc-font-weight-semibold);
+    font-size: var(--tc-font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 14px var(--tc-spacing-lg);
+    white-space: nowrap;
+}
+
+.act-table tbody td {
+    padding: 14px var(--tc-spacing-lg);
+    vertical-align: middle;
+    border-bottom: 1px solid var(--tc-border-light);
+    font-size: var(--tc-font-size-sm);
+}
+
+.act-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.act-table tbody tr:hover {
+    background: var(--tc-bg-tertiary);
+}
+
+.act-table .item-name {
+    font-size: var(--tc-font-size-base);
+    color: var(--tc-text-primary);
+    font-weight: var(--tc-font-weight-semibold);
+}
+
+.act-table .item-desc {
+    color: var(--tc-text-secondary);
+    font-size: var(--tc-font-size-xs);
+    margin-top: 2px;
+}
+
+.act-table .item-value-bold {
+    font-weight: var(--tc-font-weight-semibold);
+}
+
+.act-table .item-value-empty {
+    color: var(--tc-text-placeholder);
+}
+
+/* ========================================
+   徽章
+   ======================================== */
+.act-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--tc-spacing-xs);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: var(--tc-font-size-xs);
+    font-weight: var(--tc-font-weight-semibold);
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+/* 状态徽章 */
+.act-badge-success  { background: var(--tc-success-light); color: var(--tc-success-color); }
+.act-badge-warning  { background: var(--tc-warning-light); color: var(--tc-warning-color); }
+.act-badge-error    { background: var(--tc-error-light); color: var(--tc-error-color); }
+.act-badge-info     { background: var(--tc-info-light); color: var(--tc-info-color); }
+.act-badge-neutral  { background: var(--tc-bg-secondary); color: var(--tc-text-secondary); }
+
+/* 功能徽章（插件/模块相关） */
+.act-badge-purple   { background: #ede9fe; color: #6d28d9; }
+.act-badge-green    { background: var(--tc-success-light); color: #15803d; }
+.act-badge-orange   { background: #ffedd5; color: #c2410c; }
+.act-badge-pink     { background: #fce7f3; color: #be185d; }
+.act-badge-teal     { background: #ccfbf1; color: #0f766e; }
+.act-badge-sky      { background: #e0f2fe; color: #0369a1; }
+.act-badge-yellow   { background: #fef3c7; color: #b45309; }
+
+/* ========================================
+   操作按钮组
+   ======================================== */
+.act-actions {
+    display: flex;
+    gap: 6px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    align-items: center;
+}
+
+/* ========================================
+   空状态
+   ======================================== */
+.act-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.act-empty-state .dashicons {
+    font-size: 48px;
+    color: var(--tc-border-primary);
+    display: block;
+    margin-bottom: var(--tc-spacing-lg);
+}
+
+.act-empty-state-text {
+    font-size: var(--tc-font-size-lg);
+    color: var(--tc-text-secondary);
+    margin-bottom: var(--tc-spacing-xl);
+}
+
+.act-empty-state-help {
+    background: var(--tc-bg-tertiary);
+    padding: var(--tc-spacing-xl);
+    border-radius: var(--tc-radius-xl);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    border: 1px solid var(--tc-border-secondary);
+}
+
+.act-empty-state-help h3 {
+    margin-top: 0;
+    color: var(--tc-text-primary);
+}
+
+/* ========================================
+   分页
+   ======================================== */
+.act-pagination {
+    margin-top: var(--tc-spacing-md);
+    padding-top: var(--tc-spacing-md);
+    border-top: 1px solid var(--tc-border-light);
+    font-size: var(--tc-font-size-xs);
+    color: var(--tc-text-secondary);
+}
+
+.act-pagination .pagination-links {
+    display: flex;
+    align-items: center;
+    gap: var(--tc-spacing-xs);
+}
+
+/* ========================================
+   卡片 - 统一样式
+   ======================================== */
+.act-card,
+.act-admin-card,
+.toolkit-settings-form {
+    background: var(--tc-bg-primary);
+    border: 1px solid var(--tc-border-secondary);
+    border-radius: var(--tc-radius-xl);
+    padding: var(--tc-spacing-2xl);
+    box-shadow: var(--tc-shadow-md);
+    margin-top: 0;
+    margin-bottom: var(--tc-spacing-xl);
+}
+
+.act-card + .act-card,
+.act-admin-card + .act-admin-card,
+.toolkit-settings-form + .toolkit-settings-form {
+    margin-top: 0;
+}
+
+.act-card h2,
+.act-card h3,
+.act-admin-card h2,
+.act-admin-card h3,
+.toolkit-settings-form h2,
+.toolkit-settings-form h3 {
+    margin-top: 0;
+    margin-bottom: var(--tc-spacing-lg);
+    padding-bottom: var(--tc-spacing-md);
+    border-bottom: 1px solid var(--tc-border-secondary);
+    font-size: var(--tc-font-size-lg);
+    font-weight: var(--tc-font-weight-semibold);
+    color: var(--tc-text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--tc-spacing-sm);
+}
+
+/* 卡片内的段落 */
+.act-card p,
+.act-admin-card p,
+.toolkit-settings-form p {
+    margin: 0 0 var(--tc-spacing-lg);
+    color: var(--tc-text-primary);
+    line-height: 1.6;
+}
+
+/* 卡片内的列表 */
+.act-card ul,
+.act-card ol,
+.act-admin-card ul,
+.act-admin-card ol,
+.toolkit-settings-form ul,
+.toolkit-settings-form ol {
+    margin: 0 0 var(--tc-spacing-lg);
+    padding-left: 24px;
+}
+
+.act-card li,
+.act-admin-card li,
+.toolkit-settings-form li {
+    margin: var(--tc-spacing-sm) 0;
+    color: var(--tc-text-primary);
+}
+
+/* ========================================
+   描述文字
+   ======================================== */
+.wrap .description {
+    color: var(--tc-text-secondary);
+    font-size: var(--tc-font-size-sm);
+    line-height: 1.5;
+    margin-bottom: var(--tc-spacing-lg);
+}
+
+/* ========================================
+   响应式
+   ======================================== */
+@media screen and (max-width: 1200px) {
+    .act-filter-row {
+        flex-wrap: wrap;
+    }
+    .act-filter-row input[type="text"],
+    .act-filter-row input[type="number"] {
+        width: 180px;
+    }
+    .act-filter-actions {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .act-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .act-filter-bar {
+        padding: var(--tc-spacing-md) var(--tc-spacing-lg);
+    }
+    .act-filter-row select,
+    .act-filter-row input[type="text"],
+    .act-filter-row input[type="number"] {
+        height: 40px;
+        line-height: 40px;
+        font-size: var(--tc-font-size-base);
+        width: 100%;
+        max-width: 100%;
+    }
+    .act-filter-actions {
+        width: 100%;
+    }
+    .act-table thead th,
+    .act-table tbody td {
+        padding: var(--tc-spacing-md) 10px;
+    }
+    .act-btn-sm {
+        font-size: 11px;
+        padding: 4px var(--tc-spacing-sm);
+    }
+}
+
+/* ========================================
+   设置表单
+   ======================================== */
+.act-card .form-table,
+.act-card form .form-table,
+#wpbody-content .act-card .form-table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    table-layout: auto !important;
+    margin-top: 0 !important;
+}
+
+.act-card .form-table tr,
+.act-card form .form-table tr,
+#wpbody-content .act-card .form-table tr {
+    display: block !important;
+    margin-bottom: 18px !important;
+    padding-bottom: 18px !important;
+    border-bottom: 1px solid var(--tc-border-light) !important;
+}
+
+.act-card .form-table tr:last-child,
+.act-card form .form-table tr:last-child,
+#wpbody-content .act-card .form-table tr:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.act-card .form-table th,
+.act-card form .form-table th,
+#wpbody-content .act-card .form-table th {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 0 var(--tc-spacing-sm) 0 !important;
+    font-weight: var(--tc-font-weight-semibold) !important;
+    color: var(--tc-text-primary) !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+}
+
+.act-card .form-table th label,
+.act-card form .form-table th label,
+#wpbody-content .act-card .form-table th label {
+    display: inline-block !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+.act-card .form-table td,
+.act-card form .form-table td,
+#wpbody-content .act-card .form-table td {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    vertical-align: top !important;
+    box-sizing: border-box !important;
+}
+
+.act-card .form-table input[type="text"],
+.act-card .form-table input[type="number"],
+.act-card .form-table input[type="email"],
+.act-card .form-table input[type="url"],
+.act-card .form-table input[type="password"],
+.act-card .form-table input[type="date"],
+.act-card .form-table textarea,
+.act-card .form-table select,
+.act-card form .form-table input[type="text"],
+.act-card form .form-table input[type="number"],
+.act-card form .form-table input[type="email"],
+.act-card form .form-table input[type="url"],
+.act-card form .form-table input[type="password"],
+.act-card form .form-table input[type="date"],
+.act-card form .form-table textarea,
+.act-card form .form-table select,
+#wpbody-content .act-card .form-table input[type="text"],
+#wpbody-content .act-card .form-table input[type="number"],
+#wpbody-content .act-card .form-table input[type="email"],
+#wpbody-content .act-card .form-table input[type="url"],
+#wpbody-content .act-card .form-table input[type="password"],
+#wpbody-content .act-card .form-table input[type="date"],
+#wpbody-content .act-card .form-table textarea,
+#wpbody-content .act-card .form-table select {
+    display: block !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    border-radius: var(--tc-radius-md) !important;
+    border: 1px solid var(--tc-border-primary) !important;
+    padding: 10px var(--tc-spacing-md) !important;
+    font-size: var(--tc-font-size-base) !important;
+    transition: border-color var(--tc-transition-normal), box-shadow var(--tc-transition-normal) !important;
+    height: 42px !important;
+    line-height: 20px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+.act-card .form-table input[type="date"],
+.act-card form .form-table input[type="date"],
+#wpbody-content .act-card .form-table input[type="date"] {
+    padding: 9px var(--tc-spacing-md) !important;
+    max-width: 200px !important;
+}
+
+.act-card .form-table select,
+.act-card form .form-table select,
+#wpbody-content .act-card .form-table select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 12px !important;
+    padding-right: 36px !important;
+    background-color: var(--tc-bg-primary) !important;
+    max-width: 300px !important;
+}
+
+.act-card .form-table textarea,
+.act-card form .form-table textarea,
+#wpbody-content .act-card .form-table textarea {
+    height: auto !important;
+    min-height: 100px !important;
+    resize: vertical !important;
+    max-width: 500px !important;
+}
+
+.act-card .form-table input:focus,
+.act-card .form-table textarea:focus,
+.act-card .form-table select:focus,
+.act-card form .form-table input:focus,
+.act-card form .form-table textarea:focus,
+.act-card form .form-table select:focus,
+#wpbody-content .act-card .form-table input:focus,
+#wpbody-content .act-card .form-table textarea:focus,
+#wpbody-content .act-card .form-table select:focus {
+    border-color: var(--tc-apple-blue) !important;
+    box-shadow: 0 0 0 2px var(--tc-apple-blue-light) !important;
+    outline: none !important;
+}
+
+.act-card .form-table .description,
+.act-card form .form-table .description,
+#wpbody-content .act-card .form-table .description {
+    color: var(--tc-text-secondary) !important;
+    font-size: var(--tc-font-size-xs) !important;
+    margin-top: var(--tc-spacing-sm) !important;
+    line-height: 1.4 !important;
+    display: block !important;
+}
+
+/* 必填标记 */
+.act-card .form-table .required,
+.act-card form .form-table .required,
+#wpbody-content .act-card .form-table .required {
+    color: var(--tc-error-color) !important;
+    margin-left: 2px !important;
+}
+
+/* 标题样式 */
+.act-card h3 {
+    margin-top: 28px !important;
+    margin-bottom: var(--tc-spacing-xl) !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid var(--tc-border-secondary) !important;
+    font-size: var(--tc-font-size-lg) !important;
+    font-weight: var(--tc-font-weight-semibold) !important;
+    color: var(--tc-text-primary) !important;
+}
+
+.act-card h3:first-child {
+    margin-top: 0 !important;
+}
+
+/* ========================================
+   通知/提示
+   ======================================== */
+.act-card .notice {
+    border-radius: var(--tc-radius-md);
+    margin: var(--tc-spacing-md) 0;
+}
+
+/* ========================================
+   提交按钮区域
+   ======================================== */
+.act-card .submit {
+    padding-top: var(--tc-spacing-lg);
+    margin-top: var(--tc-spacing-lg);
+    border-top: 1px solid var(--tc-border-light);
+}
+
+/* ========================================
+   postbox 美化（保留的设置区域）
+   ======================================== */
+.wrap .postbox {
+    border: 1px solid var(--tc-border-secondary);
+    border-radius: var(--tc-radius-xl);
+    box-shadow: var(--tc-shadow-sm);
+    background: var(--tc-bg-primary);
+}
+
+.wrap .postbox .inside {
+    padding: var(--tc-spacing-xl);
+}
+
+.wrap .postbox h2 {
+    font-size: var(--tc-font-size-lg);
+    font-weight: var(--tc-font-weight-semibold);
+    color: var(--tc-text-primary);
+    margin: 0 0 var(--tc-spacing-lg) 0;
+    padding-bottom: var(--tc-spacing-md);
+    border-bottom: 1px solid var(--tc-border-light);
+}
+
+/* ========================================
+   按钮增强
+   ======================================== */
+.wrap .button-primary {
+    border-radius: var(--tc-radius-md);
+    font-weight: var(--tc-font-weight-medium);
+    transition: all var(--tc-transition-normal);
+}
+
+.wrap .button {
+    border-radius: var(--tc-radius-md);
+    font-weight: var(--tc-font-weight-medium);
+    transition: all var(--tc-transition-normal);
+}
+
+.wrap .button:hover {
+    background: var(--tc-bg-secondary);
+}
+
+.wrap .button-primary:hover {
+    background: var(--tc-apple-blue-hover);
+    border-color: var(--tc-apple-blue-hover);
+}

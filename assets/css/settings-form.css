@@ -1,0 +1,157 @@
+/**
+ * Saiita AI Toolkit — 设置页面统一样式
+ * 与 AI设置 页面风格一致
+ */
+
+/* === 页面顶部间距（替代已删除的 H1 间距） === */
+.wrap {
+    padding-top: 20px;
+}
+
+.act-settings-section:first-child,
+.act-card:first-child,
+.toolkit-welcome:first-child {
+    margin-top: 0;
+}
+
+/* === 设置区块容器 === */
+.act-settings-section,
+.act-card {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.act-settings-section h2,
+.act-card h2 {
+    margin: 0 0 16px;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #1d2327;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+.act-settings-section h3,
+.act-card h3 {
+    margin: 24px 0 4px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.act-settings-section h3 + .description,
+.act-card h3 + .description {
+    margin-bottom: 8px;
+}
+
+/* === 文本域 === */
+.act-settings-section .form-table textarea,
+.act-card .form-table textarea {
+    min-height: 120px;
+}
+
+/* === 表单表格微调 === */
+.act-settings-section .form-table th,
+.act-card .form-table th {
+    font-weight: 600;
+    color: #1d2327;
+    padding: 15px 10px 15px 0;
+    width: 200px;
+}
+
+.act-settings-section .form-table td,
+.act-card .form-table td {
+    padding: 15px 10px;
+}
+
+/* === 输入框风格 === */
+.act-settings-section .form-table input[type="text"],
+.act-settings-section .form-table input[type="url"],
+.act-settings-section .form-table input[type="email"],
+.act-settings-section .form-table input[type="password"],
+.act-settings-section .form-table input[type="number"],
+.act-settings-section .form-table select,
+.act-settings-section .form-table textarea,
+.act-card .form-table input[type="text"],
+.act-card .form-table input[type="url"],
+.act-card .form-table input[type="email"],
+.act-card .form-table input[type="password"],
+.act-card .form-table input[type="number"],
+.act-card .form-table select,
+.act-card .form-table textarea {
+    padding: 4px 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #2c3338;
+    min-height: 30px;
+}
+
+.act-settings-section .form-table input:focus,
+.act-settings-section .form-table select:focus,
+.act-settings-section .form-table textarea:focus,
+.act-card .form-table input:focus,
+.act-card .form-table select:focus,
+.act-card .form-table textarea:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.act-settings-section .form-table input[type="number"],
+.act-card .form-table input[type="number"] {
+    width: 100px;
+}
+
+.act-settings-section .form-table select,
+.act-card .form-table select {
+    padding-right: 28px;
+    min-width: 200px;
+}
+
+/* === 复选框 === */
+.act-settings-section .form-table input[type="checkbox"],
+.act-card .form-table input[type="checkbox"] {
+    margin-right: 6px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.act-settings-section .form-table .description,
+.act-card .form-table .description {
+    color: #646970;
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 4px;
+}
+
+/* === 提交按钮区 === */
+.act-settings-section .submit,
+.act-card .submit {
+    margin: 0;
+    padding: 16px 0 0;
+    border-top: 1px solid #dcdcde;
+}
+
+.act-settings-section .submit .button-primary,
+.act-card .submit .button-primary {
+    min-height: 30px;
+}
+
+/* === 响应式 === */
+@media (max-width: 782px) {
+    .act-settings-section .form-table th,
+    .act-card .form-table th {
+        width: auto;
+        padding-bottom: 4px;
+    }
+
+    .act-settings-section .form-table td,
+    .act-card .form-table td {
+        padding-top: 4px;
+    }
+}

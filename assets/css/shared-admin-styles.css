@@ -1,0 +1,161 @@
+/**
+ * 共享管理页面样式
+ * 用于多个模块的管理页面，避免代码重复
+ *
+ * @version 1.0.0
+ * @author Saiita AI Content Toolkit
+ */
+
+/* 按钮加载动画 */
+.spinning {
+	animation: saiita-spin 1s linear infinite;
+}
+
+@keyframes saiita-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+/* 状态样式 */
+.status-active {
+    color: #00a32a;
+    font-weight: bold;
+}
+
+.status-inactive {
+    color: #d63638;
+    font-weight: bold;
+}
+
+/* WordPress标准分页样式 */
+.tablenav-pages {
+    margin-top: 0;
+    background: #f8f9f9;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+}
+
+.tablenav-pages .displaying-num {
+    margin-right: 10px;
+    color: #50575e;
+}
+
+.tablenav-pages .page-numbers {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 0 2px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.tablenav-pages .page-numbers.current {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+.tablenav-pages .page-numbers:hover {
+    background: #f1f1f1;
+}
+
+.tablenav-pages .page-numbers.current:hover {
+    background: #0073aa;
+}
+
+/* 批量操作进度条样式 */
+.progress-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container h4 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 24px;
+    background: #f1f1f1;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0073aa 0%, #005a87 100%);
+    border-radius: 12px;
+    width: 0%;
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-text {
+    font-weight: 600;
+    color: #0073aa;
+    font-size: 14px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.progress-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    color: #555;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid #0073aa;
+}
+
+.progress-details span {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.progress-details span span {
+    font-weight: 600;
+    color: #0073aa;
+}

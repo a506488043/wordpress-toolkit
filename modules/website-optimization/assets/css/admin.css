@@ -1,0 +1,75 @@
+/**
+ * Website Optimization 模块管理后台样式
+ *
+ * @version 1.0.0
+ * @author Saiita AI Content Toolkit
+ */
+
+/* 此模块现在使用共享样式文件 shared-admin-styles.css 来获取进度条样式 */
+
+/* 此模块特有的SEO分析报告样式 */
+.seo-report-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.seo-report-section h4 {
+    margin: 0 0 15px 0;
+    color: #1d2327;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 8px;
+}
+
+.report-content {
+    margin-top: 15px;
+}
+
+.report-item {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #0073aa;
+}
+
+.report-item strong {
+    color: #1d2327;
+}
+
+.analysis-results,
+.recommendations {
+    margin-top: 20px;
+}
+
+.analysis-results h5,
+.recommendations h5 {
+    margin: 0 0 10px 0;
+    color: #1d2327;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.analysis-results ul,
+.recommendations ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.analysis-results li {
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.recommendations li {
+    color: #0073aa;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-weight: 500;
+}

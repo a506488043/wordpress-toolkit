@@ -1,0 +1,23 @@
+/**
+ * Prompt Settings 模块管理后台样式
+ *
+ * @version 1.0.0
+ * @author WordPress Toolkit
+ */
+
+/* WordPress Toolkit 提示词设置页面样式 */
+.form-table th {
+    font-weight: 600;
+    color: #1d2327;
+    width: 200px;
+}
+
+.reset-prompt-btn {
+    margin-top: 10px;
+}
+
+.large-text.code {
+    font-family: 'Courier New', Courier, monospace;
+    background: #f6f8fa;
+    border: 1px solid #e1e4e8;
+}

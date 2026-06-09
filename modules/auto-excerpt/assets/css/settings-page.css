@@ -1,0 +1,16 @@
+/* WordPress Toolkit 统一设置页面样式 — 补充样式（act-card/.wrap 由 settings-form.css 统一处理） */
+
+.card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #1d2327;
+}

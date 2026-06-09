@@ -1,0 +1,3105 @@
+# Copyright (C) 2026 chenghoufeng
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Saiita AI Content Toolkit 2.0.19\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/saiita-ai-content-toolkit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-04-13T03:35:45+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: saiita-ai-content-toolkit\n"
+
+#. Plugin Name of the plugin
+#: ai-content-toolkit.php
+#: ai-content-toolkit.php:599
+msgid "Saiita AI Content Toolkit"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: ai-content-toolkit.php
+msgid "https://www.saiita.com.cn"
+msgstr ""
+
+#. Description of the plugin
+#: ai-content-toolkit.php
+msgid "集成WordPress 6.9 Abilities API的智能AI内容工具包，支持DeepSeek、硅基流动等多个AI提供商，提供AI文章优化、SEO分析、网站卡片等10+功能。"
+msgstr ""
+
+#. Author of the plugin
+#: ai-content-toolkit.php
+msgid "chenghoufeng"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:133
+msgid "确定要删除这个配置吗？"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:134
+msgid "连接测试成功！"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:135
+msgid "连接测试失败："
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:151
+#: modules/ai-settings/ai-settings-module.php:116
+msgid "AI提供商"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:152
+msgid "全局设置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:153
+#: admin/class-ai-provider-manager.php:472
+#: ai-content-toolkit.php:1015
+msgid "使用统计"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:154
+#: admin/class-ai-provider-manager.php:522
+#: modules/auto-excerpt/admin/admin-page.php:359
+msgid "高级选项"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:193
+msgid "选择活动提供商"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:194
+msgid "选择一个AI提供商作为默认的AI服务来源"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:205
+#: admin/class-ai-provider-manager.php:225
+#: admin/class-ai-provider-manager.php:482
+msgid "未配置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:223
+#: admin/class-ai-provider-manager.php:482
+msgid "已配置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:237
+msgid "测试连接"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:241
+msgid "支持流式生成"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:246
+msgid "可用模型"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:253
+msgid "保存配置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:370
+msgid "暂无可用模型信息"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:381
+msgid "上下文长度"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:384
+msgid "价格"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:402
+msgid "全局AI设置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:405
+msgid "默认创造性"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:411
+msgid "控制AI生成内容的创造性（0=保守，2=极富创造性）"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:415
+msgid "默认最大长度"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:419
+msgid "生成内容的最大token数（约等于字数）"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:426
+msgid "启用缓存"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:428
+msgid "缓存AI生成结果以提高性能和节省成本"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:432
+msgid "缓存时长"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:436
+msgid "1小时"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:437
+msgid "1天"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:438
+msgid "1周"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:439
+msgid "1个月"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:454
+msgid "启用日志记录"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:456
+msgid "记录AI请求和响应用于调试和优化"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:460
+#: ai-content-toolkit.php:855
+#: ai-content-toolkit.php:1126
+#: modules/ai-category/ai-category-module.php:205
+#: modules/ai-settings/ai-settings-module.php:267
+#: modules/auto-excerpt/admin/admin-page.php:775
+#: modules/auto-excerpt/auto-excerpt-module.php:1614
+#: modules/custom-card/admin/admin-page.php:77
+#: modules/prompt-settings/prompt-settings-module.php:368
+msgid "保存设置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:480
+msgid "配置状态"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:486
+msgid "使用次数"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:490
+msgid "最后使用"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:491
+msgid "从未使用"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:495
+msgid "流式生成"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:496
+msgid "支持"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:505
+msgid "使用趋势"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:506
+msgid "显示过去30天的API使用情况"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:509
+msgid "图表功能即将推出"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:525
+msgid "API限制"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:526
+msgid "配置API请求限制以避免超出配额"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:529
+msgid "每分钟最大请求数"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:536
+msgid "重试次数"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:544
+msgid "调试选项"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:550
+msgid "启用调试模式"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:552
+msgid "显示详细的调试信息和API响应"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:559
+msgid "记录所有请求"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:561
+msgid "记录所有AI请求和响应到日志文件（可能影响性能）"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:566
+msgid "数据管理"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:569
+msgid "清除所有缓存"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:573
+msgid "重置使用统计"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:577
+msgid "导出日志"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:614
+#: admin/class-ai-provider-manager.php:655
+msgid "无效的提供商"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:623
+msgid "连接测试成功"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:632
+msgid "缓存已清除"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:641
+msgid "统计已重置"
+msgstr ""
+
+#: admin/class-ai-provider-manager.php:651
+msgid "缺少提供商参数"
+msgstr ""
+
+#: ai-content-toolkit.php:327
+msgid "工具箱"
+msgstr ""
+
+#: ai-content-toolkit.php:339
+#: ai-content-toolkit.php:340
+#: ai-content-toolkit.php:429
+#: ai-content-toolkit.php:617
+#: ai-content-toolkit.php:669
+#: ai-content-toolkit.php:3545
+#: ai-content-toolkit.php:3593
+msgid "网站卡片"
+msgstr ""
+
+#: ai-content-toolkit.php:351
+#: ai-content-toolkit.php:352
+#: ai-content-toolkit.php:631
+#: ai-content-toolkit.php:3561
+msgid "友情链接"
+msgstr ""
+
+#: ai-content-toolkit.php:363
+#: ai-content-toolkit.php:364
+#: ai-content-toolkit.php:439
+#: ai-content-toolkit.php:638
+#: ai-content-toolkit.php:662
+#: ai-content-toolkit.php:3597
+msgid "文章优化"
+msgstr ""
+
+#: ai-content-toolkit.php:375
+#: ai-content-toolkit.php:376
+#: ai-content-toolkit.php:3482
+msgid "标签优化"
+msgstr ""
+
+#: ai-content-toolkit.php:387
+#: ai-content-toolkit.php:388
+#: ai-content-toolkit.php:645
+#: ai-content-toolkit.php:3505
+msgid "分类优化"
+msgstr ""
+
+#: ai-content-toolkit.php:399
+#: ai-content-toolkit.php:400
+#: ai-content-toolkit.php:3528
+msgid "网站优化"
+msgstr ""
+
+#: ai-content-toolkit.php:416
+#: ai-content-toolkit.php:417
+#: ai-content-toolkit.php:3576
+msgid "工具箱设置"
+msgstr ""
+
+#: ai-content-toolkit.php:428
+#: modules/custom-card/admin/admin-page.php:31
+msgid "网站卡片设置"
+msgstr ""
+
+#: ai-content-toolkit.php:438
+#: ai-content-toolkit.php:3667
+msgid "文章优化设置"
+msgstr ""
+
+#: ai-content-toolkit.php:448
+msgid "年龄计算器设置"
+msgstr ""
+
+#: ai-content-toolkit.php:449
+#: ai-content-toolkit.php:624
+#: ai-content-toolkit.php:3601
+msgid "年龄计算器"
+msgstr ""
+
+#: ai-content-toolkit.php:458
+#: ai-content-toolkit.php:3683
+#: modules/ai-category/ai-category-module.php:127
+msgid "AI自动分类设置"
+msgstr ""
+
+#: ai-content-toolkit.php:459
+#: ai-content-toolkit.php:3605
+msgid "AI自动分类"
+msgstr ""
+
+#: ai-content-toolkit.php:468
+#: ai-content-toolkit.php:776
+msgid "Cookie同意设置"
+msgstr ""
+
+#: ai-content-toolkit.php:469
+#: ai-content-toolkit.php:3609
+msgid "Cookie同意"
+msgstr ""
+
+#: ai-content-toolkit.php:478
+#: ai-content-toolkit.php:1077
+msgid "简洁友情链接设置"
+msgstr ""
+
+#: ai-content-toolkit.php:479
+#: ai-content-toolkit.php:3613
+#: modules/simple-friendlink/admin.php:74
+#: modules/simple-friendlink/simple-friendlink-module.php:848
+msgid "简洁友情链接"
+msgstr ""
+
+#: ai-content-toolkit.php:488
+#: ai-content-toolkit.php:489
+#: ai-content-toolkit.php:968
+#: ai-content-toolkit.php:3617
+msgid "PRO License"
+msgstr ""
+
+#: ai-content-toolkit.php:558
+#: includes/class-admin-page-template.php:97
+msgid "保存成功！"
+msgstr ""
+
+#: ai-content-toolkit.php:559
+#: includes/class-admin-page-template.php:98
+msgid "保存失败，请重试。"
+msgstr ""
+
+#: ai-content-toolkit.php:560
+#: includes/class-admin-page-template.php:99
+msgid "网络错误，请重试。"
+msgstr ""
+
+#: ai-content-toolkit.php:561
+#: includes/class-admin-page-template.php:100
+msgid "确定要删除这个项目吗？此操作不可撤销。"
+msgstr ""
+
+#: ai-content-toolkit.php:562
+#: includes/class-admin-page-template.php:101
+msgid "删除成功！"
+msgstr ""
+
+#: ai-content-toolkit.php:563
+#: includes/class-admin-page-template.php:102
+msgid "删除失败，请重试。"
+msgstr ""
+
+#: ai-content-toolkit.php:564
+#: includes/class-admin-page-template.php:103
+msgid "加载中..."
+msgstr ""
+
+#: ai-content-toolkit.php:565
+#: includes/class-admin-page-template.php:104
+msgid "处理中..."
+msgstr ""
+
+#: ai-content-toolkit.php:566
+#: includes/class-admin-page-template.php:105
+msgid "确定"
+msgstr ""
+
+#: ai-content-toolkit.php:567
+#: includes/class-admin-page-template.php:106
+#: modules/auto-excerpt/auto-excerpt-module.php:588
+msgid "取消"
+msgstr ""
+
+#: ai-content-toolkit.php:602
+msgid "欢迎使用 Saiita AI Content Toolkit！"
+msgstr ""
+
+#: ai-content-toolkit.php:603
+msgid "这是一个功能强大的WordPress综合工具包，集成了多个实用模块。"
+msgstr ""
+
+#: ai-content-toolkit.php:611
+msgid "可用模块"
+msgstr ""
+
+#: ai-content-toolkit.php:618
+msgid "自动抓取网站元数据并生成美观卡片"
+msgstr ""
+
+#: ai-content-toolkit.php:625
+msgid "精确计算年龄，支持闰年优化"
+msgstr ""
+
+#: ai-content-toolkit.php:632
+msgid "完整的友情链接管理和展示系统"
+msgstr ""
+
+#: ai-content-toolkit.php:639
+msgid "智能文章摘要生成和SEO分析"
+msgstr ""
+
+#: ai-content-toolkit.php:646
+msgid "AI智能分类描述生成"
+msgstr ""
+
+#: ai-content-toolkit.php:656
+msgid "快速链接"
+msgstr ""
+
+#: ai-content-toolkit.php:663
+msgid "摘要生成、SEO分析"
+msgstr ""
+
+#: ai-content-toolkit.php:670
+msgid "网站元数据卡片"
+msgstr ""
+
+#: ai-content-toolkit.php:694
+#: ai-content-toolkit.php:707
+#: ai-content-toolkit.php:730
+#: ai-content-toolkit.php:752
+#: ai-content-toolkit.php:906
+#: ai-content-toolkit.php:935
+#: ai-content-toolkit.php:1042
+#: ai-content-toolkit.php:1680
+#: ai-content-toolkit.php:3470
+#: ai-content-toolkit.php:3493
+#: ai-content-toolkit.php:3516
+#: ai-content-toolkit.php:3538
+#: ai-content-toolkit.php:3555
+#: ai-content-toolkit.php:3572
+#: ai-content-toolkit.php:3661
+#: ai-content-toolkit.php:3677
+#: includes/abstract-class-admin-page-base.php:112
+#: includes/abstract-class-module-base.php:32
+#: includes/class-security-validator.php:24
+#: includes/class-security-validator.php:52
+#: includes/class-security-validator.php:81
+#: modules/ai-category/ai-category-module.php:361
+#: modules/ai-category/ai-category-module.php:397
+#: modules/ai-settings/ai-settings-module.php:431
+#: modules/auto-excerpt/admin/admin-page.php:82
+#: modules/auto-excerpt/admin/admin-page.php:1133
+#: modules/category-optimization/admin/admin-page.php:62
+#: modules/custom-card/admin/cards-admin-page.php:97
+#: modules/prompt-settings/prompt-settings-module.php:266
+#: modules/simple-friendlink/admin.php:245
+#: modules/simple-friendlink/simple-friendlink-module.php:335
+#: modules/tag-optimization/admin/admin-page.php:62
+#: modules/website-optimization/website-optimization-module.php:129
+#: modules/website-optimization/website-optimization-module.php:1019
+#: modules/website-optimization/website-optimization-module.php:1047
+#: modules/website-optimization/website-optimization-module.php:1070
+msgid "权限不足"
+msgstr ""
+
+#: ai-content-toolkit.php:712
+#: ai-content-toolkit.php:735
+#: ai-content-toolkit.php:757
+#: ai-content-toolkit.php:1685
+#: ai-content-toolkit.php:3475
+#: ai-content-toolkit.php:3498
+#: ai-content-toolkit.php:3521
+#: includes/abstract-class-admin-page-base.php:117
+#: includes/abstract-class-module-base.php:24
+#: includes/class-security-validator.php:33
+#: includes/class-security-validator.php:61
+#: includes/class-security-validator.php:90
+#: modules/ai-category/ai-category-module.php:218
+#: modules/auto-excerpt/admin/admin-page.php:1071
+#: modules/auto-excerpt/admin/admin-page.php:1088
+#: modules/auto-excerpt/admin/admin-page.php:1109
+#: modules/auto-excerpt/admin/admin-page.php:1129
+#: modules/category-optimization/admin/admin-page.php:67
+#: modules/simple-friendlink/simple-friendlink-module.php:135
+#: modules/simple-friendlink/simple-friendlink-module.php:224
+#: modules/simple-friendlink/simple-friendlink-module.php:308
+#: modules/simple-friendlink/simple-friendlink-module.php:339
+#: modules/tag-optimization/admin/admin-page.php:67
+#: modules/website-optimization/website-optimization-module.php:1023
+#: modules/website-optimization/website-optimization-module.php:1051
+#: modules/website-optimization/website-optimization-module.php:1074
+msgid "安全验证失败"
+msgstr ""
+
+#: ai-content-toolkit.php:786
+msgid "Cookie类型"
+msgstr ""
+
+#: ai-content-toolkit.php:790
+msgid "必要Cookie"
+msgstr ""
+
+#: ai-content-toolkit.php:790
+msgid "始终启用"
+msgstr ""
+
+#: ai-content-toolkit.php:794
+msgid "功能性Cookie"
+msgstr ""
+
+#: ai-content-toolkit.php:798
+msgid "分析性Cookie"
+msgstr ""
+
+#: ai-content-toolkit.php:802
+msgid "营销性Cookie"
+msgstr ""
+
+#: ai-content-toolkit.php:808
+msgid "主题"
+msgstr ""
+
+#: ai-content-toolkit.php:811
+msgid "浅色"
+msgstr ""
+
+#: ai-content-toolkit.php:812
+msgid "深色"
+msgstr ""
+
+#: ai-content-toolkit.php:813
+msgid "自动"
+msgstr ""
+
+#: ai-content-toolkit.php:819
+msgid "位置"
+msgstr ""
+
+#: ai-content-toolkit.php:822
+msgid "底部"
+msgstr ""
+
+#: ai-content-toolkit.php:823
+msgid "顶部"
+msgstr ""
+
+#: ai-content-toolkit.php:824
+msgid "居中"
+msgstr ""
+
+#: ai-content-toolkit.php:830
+msgid "了解更多链接"
+msgstr ""
+
+#: ai-content-toolkit.php:833
+msgid "Cookie使用说明页面链接"
+msgstr ""
+
+#: ai-content-toolkit.php:838
+msgid "隐私政策链接"
+msgstr ""
+
+#: ai-content-toolkit.php:841
+msgid "隐私政策页面链接"
+msgstr ""
+
+#: ai-content-toolkit.php:846
+msgid "同意有效期"
+msgstr ""
+
+#: ai-content-toolkit.php:849
+msgid "用户Cookie同意记录的有效天数（默认：365天）"
+msgstr ""
+
+#: ai-content-toolkit.php:923
+#: modules/website-optimization/website-optimization-module.php:1085
+#: modules/website-optimization/website-optimization-module.php:1150
+msgid "设置已保存"
+msgstr ""
+
+#: ai-content-toolkit.php:952
+msgid "License 激活成功！"
+msgstr ""
+
+#: ai-content-toolkit.php:957
+msgid "License 已停用。"
+msgstr ""
+
+#: ai-content-toolkit.php:978
+msgid "PRO 版本已激活"
+msgstr ""
+
+#: ai-content-toolkit.php:979
+msgid "License Key:"
+msgstr ""
+
+#: ai-content-toolkit.php:980
+msgid "所有 PRO 功能已解锁，无使用次数限制。"
+msgstr ""
+
+#: ai-content-toolkit.php:985
+msgid "确定要停用 License 吗？停用后将恢复免费版限制。"
+msgstr ""
+
+#: ai-content-toolkit.php:986
+msgid "停用 License"
+msgstr ""
+
+#: ai-content-toolkit.php:993
+msgid "激活 PRO License"
+msgstr ""
+
+#: ai-content-toolkit.php:994
+msgid "输入 License Key 以激活 PRO 版本，解锁所有功能并取消使用次数限制。"
+msgstr ""
+
+#: ai-content-toolkit.php:1001
+msgid "License Key"
+msgstr ""
+
+#: ai-content-toolkit.php:1007
+msgid "激活 License"
+msgstr ""
+
+#: ai-content-toolkit.php:1019
+msgid "功能"
+msgstr ""
+
+#: ai-content-toolkit.php:1020
+msgid "已使用"
+msgstr ""
+
+#: ai-content-toolkit.php:1057
+#: modules/ai-category/ai-category-module.php:230
+#: modules/auto-excerpt/admin/admin-page.php:1083
+#: modules/auto-excerpt/auto-excerpt-module.php:1499
+msgid "设置保存成功！"
+msgstr ""
+
+#: ai-content-toolkit.php:1086
+msgid "用户提交"
+msgstr ""
+
+#: ai-content-toolkit.php:1090
+msgid "允许用户提交友情链接"
+msgstr ""
+
+#: ai-content-toolkit.php:1096
+msgid "需要登录"
+msgstr ""
+
+#: ai-content-toolkit.php:1100
+msgid "用户必须登录才能提交"
+msgstr ""
+
+#: ai-content-toolkit.php:1106
+msgid "管理员审核"
+msgstr ""
+
+#: ai-content-toolkit.php:1110
+msgid "用户提交的链接需要管理员审核"
+msgstr ""
+
+#: ai-content-toolkit.php:1116
+msgid "每页显示数量"
+msgstr ""
+
+#: ai-content-toolkit.php:1119
+msgid "友情链接页面每页显示的链接数量（默认：30）"
+msgstr ""
+
+#: ai-content-toolkit.php:1713
+msgid "全部文章"
+msgstr ""
+
+#: ai-content-toolkit.php:1714
+msgid "有摘要文章"
+msgstr ""
+
+#: ai-content-toolkit.php:1715
+msgid "无摘要文章"
+msgstr ""
+
+#: ai-content-toolkit.php:1717
+#: includes/abstract-class-admin-page-base.php:246
+#: modules/category-optimization/admin/admin-page.php:114
+#: modules/tag-optimization/admin/admin-page.php:114
+msgid "筛选"
+msgstr ""
+
+#: ai-content-toolkit.php:1722
+msgid "无摘要文章生成摘要"
+msgstr ""
+
+#: ai-content-toolkit.php:1725
+msgid "批量生成标签"
+msgstr ""
+
+#. translators: %d: total item count
+#. translators: %d: count
+#: ai-content-toolkit.php:1764
+#: includes/abstract-class-admin-page-base.php:305
+#: modules/category-optimization/admin/admin-page.php:138
+#: modules/tag-optimization/admin/admin-page.php:138
+#, php-format
+msgid "共 %d 个项目"
+msgstr ""
+
+#: ai-content-toolkit.php:1771
+#: includes/abstract-class-admin-page-base.php:312
+#: modules/category-optimization/admin/admin-page.php:148
+#: modules/custom-card/admin/admin-page.php:159
+#: modules/custom-card/admin/admin-page.php:225
+#: modules/tag-optimization/admin/admin-page.php:148
+msgid "&laquo; 上一页"
+msgstr ""
+
+#: ai-content-toolkit.php:1772
+#: includes/abstract-class-admin-page-base.php:313
+#: modules/category-optimization/admin/admin-page.php:149
+#: modules/custom-card/admin/admin-page.php:160
+#: modules/custom-card/admin/admin-page.php:226
+#: modules/tag-optimization/admin/admin-page.php:149
+msgid "下一页 &raquo;"
+msgstr ""
+
+#: ai-content-toolkit.php:1814
+#: ai-content-toolkit.php:1853
+msgid "标题"
+msgstr ""
+
+#: ai-content-toolkit.php:1815
+#: ai-content-toolkit.php:1854
+#: modules/auto-excerpt/admin/admin-page.php:178
+msgid "摘要状态"
+msgstr ""
+
+#: ai-content-toolkit.php:1816
+#: ai-content-toolkit.php:1855
+#: modules/auto-excerpt/admin/admin-page.php:720
+#: modules/auto-excerpt/admin/admin-page.php:898
+#: modules/auto-excerpt/auto-excerpt-module.php:619
+#: modules/auto-excerpt/auto-excerpt-module.php:1526
+msgid "摘要长度"
+msgstr ""
+
+#: ai-content-toolkit.php:1817
+#: ai-content-toolkit.php:1856
+msgid "内容长度"
+msgstr ""
+
+#: ai-content-toolkit.php:1818
+#: ai-content-toolkit.php:1857
+msgid "发布日期"
+msgstr ""
+
+#: ai-content-toolkit.php:1819
+#: ai-content-toolkit.php:1858
+#: modules/auto-excerpt/admin/admin-page.php:181
+#: modules/category-optimization/admin/admin-page.php:196
+#: modules/category-optimization/admin/admin-page.php:236
+#: modules/custom-card/admin/admin-page.php:174
+#: modules/custom-card/admin/cards-admin-page.php:135
+#: modules/simple-friendlink/admin.php:179
+#: modules/tag-optimization/admin/admin-page.php:196
+#: modules/tag-optimization/admin/admin-page.php:236
+msgid "操作"
+msgstr ""
+
+#: ai-content-toolkit.php:1872
+#: modules/auto-excerpt/admin/admin-page.php:230
+msgid "有摘要"
+msgstr ""
+
+#: ai-content-toolkit.php:1877
+#: modules/auto-excerpt/admin/admin-page.php:243
+msgid "无摘要"
+msgstr ""
+
+#: ai-content-toolkit.php:1880
+#: ai-content-toolkit.php:1881
+#: modules/auto-excerpt/admin/admin-page.php:904
+#: modules/auto-excerpt/auto-excerpt-module.php:606
+#: modules/auto-excerpt/auto-excerpt-module.php:610
+#: modules/auto-excerpt/auto-excerpt-module.php:625
+#: modules/category-optimization/admin/admin-page.php:255
+#: modules/tag-optimization/admin/admin-page.php:255
+#: modules/website-optimization/admin/admin-page.php:146
+#: modules/website-optimization/admin/admin-page.php:177
+msgid "字符"
+msgstr ""
+
+#: ai-content-toolkit.php:1885
+#: modules/category-optimization/admin/admin-page.php:259
+#: modules/tag-optimization/admin/admin-page.php:259
+msgid "编辑"
+msgstr ""
+
+#: ai-content-toolkit.php:1886
+#: modules/category-optimization/admin/admin-page.php:260
+#: modules/tag-optimization/admin/admin-page.php:260
+msgid "查看"
+msgstr ""
+
+#: ai-content-toolkit.php:3483
+msgid "标签优化模块未正确加载"
+msgstr ""
+
+#: ai-content-toolkit.php:3506
+msgid "分类优化模块未正确加载"
+msgstr ""
+
+#: ai-content-toolkit.php:3529
+msgid "网站优化模块未正确加载"
+msgstr ""
+
+#: ai-content-toolkit.php:3546
+msgid "网站卡片模块未正确加载"
+msgstr ""
+
+#: ai-content-toolkit.php:3562
+msgid "友情链接模块未正确加载"
+msgstr ""
+
+#: ai-content-toolkit.php:3579
+msgid "欢迎使用 Saiita AI Content Toolkit 设置！"
+msgstr ""
+
+#: ai-content-toolkit.php:3580
+msgid "请从左侧子菜单选择具体模块进行设置。"
+msgstr ""
+
+#: ai-content-toolkit.php:3588
+msgid "快速设置"
+msgstr ""
+
+#: ai-content-toolkit.php:3626
+msgid "系统信息"
+msgstr ""
+
+#: ai-content-toolkit.php:3630
+msgid "插件版本"
+msgstr ""
+
+#: ai-content-toolkit.php:3634
+msgid "WordPress版本"
+msgstr ""
+
+#: ai-content-toolkit.php:3638
+msgid "PHP版本"
+msgstr ""
+
+#: ai-content-toolkit.php:3668
+msgid "文章优化模块未正确加载"
+msgstr ""
+
+#: ai-content-toolkit.php:3684
+msgid "AI自动分类模块未正确加载"
+msgstr ""
+
+#: includes/abstract-class-admin-page-base.php:283
+msgid "全部"
+msgstr ""
+
+#: includes/abstract-class-admin-page-base.php:284
+msgid "已激活"
+msgstr ""
+
+#: includes/abstract-class-admin-page-base.php:285
+msgid "未激活"
+msgstr ""
+
+#: includes/abstract-class-admin-page-base.php:389
+#: modules/auto-excerpt/admin/admin-page.php:885
+#: modules/auto-excerpt/admin/admin-page.php:911
+msgid "暂无数据"
+msgstr ""
+
+#: includes/abstract-class-admin-page-base.php:392
+msgid "清除筛选条件"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:81
+#: includes/class-ai-manager.php:287
+msgid "AI内容生成"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:82
+msgid "使用AI生成各种类型的优质内容"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:116
+#: includes/class-ai-manager.php:294
+msgid "AI内容优化"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:117
+msgid "优化现有内容的可读性和SEO表现"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:144
+#: includes/class-ai-manager.php:301
+msgid "AI SEO分析"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:145
+msgid "深入分析内容的SEO表现并提供改进建议"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:172
+#: modules/auto-excerpt/auto-excerpt-module.php:540
+msgid "智能摘要生成"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:173
+msgid "为文章生成吸引人的摘要"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:207
+msgid "块内容建议"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:208
+msgid "为编辑器中的块提供AI内容建议"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:217
+msgid "块样式推荐"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:218
+msgid "基于内容推荐最适合的块样式"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:227
+msgid "图片生成提示词"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:228
+msgid "为内容生成匹配的图片提示词"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:241
+msgid "批量内容生成"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:242
+msgid "批量生成多篇文章或内容"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:252
+msgid "AI内容审核"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:253
+msgid "使用AI审核和改进内容质量"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:268
+msgid "内容推荐"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:269
+msgid "基于当前内容推荐相关内容"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:278
+msgid "智能搜索"
+msgstr ""
+
+#: includes/class-abilities-api-integration.php:279
+msgid "使用AI增强搜索功能"
+msgstr ""
+
+#: includes/class-admin-page-template.php:133
+msgid "抱歉，您没有权限访问此页面。"
+msgstr ""
+
+#: includes/class-admin-page-template.php:189
+msgid "欢迎使用WordPress Toolkit！"
+msgstr ""
+
+#: includes/class-admin-page-template.php:195
+msgid "功能强大，易于使用的WordPress管理工具集"
+msgstr ""
+
+#: includes/class-admin-page-template.php:261
+msgid "内容未找到"
+msgstr ""
+
+#: includes/class-ai-manager.php:288
+msgid "使用AI生成高质量内容"
+msgstr ""
+
+#: includes/class-ai-manager.php:295
+msgid "使用AI优化现有内容"
+msgstr ""
+
+#: includes/class-ai-manager.php:302
+msgid "使用AI进行SEO分析"
+msgstr ""
+
+#. translators: %s: value
+#: includes/class-security-validator.php:169
+#, php-format
+msgid "字段 \"%s\" 是必填的"
+msgstr ""
+
+#. translators: %s: value
+#: includes/class-settings-manager.php:228
+#, php-format
+msgid "字段 %s 的值无效"
+msgstr ""
+
+#: includes/class-settings-manager.php:244
+msgid "设置保存成功"
+msgstr ""
+
+#: includes/class-settings-manager.php:248
+msgid "设置保存失败"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:131
+#: modules/auto-excerpt/admin/admin-page.php:356
+msgid "基本设置"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:138
+msgid "启用AI自动分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:142
+msgid "启用后，保存文章时会自动调用AI选择合适的分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:148
+msgid "自动分类模式"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:153
+msgid "草稿总是分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:156
+msgid "智能首次分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:159
+msgid "草稿首次分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:163
+msgid "草稿总是分类：草稿状态每次保存都AI分类；智能首次分类：只有默认文章分类时才AI分类；草稿首次分类：只对草稿第一次保存时AI分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:170
+msgid "自动移除笔记分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:174
+msgid "自动分类时移除默认选择的\"笔记\"分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:180
+msgid "置信度阈值"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:186
+msgid "AI分类的最低置信度（0.1-1.0）"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:192
+msgid "最大分类数量"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:198
+msgid "一篇文章最多分配的分类数量"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:323
+msgid "确定要对这些文章进行AI分类吗？"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:324
+msgid "正在处理..."
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:325
+msgid "处理完成"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:326
+msgid "处理失败，请重试"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:342
+msgid "AI分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:345
+msgid "智能选择分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:366
+#: modules/auto-excerpt/auto-excerpt-module.php:2040
+#: modules/auto-excerpt/auto-excerpt-module.php:2251
+#: modules/auto-excerpt/auto-excerpt-module.php:2820
+#: modules/auto-excerpt/auto-excerpt-module.php:2868
+msgid "文章ID无效"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:519
+msgid "文章内容为空"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:524
+#: modules/ai-settings/ai-settings-helper.php:114
+msgid "AI功能不可用"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:532
+#: modules/auto-excerpt/auto-excerpt-module.php:2838
+msgid "没有可用的分类"
+msgstr ""
+
+#. translators: %d: count
+#: modules/ai-category/ai-category-module.php:587
+#, php-format
+msgid "已选择 %d 个分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:593
+msgid "AI未能选择合适的分类"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:596
+msgid "AI分类失败"
+msgstr ""
+
+#: modules/ai-category/ai-category-module.php:600
+msgid "分类时发生错误"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-helper.php:151
+msgid "响应格式错误"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-helper.php:159
+msgid "无效的API响应"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:73
+#: modules/ai-settings/ai-settings-module.php:74
+#: modules/ai-settings/ai-settings-module.php:95
+#: modules/auto-excerpt/auto-excerpt-module.php:1592
+msgid "AI设置"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:88
+msgid "设置已保存！"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:98
+msgid "AI服务配置"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:106
+msgid "启用AI功能"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:110
+msgid "启用后所有模块的AI功能将可用"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:120
+msgid "DeepSeek"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:121
+msgid "硅基流动"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:123
+msgid "选择AI服务提供商"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:130
+msgid "DeepSeek API密钥"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:137
+msgid "从DeepSeek平台获取API密钥"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:138
+#: modules/ai-settings/ai-settings-module.php:184
+msgid "获取密钥"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:139
+#: modules/ai-settings/ai-settings-module.php:185
+msgid "格式：sk-xxxxxxxx"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:146
+#: modules/ai-settings/ai-settings-module.php:192
+msgid "API基础URL"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:152
+msgid "DeepSeek API服务地址（无需修改）"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:158
+#: modules/ai-settings/ai-settings-module.php:204
+msgid "AI模型"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:165
+msgid "选择使用的AI模型"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:167
+msgid "快速生成，支持自定义长度和创造性"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:168
+msgid "深度思考模式，更准确但稍慢"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:176
+msgid "硅基流动 API密钥"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:183
+msgid "从硅基流动平台获取API密钥"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:198
+msgid "硅基流动 API服务地址（无需修改）"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:210
+msgid "输入硅基流动支持的模型名称"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:212
+msgid "常用模型：deepseek-ai/DeepSeek-V3、Qwen/Qwen2.5-72B-Instruct、THUDM/glm-4-9b-chat 等"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:213
+msgid "查看所有可用模型"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:220
+msgid "最大Token数"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:226
+msgid "AI生成内容的最大长度"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:232
+msgid "创造性"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:239
+msgid "值越高越有创造性，建议0.3-0.7"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:245
+msgid "降级机制"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:249
+msgid "AI生成失败时使用本地算法"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:256
+msgid "API连接测试"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:259
+msgid "🧪 测试API连接"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:260
+msgid "测试API连接是否正常工作"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:366
+msgid "测试中..."
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:388
+msgid "请求失败，请检查网络连接"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:391
+msgid "测试API连接"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:440
+msgid "请先填写API密钥"
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:444
+msgid "请回复\"测试成功\""
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:472
+msgid "连接失败: "
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:479
+msgid "响应格式错误: "
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:483
+msgid "API错误: "
+msgstr ""
+
+#: modules/ai-settings/ai-settings-module.php:486
+msgid "✅ API连接测试成功！模型可用，配置正确。"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:68
+#: modules/auto-excerpt/admin/admin-page.php:95
+msgid "自动摘要管理"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:69
+msgid "自动摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:99
+msgid "文章列表与SEO分析"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:147
+#: modules/auto-excerpt/admin/admin-page.php:315
+#: modules/auto-excerpt/auto-excerpt-module.php:401
+msgid "批量SEO分析"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:152
+#, php-format
+msgid "共 %d 篇文章"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:162
+#: modules/auto-excerpt/admin/admin-page.php:323
+msgid "&laquo;"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:163
+#: modules/auto-excerpt/admin/admin-page.php:324
+msgid "&raquo;"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:177
+#: modules/auto-excerpt/admin/admin-page.php:898
+msgid "文章标题"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:179
+msgid "SEO得分"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:180
+msgid "修改时间"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:267
+msgid "未分析"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:333
+msgid "没有找到文章"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:343
+msgid "SEO分析结果"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:347
+msgid "正在分析..."
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:357
+msgid "批量操作"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:358
+msgid "数据分析"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:709
+#: modules/auto-excerpt/auto-excerpt-module.php:1516
+msgid "自动生成摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:714
+#: modules/auto-excerpt/auto-excerpt-module.php:1520
+msgid "保存文章时自动为没有摘要的文章生成摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:726
+#: modules/auto-excerpt/auto-excerpt-module.php:1532
+msgid "字符（建议100-200字符）"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:732
+#: modules/auto-excerpt/auto-excerpt-module.php:630
+msgid "智能提取"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:737
+msgid "优先提取文章关键句子，保持语义完整"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:741
+msgid "前往AI设置"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:743
+msgid "⚠️ AI功能未配置，请先配置AI服务"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:751
+msgid "保留格式"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:756
+msgid "在摘要中保留基本的HTML格式标签"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:762
+#: modules/auto-excerpt/auto-excerpt-module.php:1570
+msgid "最小内容长度"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:768
+#: modules/auto-excerpt/auto-excerpt-module.php:1576
+msgid "字符（内容少于此长度时不生成摘要）"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:786
+msgid "批量生成摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:787
+msgid "为现有的文章批量生成摘要。您可以选择文章类型、数量限制，以及是否覆盖已有摘要。"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:793
+msgid "准备开始..."
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:802
+msgid "文章类型"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:806
+msgid "文章"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:807
+msgid "页面"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:826
+msgid "处理数量"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:830
+msgid "一次最多处理的文章数量"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:836
+msgid "覆盖已有摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:840
+msgid "勾选此项将覆盖已有的摘要内容"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:847
+msgid "开始批量生成"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:860
+msgid "摘要数据统计"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:863
+msgid "摘要长度分布"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:871
+msgid "长度范围"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:871
+#: modules/category-optimization/admin/admin-page.php:195
+#: modules/category-optimization/admin/admin-page.php:235
+#: modules/tag-optimization/admin/admin-page.php:195
+#: modules/tag-optimization/admin/admin-page.php:235
+msgid "文章数量"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:871
+msgid "百分比"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:892
+msgid "最近生成的摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:898
+msgid "生成时间"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:923
+msgid "高级设置"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:931
+msgid "排除的短代码"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:938
+msgid "每行一个短代码名称，这些短代码的内容将在生成摘要时被忽略"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:944
+msgid "保留的HTML标签"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:949
+msgid "逗号分隔的HTML标签列表，这些标签在清理内容时将被保留"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:955
+msgid "自定义提示词"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:960
+msgid "用于指导摘要生成的提示词，留空使用默认提示词"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:967
+msgid "保存高级设置"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:972
+msgid "危险操作"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:973
+#: modules/auto-excerpt/admin/admin-page.php:978
+msgid "清除所有摘要"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:974
+msgid "此操作将删除所有文章的摘要内容，无法撤销。请谨慎操作。"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:975
+msgid "确定要清除所有摘要吗？此操作无法撤销！"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:1104
+msgid "高级设置保存成功！"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:1119
+msgid "所有摘要已清除！"
+msgstr ""
+
+#: modules/auto-excerpt/admin/admin-page.php:1173
+#, php-format
+msgid "成功处理了 %d 篇文章"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:491
+msgid "智能摘要生成器"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:548
+msgid "基于DeepSeek AI智能生成摘要，支持中英文混合内容。"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:550
+msgid "基于文章内容智能生成摘要，支持中英文混合内容。"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:559
+msgid "生成智能摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:564
+msgid "重新生成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:570
+msgid "追加模式（不替换现有摘要）"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:581
+msgid "预览生成的摘要："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:585
+msgid "应用此摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:595
+msgid "当前状态："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:598
+msgid "已有摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:600
+msgid "暂无摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:605
+msgid "内容长度："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:609
+msgid "建议摘要长度："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:615
+msgid "生成选项："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:635
+msgid "优先提取文章关键句和段落"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:669
+#: modules/auto-excerpt/auto-excerpt-module.php:2014
+msgid "AI摘要生成成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:670
+#: modules/auto-excerpt/auto-excerpt-module.php:2015
+msgid "摘要生成成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:680
+msgid "AI生成失败且内容太短，无法生成摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:681
+msgid "无法生成摘要，内容可能太短"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1505
+msgid "自动摘要生成设置"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1538
+msgid "自动生成模式"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1543
+msgid "草稿总是生成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1546
+msgid "智能首次生成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1549
+msgid "草稿首次生成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1553
+msgid "草稿总是生成：草稿状态每次保存都AI生成；智能首次生成：只在没有摘要/标签时AI生成；草稿首次生成：只对草稿第一次保存时AI生成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1560
+msgid "自动生成标签"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1564
+msgid "保存文章时自动为没有标签的文章生成标签"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1582
+msgid "智能内容提取"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1586
+msgid "使用智能算法提取关键句子，而非简单截取"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1596
+msgid "AI功能设置已迁移到"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1597
+msgid "工具箱设置 → AI设置"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1598
+msgid "，请在那里配置API密钥和AI服务参数。"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1601
+msgid "AI功能状态："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1603
+msgid "AI功能已启用"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1605
+#: modules/website-optimization/website-optimization-module.php:730
+msgid "AI功能未配置"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1638
+msgid "请先配置API密钥"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1651
+msgid "连接成功，AI回复："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1655
+msgid "API响应格式异常"
+msgstr ""
+
+#. translators: 1: success count, 2: fail count
+#: modules/auto-excerpt/auto-excerpt-module.php:1902
+#, php-format
+msgid "处理完成：成功 %1$d 篇，失败 %2$d 篇"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1907
+#: modules/category-optimization/category-optimization-module.php:648
+#: modules/tag-optimization/tag-optimization-module.php:645
+msgid "批量生成失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1956
+#: modules/auto-excerpt/auto-excerpt-module.php:2046
+#: modules/auto-excerpt/auto-excerpt-module.php:2261
+#: modules/auto-excerpt/auto-excerpt-module.php:2352
+#: modules/auto-excerpt/auto-excerpt-module.php:2826
+#: modules/auto-excerpt/auto-excerpt-module.php:2874
+msgid "文章不存在"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:1967
+msgid "文章已有AI生成的摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2018
+msgid "摘要生成失败，无法从内容中提取有效摘要"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2023
+#: modules/auto-excerpt/auto-excerpt-module.php:2089
+#: modules/category-optimization/category-optimization-module.php:622
+#: modules/tag-optimization/tag-optimization-module.php:619
+msgid "生成失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2079
+msgid "标签生成成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2084
+msgid "标签生成失败，请检查文章内容"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2256
+#: modules/auto-excerpt/auto-excerpt-module.php:2448
+#: modules/category-optimization/category-optimization-module.php:456
+#: modules/tag-optimization/tag-optimization-module.php:453
+msgid "AI生成功能未启用或未配置API密钥"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2333
+#: modules/auto-excerpt/auto-excerpt-module.php:3012
+#: modules/auto-excerpt/auto-excerpt-module.php:3195
+#: modules/category-optimization/category-optimization-module.php:405
+#: modules/tag-optimization/tag-optimization-module.php:402
+msgid "AI服务响应异常"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2338
+msgid "标签生成失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2347
+#: modules/category-optimization/category-optimization-module.php:419
+#: modules/tag-optimization/tag-optimization-module.php:416
+msgid "参数无效"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2384
+msgid "标签更新成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2391
+msgid "标签更新失败："
+msgstr ""
+
+#. translators: 1: processed, 2: success, 3: fail, 4: tags
+#: modules/auto-excerpt/auto-excerpt-module.php:2517
+#, php-format
+msgid "批量生成标签完成！处理：%1$d篇，成功：%2$d篇，失败：%3$d篇，应用标签：%4$d个"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2529
+#: modules/auto-excerpt/auto-excerpt-module.php:2555
+msgid "批量生成标签失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2570
+#: modules/auto-excerpt/auto-excerpt-module.php:2639
+msgid "无效的文章ID"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2575
+#: modules/auto-excerpt/auto-excerpt-module.php:2611
+#: modules/auto-excerpt/auto-excerpt-module.php:2644
+#: modules/auto-excerpt/auto-excerpt-module.php:2720
+#: modules/auto-excerpt/auto-excerpt-module.php:2789
+msgid "AI功能未配置，请在工具箱设置中配置AI服务"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2583
+msgid "SEO分析完成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2590
+msgid "SEO分析失败"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2595
+#: modules/website-optimization/website-optimization-module.php:1144
+msgid "SEO分析失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2618
+msgid "批量SEO分析完成"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2624
+msgid "批量SEO分析失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2680
+msgid "未找到SEO分析报告"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2685
+msgid "获取报告失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2726
+msgid "获取统计信息成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2732
+#: modules/category-optimization/category-optimization-module.php:693
+#: modules/tag-optimization/tag-optimization-module.php:690
+msgid "获取统计信息失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2767
+msgid "获取文章列表成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2773
+msgid "获取文章列表失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2798
+msgid "获取报告列表成功"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2804
+msgid "获取报告列表失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2852
+msgid "AI分类失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2886
+msgid "没有可用的标签"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2901
+msgid "AI标签优化失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2911
+#: modules/auto-excerpt/auto-excerpt-module.php:3093
+#: modules/category-optimization/category-optimization-module.php:297
+#: modules/tag-optimization/tag-optimization-module.php:294
+msgid "AI功能未配置，请先配置AI服务"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2917
+#: modules/category-optimization/category-optimization-module.php:303
+#: modules/category-optimization/category-optimization-module.php:424
+msgid "分类不存在"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:2931
+#: modules/category-optimization/category-optimization-module.php:317
+msgid "该分类下没有文章"
+msgstr ""
+
+#. translators: %s: value
+#: modules/auto-excerpt/auto-excerpt-module.php:3004
+#: modules/category-optimization/category-optimization-module.php:395
+#, php-format
+msgid "成功为分类\"%s\"生成描述"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:3008
+#: modules/auto-excerpt/auto-excerpt-module.php:3191
+#: modules/category-optimization/category-optimization-module.php:401
+#: modules/tag-optimization/tag-optimization-module.php:398
+msgid "AI未能生成有效描述"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:3017
+#: modules/category-optimization/category-optimization-module.php:410
+msgid "AI生成分类描述失败："
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:3099
+#: modules/tag-optimization/tag-optimization-module.php:300
+#: modules/tag-optimization/tag-optimization-module.php:421
+msgid "标签不存在"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:3113
+#: modules/tag-optimization/tag-optimization-module.php:314
+msgid "该标签下没有文章"
+msgstr ""
+
+#. translators: %s: value
+#: modules/auto-excerpt/auto-excerpt-module.php:3187
+#: modules/tag-optimization/tag-optimization-module.php:392
+#, php-format
+msgid "成功为标签\"%s\"生成描述"
+msgstr ""
+
+#: modules/auto-excerpt/auto-excerpt-module.php:3200
+#: modules/tag-optimization/tag-optimization-module.php:407
+msgid "AI生成标签描述失败："
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:73
+msgid "分类优化管理"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:110
+msgid "全部分类"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:111
+msgid "有描述分类"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:112
+msgid "无描述分类"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:119
+msgid "无描述分类生成描述"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:192
+#: modules/category-optimization/admin/admin-page.php:232
+msgid "分类名称"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:193
+#: modules/category-optimization/admin/admin-page.php:233
+#: modules/tag-optimization/admin/admin-page.php:193
+#: modules/tag-optimization/admin/admin-page.php:233
+msgid "描述状态"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:194
+#: modules/category-optimization/admin/admin-page.php:234
+#: modules/tag-optimization/admin/admin-page.php:194
+#: modules/tag-optimization/admin/admin-page.php:234
+msgid "描述长度"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:208
+#: modules/category-optimization/admin/admin-page.php:250
+#: modules/tag-optimization/admin/admin-page.php:208
+#: modules/tag-optimization/admin/admin-page.php:250
+msgid "有描述"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:208
+#: modules/category-optimization/admin/admin-page.php:252
+#: modules/tag-optimization/admin/admin-page.php:208
+#: modules/tag-optimization/admin/admin-page.php:252
+msgid "无描述"
+msgstr ""
+
+#: modules/category-optimization/admin/admin-page.php:256
+#: modules/tag-optimization/admin/admin-page.php:256
+msgid "篇"
+msgstr ""
+
+#: modules/category-optimization/category-optimization-module.php:435
+msgid "分类描述更新成功"
+msgstr ""
+
+#: modules/category-optimization/category-optimization-module.php:442
+msgid "分类描述更新失败："
+msgstr ""
+
+#: modules/category-optimization/category-optimization-module.php:490
+#: modules/category-optimization/category-optimization-module.php:673
+msgid "获取分类列表失败："
+msgstr ""
+
+#: modules/category-optimization/category-optimization-module.php:505
+msgid "没有符合条件的分类需要处理"
+msgstr ""
+
+#. translators: 1: processed, 2: success, 3: fail
+#: modules/category-optimization/category-optimization-module.php:551
+#, php-format
+msgid "批量生成分类描述完成！处理：%1$d个，成功：%2$d个，失败：%3$d个"
+msgstr ""
+
+#: modules/category-optimization/category-optimization-module.php:562
+msgid "批量生成分类描述失败："
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:37
+msgid "📝 基本设置"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:44
+msgid "缓存时间（小时）"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:49
+msgid "设置卡片数据的缓存时间，默认为72小时。"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:55
+msgid "启用Memcached缓存"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:60
+msgid "如果服务器支持Memcached，可以启用此选项提高性能。"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:66
+msgid "启用OPcache缓存"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:71
+msgid "如果服务器支持OPcache，可以启用此选项提高性能。"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:101
+msgid "网站卡片列表"
+msgstr ""
+
+#. translators: %d: count
+#: modules/custom-card/admin/admin-page.php:146
+#: modules/custom-card/admin/cards-admin-page.php:120
+#, php-format
+msgid "共 %d 个卡片"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:170
+#: modules/custom-card/admin/cards-admin-page.php:130
+#: modules/website-optimization/admin/admin-page.php:71
+msgid "网站标题"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:171
+#: modules/custom-card/admin/cards-admin-page.php:132
+msgid "状态"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:172
+#: modules/custom-card/admin/cards-admin-page.php:133
+msgid "点击次数"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:173
+#: modules/custom-card/admin/cards-admin-page.php:134
+msgid "创建时间"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:234
+msgid "📭 暂无网站卡片"
+msgstr ""
+
+#: modules/custom-card/admin/admin-page.php:235
+msgid "还没有创建任何网站卡片。您可以："
+msgstr ""
+
+#: modules/custom-card/admin/cards-admin-page.php:107
+msgid "网站卡片管理"
+msgstr ""
+
+#: modules/custom-card/admin/cards-admin-page.php:131
+msgid "URL"
+msgstr ""
+
+#: modules/custom-card/admin/cards-admin-page.php:178
+msgid "🚫 停用"
+msgstr ""
+
+#: modules/custom-card/admin/cards-admin-page.php:178
+msgid "✅ 激活"
+msgstr ""
+
+#: modules/custom-card/admin/cards-list.php:57
+msgid "卡片已删除！"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php:313
+#: modules/custom-card/custom-card-module.php:314
+msgid "已启用"
+msgstr ""
+
+#: modules/custom-card/custom-card-module.php:313
+#: modules/custom-card/custom-card-module.php:314
+msgid "已禁用"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:212
+#: modules/prompt-settings/prompt-settings-module.php:213
+#: modules/prompt-settings/prompt-settings-module.php:327
+#: modules/prompt-settings/prompt-settings-module.php:330
+msgid "提示词设置"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:254
+msgid "提示词设置已保存！"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:273
+msgid "无效的模块"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:278
+msgid "已重置为默认提示词"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:310
+#: modules/prompt-settings/prompt-settings-module.php:360
+msgid "重置为默认"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:311
+msgid "重置中..."
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:312
+msgid "请求失败，请重试"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:331
+msgid "自定义各AI功能模块的提示词，优化AI生成效果。"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:343
+msgid "提示词内容"
+msgstr ""
+
+#: modules/prompt-settings/prompt-settings-module.php:354
+msgid "支持变量替换，如：{length}、{content}、{category_name}等"
+msgstr ""
+
+#: modules/rest-proxy-fix.php:385
+msgid "✅ 修复已启用"
+msgstr ""
+
+#: modules/rest-proxy-fix.php:385
+msgid "⚠️ 修复已禁用"
+msgstr ""
+
+#: modules/rest-proxy-fix.php:386
+msgid "REST代理连接问题已成功修复，插件正在运行中。"
+msgstr ""
+
+#: modules/rest-proxy-fix.php:386
+msgid "REST代理修复功能已禁用，不会阻止任何请求。"
+msgstr ""
+
+#: modules/rest-proxy-fix.php:570
+#: modules/rest-proxy-fix.php:575
+#: modules/rest-proxy-fix.php:580
+#: modules/rest-proxy-fix.php:585
+#: modules/rest-proxy-fix.php:590
+#: modules/rest-proxy-fix.php:595
+msgid "✅ 已启用"
+msgstr ""
+
+#: modules/rest-proxy-fix.php:570
+#: modules/rest-proxy-fix.php:575
+#: modules/rest-proxy-fix.php:580
+#: modules/rest-proxy-fix.php:585
+#: modules/rest-proxy-fix.php:590
+#: modules/rest-proxy-fix.php:595
+msgid "❌ 已禁用"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:78
+msgid "已发布的友情链接请使用WordPress内置的\"链接\"管理功能。此页面仅显示用户提交的待审核申请。"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:80
+msgid "管理已发布链接"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:133
+#: modules/simple-friendlink/admin.php:145
+msgid "待审核申请"
+msgstr ""
+
+#. translators: %d: count
+#: modules/simple-friendlink/admin.php:137
+#, php-format
+msgid "共 %d 条记录"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:147
+msgid "个友情链接申请等待审核"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:160
+msgid "全选"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:163
+msgid "批准选中"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:166
+msgid "删除选中"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:175
+msgid "网站名称"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:176
+msgid "网站地址"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:177
+msgid "描述"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:178
+msgid "申请时间"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:208
+msgid "批准"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:216
+msgid "确定要删除这个申请吗？"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:217
+msgid "删除"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:228
+msgid "暂无待审核的友情链接申请"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:343
+msgid "链接已批准"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:346
+msgid "链接已删除"
+msgstr ""
+
+#: modules/simple-friendlink/admin.php:349
+msgid "操作失败"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:68
+msgid "友情链接页面"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:122
+msgid "提交成功！"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:123
+#: modules/simple-friendlink/simple-friendlink-module.php:213
+#: modules/simple-friendlink/simple-friendlink-module.php:297
+msgid "提交失败，请重试。"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:124
+msgid "提交中..."
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:143
+#: modules/simple-friendlink/simple-friendlink-module.php:229
+msgid "请登录后提交友情链接"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:154
+#: modules/simple-friendlink/simple-friendlink-module.php:240
+msgid "网站名称和地址为必填项"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:159
+#: modules/simple-friendlink/simple-friendlink-module.php:245
+msgid "请输入有效的网站地址"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:171
+#: modules/simple-friendlink/simple-friendlink-module.php:257
+msgid "该网站已存在于友情链接中"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:203
+#: modules/simple-friendlink/simple-friendlink-module.php:292
+msgid "友情链接提交成功！等待管理员审核。"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:209
+#: modules/simple-friendlink/simple-friendlink-module.php:294
+msgid "友情链接添加成功！"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:313
+msgid "URL不能为空"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:325
+msgid "无法获取信息"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:370
+msgid "缓存刷新完成"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:850
+msgid "🔒 此功能为 PRO 版本专属功能"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:851
+msgid "请升级到 PRO 版本解锁简洁友情链接功能。"
+msgstr ""
+
+#: modules/simple-friendlink/simple-friendlink-module.php:852
+msgid "升级 PRO 版本"
+msgstr ""
+
+#: modules/tag-optimization/admin/admin-page.php:73
+msgid "标签优化管理"
+msgstr ""
+
+#: modules/tag-optimization/admin/admin-page.php:110
+msgid "全部标签"
+msgstr ""
+
+#: modules/tag-optimization/admin/admin-page.php:111
+msgid "有描述标签"
+msgstr ""
+
+#: modules/tag-optimization/admin/admin-page.php:112
+msgid "无描述标签"
+msgstr ""
+
+#: modules/tag-optimization/admin/admin-page.php:119
+msgid "无描述标签生成描述"
+msgstr ""
+
+#: modules/tag-optimization/admin/admin-page.php:192
+#: modules/tag-optimization/admin/admin-page.php:232
+msgid "标签名称"
+msgstr ""
+
+#: modules/tag-optimization/tag-optimization-module.php:432
+msgid "标签描述更新成功"
+msgstr ""
+
+#: modules/tag-optimization/tag-optimization-module.php:439
+msgid "标签描述更新失败："
+msgstr ""
+
+#: modules/tag-optimization/tag-optimization-module.php:487
+#: modules/tag-optimization/tag-optimization-module.php:670
+msgid "获取标签列表失败："
+msgstr ""
+
+#: modules/tag-optimization/tag-optimization-module.php:502
+msgid "没有符合条件的标签需要处理"
+msgstr ""
+
+#. translators: 1: processed, 2: success, 3: fail
+#: modules/tag-optimization/tag-optimization-module.php:548
+#, php-format
+msgid "批量生成标签描述完成！处理：%1$d个，成功：%2$d个，失败：%3$d个"
+msgstr ""
+
+#: modules/tag-optimization/tag-optimization-module.php:559
+msgid "批量生成标签描述失败："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:49
+msgid "网站SEO优化"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:78
+msgid "文章总数"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:85
+msgid "页面总数"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:92
+msgid "最后分析"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:105
+msgid "分析网站SEO"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:113
+#: modules/website-optimization/website-optimization-module.php:1139
+msgid "分析中..."
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:121
+msgid "当前分析："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:121
+msgid "准备中..."
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:122
+msgid "已分析："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:123
+msgid "成功："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:124
+msgid "失败："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:134
+msgid "SEO分析报告"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:138
+msgid "标题SEO分析"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:141
+msgid "当前标题："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:145
+msgid "标题长度："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:149
+#: modules/website-optimization/admin/admin-page.php:180
+#: modules/website-optimization/admin/admin-page.php:211
+msgid "分析结果："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:153
+#: modules/website-optimization/admin/admin-page.php:184
+#: modules/website-optimization/admin/admin-page.php:215
+msgid "优化建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:157
+msgid "具体标题建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:161
+msgid "🤖 AI智能标题建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:169
+msgid "描述SEO分析"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:172
+msgid "当前描述："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:176
+msgid "描述长度："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:188
+msgid "具体描述建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:192
+msgid "🤖 AI智能描述建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:200
+msgid "关键字SEO分析"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:203
+msgid "当前关键字："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:207
+msgid "关键字数量："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:208
+msgid "个"
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:219
+msgid "具体关键字建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:223
+msgid "🤖 AI智能关键字建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:227
+msgid "🤖 AI智能长尾关键字建议："
+msgstr ""
+
+#: modules/website-optimization/admin/admin-page.php:235
+msgid "总体优化建议"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:163
+msgid "从未分析"
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:319
+#, php-format
+msgid "标题长度分析：当前标题过短（%d字符），建议扩展到30-60字符"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:322
+msgid "具体优化：在标题中添加更多描述性词语，如\"专业\"、\"优质\"、\"最新\"等"
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:326
+#, php-format
+msgid "标题长度分析：当前标题过长（%d字符），可能被搜索引擎截断"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:329
+msgid "具体优化：精简标题内容，删除不必要的词语，保持在60字符以内"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:331
+msgid "标题长度分析：标题长度适中，符合搜索引擎要求"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:336
+msgid "标题内容分析：未设置网站标题"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:337
+msgid "具体优化：请立即设置一个包含关键词和品牌名称的网站标题"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:340
+#, php-format
+msgid "标题内容分析：当前标题为\"%s\""
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:353
+msgid "具体优化：确保标题包含主要关键词，格式建议：\"[关键词] - [品牌名称]\" 或 \"[品牌名称] | [核心业务]\""
+msgstr ""
+
+#. translators: 1: keyword, 2: site title
+#: modules/website-optimization/website-optimization-module.php:364
+#, php-format
+msgid "建议标题1：%1$s - %2$s"
+msgstr ""
+
+#. translators: 1: site title, 2: keyword
+#: modules/website-optimization/website-optimization-module.php:366
+#, php-format
+msgid "建议标题2：%1$s | %2$s服务"
+msgstr ""
+
+#. translators: 1: keyword, 2: site title
+#: modules/website-optimization/website-optimization-module.php:368
+#, php-format
+msgid "建议标题3：专业%1$s - %2$s官方网站"
+msgstr ""
+
+#. translators: 1: keyword1, 2: keyword2, 3: site title
+#: modules/website-optimization/website-optimization-module.php:370
+#, php-format
+msgid "建议标题4：%1$s %2$s - %3$s"
+msgstr ""
+
+#. translators: 1: site title, 2: keyword1, 3: keyword2
+#: modules/website-optimization/website-optimization-module.php:372
+#, php-format
+msgid "建议标题5：%1$s - 专注%2$s和%3$s领域"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:377
+#, php-format
+msgid "建议标题1：%s - 官方网站"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:379
+#, php-format
+msgid "建议标题2：%s | 专业服务提供商"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:381
+#, php-format
+msgid "建议标题3：欢迎访问%s - 优质内容分享"
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:409
+#, php-format
+msgid "描述长度分析：当前描述过短（%d字符），无法有效吸引用户点击"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:412
+msgid "具体优化：将描述扩展到50-160字符，添加更多有价值的信息和关键词"
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:416
+#, php-format
+msgid "描述长度分析：当前描述过长（%d字符），可能被搜索引擎截断"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:419
+msgid "具体优化：精简描述内容，删除冗余信息，保持在160字符以内"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:421
+msgid "描述长度分析：描述长度适中，符合搜索引擎要求"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:426
+msgid "描述内容分析：未设置网站描述"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:427
+msgid "具体优化：请立即设置一个包含关键词、核心价值和行动号召的网站描述"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:430
+#, php-format
+msgid "描述内容分析：当前描述为\"%s\""
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:436
+msgid "具体优化：确保描述具有吸引力、包含核心价值主张和行动号召，格式建议：\"[品牌名称]提供[核心服务]，帮助用户[解决问题]。了解更多信息请访问我们的网站。\""
+msgstr ""
+
+#. translators: 1: value, 2: value, 3: value, 4: value, 5: value
+#: modules/website-optimization/website-optimization-module.php:448
+#, php-format
+msgid "建议描述1：%1$s专注于%2$s和%3$s领域，提供专业的%2$s服务和解决方案。我们致力于帮助用户解决%2$s相关问题，提供高质量的内容和资源。"
+msgstr ""
+
+#. translators: 1: value, 2: value, 3: value, 4: value
+#: modules/website-optimization/website-optimization-module.php:450
+#, php-format
+msgid "建议描述2：欢迎访问%1$s - 您的%2$s专家。我们提供最新的%2$s资讯、实用技巧和深度分析，帮助您更好地理解和应用%2$s知识。"
+msgstr ""
+
+#. translators: 1: value, 2: value, 3: value, 4: value, 5: value
+#: modules/website-optimization/website-optimization-module.php:452
+#, php-format
+msgid "建议描述3：%1$s是专业的%2$s平台，涵盖%3$s、%4$s等多个领域。我们为读者提供有价值的%2$s内容，帮助您提升技能和知识水平。"
+msgstr ""
+
+#. translators: 1: value, 2: value, 3: value, 4: value
+#: modules/website-optimization/website-optimization-module.php:454
+#, php-format
+msgid "建议描述4：探索%1$s的%2$s世界 - 从基础入门到高级应用，我们为您提供全面的%2$s指南和教程。加入我们的社区，与其他%2$s爱好者交流学习。"
+msgstr ""
+
+#. translators: 1: value, 2: value, 3: value, 4: value, 5: value
+#: modules/website-optimization/website-optimization-module.php:456
+#, php-format
+msgid "建议描述5：%1$s - 您的%2$s资源中心。我们收集整理了大量关于%2$s和%3$s的优质内容，包括教程、案例分析和最佳实践，助您成为%2$s专家。"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:461
+#, php-format
+msgid "建议描述1：%s是一个专业的网站，致力于为用户提供有价值的内容和服务。我们关注用户体验，持续优化网站内容，确保为访客提供最佳的浏览体验。"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:463
+#, php-format
+msgid "建议描述2：欢迎访问%s，这里汇集了丰富的资源和信息。我们的目标是创建高质量的内容，帮助用户解决问题、获取知识和提升技能。"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:465
+#, php-format
+msgid "建议描述3：%s为您提供专业的服务和内容支持。我们注重内容质量和用户体验，致力于成为您信赖的信息来源和问题解决平台。"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:493
+msgid "关键词分析：未设置网站关键词"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:494
+msgid "具体优化：请立即设置3-5个核心关键词，用逗号分隔"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:498
+#, php-format
+msgid "关键词分析：当前关键词为\"%s\""
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:509
+#, php-format
+msgid "关键词数量分析：关键词数量过少（%d个），建议设置3-5个核心关键词"
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:515
+#, php-format
+msgid "关键词数量分析：关键词数量过多（%d个），建议精简到3-5个核心关键词"
+msgstr ""
+
+#. translators: %d: count
+#: modules/website-optimization/website-optimization-module.php:521
+#, php-format
+msgid "关键词数量分析：关键词数量适中（%d个），符合SEO最佳实践"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:530
+msgid "关键词质量分析：关键词质量良好，具有商业价值和搜索潜力"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:532
+msgid "关键词质量分析：关键词质量需要优化，建议选择更具商业价值的关键词"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:535
+msgid "具体优化：确保关键词在标题、描述和内容中自然分布"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:536
+msgid "具体优化：创建长尾关键词，如\"[核心关键词] 使用方法\""
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:537
+msgid "具体优化：确保关键词自然融入内容，避免堆砌"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:547
+#, php-format
+msgid "核心关键词：%s"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:549
+#, php-format
+msgid "长尾关键词：%s 使用方法"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:551
+#, php-format
+msgid "长尾关键词：%s 教程"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:553
+#, php-format
+msgid "长尾关键词：%s 技巧"
+msgstr ""
+
+#. translators: 1: keyword1, 2: keyword2
+#: modules/website-optimization/website-optimization-module.php:555
+#, php-format
+msgid "长尾关键词：%1$s %2$s"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:557
+#, php-format
+msgid "长尾关键词：%s 入门指南"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:559
+#, php-format
+msgid "长尾关键词：%s 常见问题"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:561
+#, php-format
+msgid "长尾关键词：%s 最佳实践"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:565
+msgid "核心关键词：网站优化, SEO, 内容策略"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:566
+msgid "长尾关键词：网站优化 方法"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:567
+msgid "长尾关键词：SEO 优化技巧"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:568
+msgid "长尾关键词：内容策略 指南"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:569
+msgid "长尾关键词：网站SEO 最佳实践"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:600
+msgid "描述包含明确的价值主张和吸引力元素"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:602
+msgid "描述缺乏明确的价值主张或吸引力元素"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:639
+msgid "关键词具有明确的商业价值和搜索潜力"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:641
+msgid "关键词缺乏明确的商业价值或搜索潜力"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:703
+msgid "SEO优化总体建议："
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:704
+msgid "1. 标题优化：确保标题包含核心关键词，长度在30-60字符之间"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:705
+msgid "2. 描述优化：描述应包含关键词和行动号召，长度在50-160字符之间"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:706
+msgid "3. 关键词优化：选择3-5个核心关键词，在内容中自然分布"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:707
+msgid "4. 内容质量：定期发布高质量、原创的内容"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:708
+msgid "5. 用户体验：确保网站加载速度快，移动端友好"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:755
+msgid "AI分析完成，已生成智能优化建议"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:763
+#, php-format
+msgid "AI分析失败，使用基础建议: %s"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:862
+msgid "AI服务不可用"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1033
+msgid "没有保存的分析报告"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:1037
+#, php-format
+msgid "获取保存的分析报告失败: %s"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:1059
+#, php-format
+msgid "分析失败: %s"
+msgstr ""
+
+#. translators: %s: value
+#: modules/website-optimization/website-optimization-module.php:1089
+#, php-format
+msgid "保存设置失败: %s"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1140
+msgid "正在准备..."
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1141
+msgid "正在发送请求到服务器..."
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1142
+msgid "完成"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1143
+msgid "网站SEO分析完成！"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1145
+msgid "整体得分："
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1146
+msgid "分析时间："
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1147
+msgid "请求超时：处理时间过长，请稍后重试。"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1148
+msgid "网络错误："
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1149
+msgid "未知错误"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1151
+msgid "保存设置失败"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1152
+msgid "优秀"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1153
+msgid "良好"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1154
+#: modules/website-optimization/website-optimization-module.php:1159
+msgid "一般"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1155
+msgid "需要改进"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1156
+msgid "高优先级"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1157
+msgid "中优先级"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1158
+msgid "低优先级"
+msgstr ""
+
+#: modules/website-optimization/website-optimization-module.php:1160
+msgid "操作："
+msgstr ""
+
+#: modules/custom-card/blocks/custom-card/block.json
+msgctxt "block title"
+msgid "卡片展示"
+msgstr ""
+
+#: modules/custom-card/blocks/custom-card/block.json
+msgctxt "block description"
+msgid "插入一个自定义卡片组件"
+msgstr ""

@@ -1,0 +1,14 @@
+{
+  "name": "AI Content Toolkit",
+  "slug": "ai-content-toolkit",
+  "version": "2.0.23",
+  "author": "chenghoufeng",
+  "author_url": "https://www.saiita.com.cn",
+  "requires_wp": "5.3",
+  "requires_php": "7.4",
+  "tested_up_to": "7.0",
+  "license": "GPL v2 or later",
+  "license_uri": "https://www.gnu.org/licenses/gpl-2.0.html",
+  "release_date": "2026-06-02",
+  "changelog": "WP 7.0 compatibility, unified settings page styles, fixed bugs (singleton trait, option naming, prompt settings), removed redundant files"
+}
