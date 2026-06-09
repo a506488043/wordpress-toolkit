@@ -1,196 +1,161 @@
-=== Saiita AI Content Toolkit ===
-Contributors: saiita
-Tags: ai, content, seo, excerpt, optimization
-Requires at least: 5.3
-Tested up to: 7.0
-Requires PHP: 7.4
-Stable tag: 2.0.23
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+# Saiita AI Content Toolkit
 
-AI-powered content toolkit for WordPress. Generate article summaries, optimize SEO, auto-generate tags and category descriptions using AI.
+**AI-powered content toolkit for WordPress** — Generate article summaries, optimize SEO, auto-generate tags and category descriptions using AI.
 
-== External Services ==
+[![Requires WordPress](https://img.shields.io/badge/WordPress-5.3%2B-blue)](https://wordpress.org)
+[![Requires PHP](https://img.shields.io/badge/PHP-7.4%2B-purple)](https://php.net)
+[![License](https://img.shields.io/badge/License-GPLv2-green)](https://www.gnu.org/licenses/gpl-2.0.html)
+[![Stable](https://img.shields.io/badge/Version-2.0.23-orange)]()
 
-This plugin requires AI service providers to function. The plugin connects to external AI APIs to process your content.
+---
 
-**Supported AI Providers:**
+## ✨ 功能特性
 
-* **DeepSeek** - Affordable AI models optimized for Chinese content
-  * Service: https://platform.deepseek.com
-  * Privacy Policy: https://platform.deepseek.com/privacy
-  * Terms of Service: https://platform.deepseek.com/terms
+### 📝 文章优化
+- AI 生成文章摘要
+- 批量为无摘要文章生成摘要
+- 单篇文章 SEO 分析与评分
+- AI 根据文章内容生成标签
+- 批量生成多篇文章标签
 
-* **OpenAI** - Industry-leading GPT models
-  * Service: https://openai.com
-  * Privacy Policy: https://openai.com/policies/privacy-policy
-  * Terms of Service: https://openai.com/policies/terms-of-use
+### 🏷️ 标签优化
+- AI 生成标签描述
+- 批量生成所有标签描述
+- 提升标签页 SEO
 
-* **SiliconFlow** - Professional AI model platform
-  * Service: https://siliconflow.cn
-  * Privacy Policy: https://siliconflow.cn/privacy
-  * Terms of Service: https://siliconflow.cn/terms
+### 📂 分类优化
+- AI 生成分类描述
+- 批量生成所有分类描述
+- 提升分类归档页 SEO
 
-**How it works:**
-1. You need to obtain an API key from one or more of these AI providers
-2. Configure the API key in the plugin settings
-3. The plugin sends your content to the selected AI provider for processing
-4. Results are returned and stored in your WordPress database
+### 🌐 网站优化
+- 全站 SEO 综合分析
+- 内容结构建议
+- Meta 标签和标题分析
 
-**What data is sent:**
-* Article content (title, body text) for analysis and optimization
-* Existing metadata (tags, categories, excerpts) for enhancement
-* No personal user data or site configuration information is transmitted
+### 🤖 AI 分类
+- 使用 AI 自动为文章分类
+- 可配置置信度阈值
+- 支持多个 AI 服务商
 
-**Referral Program:**
-The plugin contains referral links to AI service providers. Using these links to register for services may provide you with bonus credits and helps support continued plugin development at no cost to you.
+### ⚙️ AI 设置
+- 统一的 AI 服务商管理
+- 支持 DeepSeek、OpenAI、SiliconFlow
+- 可配置模型选择和参数
 
-== Description ==
+### 📋 提示词设置
+- 可自定义 AI 提示词模板
+- 根据需求微调 AI 输出
 
-Saiita AI Content Toolkit is a comprehensive AI-powered content management plugin for WordPress. It leverages leading AI providers (DeepSeek, OpenAI, SiliconFlow) to help content creators and administrators streamline their workflow.
+### 🧮 年龄计算器
+- 精确的年龄计算小工具
+- 以年、月、日显示年龄
 
-**Key Features:**
+---
 
-= Article Optimization =
-* AI-powered article summary generation
-* Batch generate summaries for articles without excerpts
-* SEO analysis and scoring for individual articles
-* AI-generated tags based on article content
-* Batch tag generation for multiple articles
+## 🔌 支持的 AI 服务商
 
-= Tag Optimization =
-* AI-generated tag descriptions
-* Batch generate descriptions for all tags
-* Improve tag pages SEO with meaningful descriptions
+| 服务商 | 特点 | 注册地址 |
+|--------|------|----------|
+| **DeepSeek** | 性价比高，中文优化 | [platform.deepseek.com](https://platform.deepseek.com) |
+| **OpenAI** | 行业领先的 GPT 模型 | [openai.com](https://openai.com) |
+| **SiliconFlow** | 专业 AI 模型平台 | [siliconflow.cn](https://siliconflow.cn) |
 
-= Category Optimization =
-* AI-generated category descriptions
-* Batch generate descriptions for all categories
-* Improve category archive SEO
+> ⚠️ 使用插件需要至少一个 AI 服务商的 API Key。
 
-= Website Optimization =
-* Comprehensive website SEO analysis
-* Content structure recommendations
-* Meta tag and heading analysis
+---
 
-= AI Category =
-* Automatically categorize articles using AI
-* Configurable confidence threshold
-* Support for multiple AI providers
+## 📦 安装
 
-= AI Settings =
-* Unified AI provider management
-* Support for DeepSeek, OpenAI, and SiliconFlow
-* Configurable model selection and parameters
+1. 将插件文件夹上传到 `/wp-content/plugins/`
+2. 在 WordPress 后台「插件」菜单中激活插件
+3. 进入后台侧边栏「Saiita AI Toolkit」
+4. 配置 AI 服务商设置（API Key 和模型）
+5. 开始使用 AI 功能
 
-= Prompt Settings =
-* Customizable AI prompt templates
-* Fine-tune AI output for your specific needs
+---
 
-= Age Calculator =
-* Precise age calculation widget
-* Display age in years, months, and days
+## ❓ 常见问题
 
-== Installation ==
+### 支持哪些 AI 服务商？
+DeepSeek、OpenAI 和 SiliconFlow。可以配置多个服务商并随时切换。
 
-1. Upload the plugin folder to `/wp-content/plugins/`
-2. Activate the plugin through the "Plugins" menu in WordPress
-3. Go to "Saiita AI Toolkit" in the admin sidebar
-4. Configure your AI provider settings (API Key and model)
-5. Start using the AI features
+### 我的数据安全吗？
+所有 API 调用均在服务端进行。文章内容仅在你手动触发 AI 功能时发送给 AI 服务商。AI 服务商不会存储超出其标准 API 处理范围的数据。
 
-== Frequently Asked Questions ==
+### 需要 API Key 吗？
+是的，你需要至少一个受支持服务商的 API Key。可以从 DeepSeek、OpenAI 或 SiliconFlow 获取免费或付费的 Key。
 
-= Which AI providers are supported? =
-DeepSeek, OpenAI, and SiliconFlow. You can configure multiple providers and switch between them.
+---
 
-= Is my data safe? =
-All API calls are made server-side. Article content is only sent to the AI provider when you explicitly trigger an AI feature. No data is stored by the AI providers beyond their standard API processing.
+## 🔒 数据安全说明
 
-= Do I need an API key? =
-Yes, you need an API key from at least one supported AI provider. You can get a free or paid key from DeepSeek, OpenAI, or SiliconFlow.
+- 所有 API 调用在 WordPress 后端执行，不在浏览器端发送数据
+- 管理员需自行配置 API Key，插件不使用任何共享或内置凭证
+- 用户可以选择使用哪个 AI 服务商，或完全禁用 AI 功能
+- 文章内容不会被插件额外存储或记录（仅标准 WordPress 文章存储）
 
-== Screenshots ==
+### 发送的数据
+- 文章内容（标题、正文）— 用于分析和优化
+- 现有元数据（标签、分类、摘要）— 用于增强处理
+- **不发送**个人用户数据或站点配置信息
 
-1. Main dashboard with quick access to all features
-2. Article optimization page with batch operations
-3. Tag and category optimization interface
-4. AI settings configuration
+---
 
-== Changelog ==
+## 📸 截图
 
-= 2.0.23 =
-* Compatibility: Updated for WordPress 7.0, raised minimum WP version to 5.3
-* Fixed: Singleton Trait self/static bug causing shared instance storage across classes
-* Fixed: AI Category custom prompt settings never working due to wrong option key
-* Fixed: Unified option key naming convention across all modules (with backward compatibility)
-* Fixed: Styling conflicts between settings pages, all now match AI Settings style
-* Improved: Removed H1 titles from all admin pages, unified top spacing
-* Improved: Cleaned up 4 unused redundant CSS/JS files
-* Improved: Fixed CSS select dropdown arrow overlap with text
+1. 主仪表盘，快速访问所有功能
+2. 文章优化页面，支持批量操作
+3. 标签和分类优化界面
+4. AI 设置配置页面
 
-= 2.0.21 =
-* Security: Enhanced security measures for WordPress.org plugin directory requirements
-* Fixed: Improved input sanitization for all user-submitted data
-* Fixed: Added proper output escaping for all displayed content
-* Fixed: Added permission callbacks for all REST API endpoints
-* Fixed: Replaced json_encode() with wp_json_encode() for better security
-* Fixed: Enhanced field validation in AI category settings
-* Improved: Better sanitization for JSON-decoded options
-* Improved: Proper escaping for translation functions
+---
 
-= 2.0.19 =
-* Added: New AI-powered features and improvements
-* Improved: UI/UX enhancements
-* Security: Enhanced security measures
+## 📝 更新日志
 
-= 2.0.5 =
-* Security: Restored nonce verification for all AJAX handlers
-* Security: Added input sanitization for all $_POST operations
-* Fixed: Unified option key naming convention
-* Added: Internationalization support (.pot file)
-* Improved: Code quality and security hardening
+### 2.0.23
+- **兼容性：** 更新至 WordPress 7.0，最低 WP 版本提升至 5.3
+- **修复：** Singleton Trait self/static bug 导致类间共享实例存储
+- **修复：** AI Category 自定义提示词设置因错误 option key 无法生效
+- **修复：** 所有模块统一 option key 命名规范（含向后兼容）
+- **修复：** 各设置页样式冲突，现已统一为 AI Settings 风格
+- **改进：** 移除所有管理页面的 H1 标题，统一顶部间距
+- **改进：** 清理 4 个未使用的冗余 CSS/JS 文件
+- **改进：** 修复 CSS select 下拉箭头与文字重叠问题
 
-= 2.0.0 =
-* Complete rewrite with modular architecture
-* Added AI category auto-classification
-* Added CookieGuard GDPR compliance
-* Added prompt settings management
-* Performance improvements
+### 2.0.21
+- **安全：** 增强 WordPress.org 插件目录安全要求
+- **修复：** 改进所有用户提交数据的输入清理
+- **修复：** 为所有显示内容添加输出转义
+- **修复：** 为所有 REST API 端点添加权限回调
+- **修复：** 用 `wp_json_encode()` 替换 `json_encode()`
+- **改进：** 更好的 JSON 解码选项清理
 
-== External services ==
+### 2.0.19
+- **新增：** 新的 AI 功能和改进
+- **改进：** UI/UX 增强
+- **安全：** 安全措施增强
 
-This plugin connects to third-party AI service APIs to provide content generation and analysis features. Below is a detailed description of each external service used.
+### 2.0.5
+- **安全：** 恢复所有 AJAX 处理器的 nonce 验证
+- **安全：** 为所有 `$_POST` 操作添加输入清理
+- **修复：** 统一 option key 命名规范
+- **新增：** 国际化支持（.pot 文件）
+- **改进：** 代码质量和安全加固
 
-=== DeepSeek AI ===
+### 2.0.0
+- **完全重写：** 模块化架构
+- **新增：** AI 自动分类
+- **新增：** CookieGuard GDPR 合规
+- **新增：** 提示词设置管理
+- **改进：** 性能优化
 
-* **Service:** AI content generation, including article summarization, SEO analysis, tag generation, and category description generation.
-* **What data is sent:** Article titles, content, metadata, and existing tags/categories. Data is sent only when an administrator explicitly triggers an AI feature (e.g., clicking "Generate Summary" or "Generate Tags").
-* **When data is sent:** Only upon explicit administrator action. No automatic or background data transmission occurs.
-* **Where data is sent:** API endpoint at `api.deepseek.com`
-* **Terms of Service:** https://platform.deepseek.com/terms-of-use
-* **Privacy Policy:** https://platform.deepseek.com/privacy-policy
+---
 
-=== OpenAI ===
+## 📄 许可证
 
-* **Service:** Alternative AI provider for all content generation features (summarization, SEO analysis, tag and category descriptions).
-* **What data is sent:** Same as DeepSeek — article titles, content, and metadata sent only upon explicit administrator action.
-* **When data is sent:** Only upon explicit administrator action.
-* **Where data is sent:** API endpoint at `api.openai.com`
-* **Terms of Service:** https://openai.com/policies/terms-of-use
-* **Privacy Policy:** https://openai.com/policies/privacy-policy
+GPLv2 or later — [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
 
-=== SiliconFlow ===
+## 👥 贡献者
 
-* **Service:** Alternative AI provider for all content generation features.
-* **What data is sent:** Same as DeepSeek and OpenAI — article content and metadata sent only upon explicit administrator action.
-* **When data is sent:** Only upon explicit administrator action.
-* **Where data is sent:** API endpoint at `api.siliconflow.cn`
-* **Terms of Service:** https://siliconflow.cn/terms
-* **Privacy Policy:** https://siliconflow.cn/privacy
-
-**Important notes:**
-* All API calls are made server-side (WordPress backend). No end-user data is sent directly from browsers.
-* Administrators must configure their own API keys. The plugin does not use any shared or built-in API credentials.
-* Users can choose which AI provider to use or disable AI features entirely.
-* Article content is not stored or logged by this plugin beyond the standard WordPress post storage.
+- [saiita](https://github.com/a506488043)
