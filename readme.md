@@ -5,7 +5,7 @@
 [![Requires WordPress](https://img.shields.io/badge/WordPress-5.3%2B-blue)](https://wordpress.org)
 [![Requires PHP](https://img.shields.io/badge/PHP-7.4%2B-purple)](https://php.net)
 [![License](https://img.shields.io/badge/License-GPLv2-green)](https://www.gnu.org/licenses/gpl-2.0.html)
-[![Stable](https://img.shields.io/badge/Version-2.0.23-orange)]()
+
 
 ---
 
