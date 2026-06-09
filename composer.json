@@ -1,0 +1,20 @@
+{
+    "name": "saiita/ai-content-toolkit",
+    "description": "AI-powered content toolkit for WordPress - Generate summaries, optimize SEO, auto-generate tags and categories using AI",
+    "type": "wordpress-plugin",
+    "keywords": ["wordpress", "ai", "content", "seo", "excerpt", "optimization", "deepseek", "openai", "siliconflow"],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "saiita",
+            "homepage": "https://github.com/a506488043"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "^2.0"
+    },
+    "extra": {
+        "installer-name": "saiita-ai-content-toolkit"
+    }
+}

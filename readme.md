@@ -40,16 +40,12 @@
 
 ### ⚙️ AI 设置
 - 统一的 AI 服务商管理
-- 支持 DeepSeek、OpenAI、SiliconFlow
+- 支持 DeepSeek、SiliconFlow
 - 可配置模型选择和参数
 
 ### 📋 提示词设置
 - 可自定义 AI 提示词模板
 - 根据需求微调 AI 输出
-
-### 🧮 年龄计算器
-- 精确的年龄计算小工具
-- 以年、月、日显示年龄
 
 ---
 
@@ -58,7 +54,6 @@
 | 服务商 | 特点 | 注册地址 |
 |--------|------|----------|
 | **DeepSeek** | 性价比高，中文优化 | [platform.deepseek.com](https://platform.deepseek.com) |
-| **OpenAI** | 行业领先的 GPT 模型 | [openai.com](https://openai.com) |
 | **SiliconFlow** | 专业 AI 模型平台 | [cloud.siliconflow.cn](https://cloud.siliconflow.cn/i/lZiQhOti) |
 
 > ⚠️ 使用插件需要至少一个 AI 服务商的 API Key。
@@ -78,13 +73,13 @@
 ## ❓ 常见问题
 
 ### 支持哪些 AI 服务商？
-DeepSeek、OpenAI 和 SiliconFlow。可以配置多个服务商并随时切换。
+DeepSeek 和 SiliconFlow。可以配置多个服务商并随时切换。
 
 ### 我的数据安全吗？
 所有 API 调用均在服务端进行。文章内容仅在你手动触发 AI 功能时发送给 AI 服务商。AI 服务商不会存储超出其标准 API 处理范围的数据。
 
 ### 需要 API Key 吗？
-是的，你需要至少一个受支持服务商的 API Key。可以从 DeepSeek、OpenAI 或 SiliconFlow 获取免费或付费的 Key。
+是的，你需要至少一个受支持服务商的 API Key。可以从 DeepSeek 或 SiliconFlow 获取免费或付费的 Key。
 
 ---
 
