@@ -59,7 +59,7 @@
 |--------|------|----------|
 | **DeepSeek** | 性价比高，中文优化 | [platform.deepseek.com](https://platform.deepseek.com) |
 | **OpenAI** | 行业领先的 GPT 模型 | [openai.com](https://openai.com) |
-| **SiliconFlow** | 专业 AI 模型平台 | [siliconflow.cn](https://siliconflow.cn) |
+| **SiliconFlow** | 专业 AI 模型平台 | [cloud.siliconflow.cn](https://cloud.siliconflow.cn/i/lZiQhOti) |
 
 > ⚠️ 使用插件需要至少一个 AI 服务商的 API Key。
 
